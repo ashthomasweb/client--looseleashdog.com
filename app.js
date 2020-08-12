@@ -1,4 +1,3 @@
-
 /* --- Dependencies --- */
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -11,59 +10,87 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 /* --- Database connection --- */
-mongoose.connect('mongodb://localhost:27017/tiredPalsDB', {useNewUrlParser: true, useUnifiedTopology: true, });
-
-/* --- Database structuring --- */
-const itemsSchema = {
-    name: String,
-};
-
-const Item = mongoose.model("Item", itemsSchema);
-
-/* --- Database item --- */
-const defaultItem = new Item({
-    name: "Keep moving",
+mongoose.connect('mongodb://localhost:27017/emilyPlattDB', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 });
 
-defaultItem.save();
+/* --- Database structuring --- */
+const postsSchema = {
+    title: String,
+    html: String,
+};
 
-/* --- Static Route --- */
-// app.get("/", function(req, res){
-//     res.sendFile(__dirname + "/index.html");
-// });
+const Post = mongoose.model("Post", postsSchema);
 
-/* --- ejs Route --- */
+/* --- Database item --- */
+const defaultPost = new Post({
+    title: "Keep moving",
+    html: "<h1>Ready?</h1><img src='/images/cincy.jpg'>
+        <p class='test'>Hello there!</p>",
+});
+
+defaultPost.save();
+
+
+/* --- ejs Routes --- */
 
 app.route('/')
 
-    .get(function(req, res){
+    .get(function (req, res) {
         res.render('home', {
             pageTitle: "Home",
-            
         });
     })
+
 ;
 
-app.get('/about', function(req,res){
-    res.render('about', {
-        pageTitle: "About",
+app.get('/services', function (req, res) {
+    res.render('services', {
+        pageTitle: "Services",
+    });
+});
+
+
+app.get('/blog', function (req, res) {
+    Post.find({}, function (err, foundPosts) {
+        
+        res.render('blog', {
+            pageTitle: "Blog",
+            foundPosts: foundPosts,
+        });
+    });
+});
+
+
+
+app.get('/photos', function (req, res) {
+    res.render('photos', {
+        pageTitle: "Photos",
+    });
+});
+
+app.get('/video', function (req, res) {
+    res.render('video', {
+        pageTitle: "Video",
+    });
+});
+
+app.get('/contact', function (req, res) {
+    res.render('contact', {
+        pageTitle: "Contact",
     });
 });
 
 
 
 
-
-
-
-
-
-
-
 /* --- Localhost --- */
-app.listen(3000, function(){
+app.listen(3000, function () {
     console.log('Server started on port 3000.');
 });

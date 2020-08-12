@@ -1,0 +1,20 @@
+<%- include("../views/partials/header.ejs") -%>
+
+<h2>Welcome to the Blog!</h2>
+
+<% foundPosts.forEach(function(post){ %>
+<h1 id="x"><%=post.title%></h1>
+<p id="z"><%=post.html.slice(0, 100) %></p>
+
+<script>
+let div = document.createElement("div"); 
+document.body.appendChild(div);
+let n = document.getElementById('z').innerText;
+div.innerHTML = n;
+
+</script>
+
+
+
+<% }); %>
+<%- include("../views/partials/footer.ejs") -%>
