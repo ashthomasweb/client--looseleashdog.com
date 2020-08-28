@@ -2,19 +2,16 @@
 
 <h2>Welcome to the Blog!</h2>
 
-<% foundPosts.forEach(function(post){ %>
-<h1 id="x"><%=post.title%></h1>
-<p id="z"><%=post.html.slice(0, 100) %></p>
-
-<script>
-let div = document.createElement("div"); 
-document.body.appendChild(div);
-let n = document.getElementById('z').innerText;
-div.innerHTML = n;
-
-</script>
-
-
-
+<% postInfo.forEach(function(post) { %>
+<div>
+    <div style="display: inline-block;"><img src=<%=post.imgURL%>></div>
+    <div style="display: inline-block; margin: 20px;">
+        <h3><%=post.title%></h3>
+        <p><%=post.date%></p>
+        <p><%=post.desc%></p>
+        <p><a href='./posts/<%=post.filename%>'> ...Read More</a></p>
+    </div>
+</div>
 <% }); %>
+
 <%- include("../views/partials/footer.ejs") -%>

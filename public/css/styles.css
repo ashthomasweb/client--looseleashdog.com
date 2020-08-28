@@ -2,6 +2,21 @@ body {
     box-sizing: border-box;
 }
 
+.navbar {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
 .card {
     display: inline-block;
     background-color: #999;
