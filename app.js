@@ -51,7 +51,7 @@ function initApi(req) {
 
 app.get('/', function (req, res) {
     res.render('home', {
-        pageTitle: "Home",
+        pageTitle: 'Home',
     });
 })
 
@@ -91,7 +91,7 @@ app.get('/blog', function (req, res) {
             Prismic.Predicates.at('document.type', 'post')
         ).then(function (response) {
             // response is the response object. Render your views here.
-            res.render('test', {
+            res.render('blog', {
                 document: response.results,
                 pageTitle: "Blog",
 

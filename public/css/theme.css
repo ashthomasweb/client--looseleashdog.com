@@ -1,0 +1,72 @@
+:root {
+    --theme-blue: #3fc5f0;
+    --theme-lightblue: #c6edfa;
+    --theme-green: #6decb9;
+    --theme-yellow: #f2f6d0;
+    --theme-borders: #3a3b48;
+    --primary-background: #fff;
+    --secondary-background: #f9f9f9;
+    --body-light: #b4b4b4;
+    --body-mid: #6a6a6a;
+    --body-dark: #3a3b48;
+}
+
+body {
+    font-family: iskra, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--body-mid);
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: phoreuscherokee, serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--body-dark);
+}
+
+
+.page-wrapper {
+    background-color: #ccc;
+}
+
+.body-wrapper {
+ 
+    background-color: var(--primary-background);
+  
+
+}
+
+.header-pane {
+   
+    background-color: var(--theme-blue);
+    
+}
+
+.footer-pane {
+    background-color: var(--theme-yellow);
+   
+}
+
+.navbar ul li {
+   
+    color: var(--body-dark);
+}
+
+.logo-background {
+   
+    background-color: var(--theme-green);
+}
+
+.card {
+    background-color: var(--theme-lightblue);
+    box-shadow: 4px 3px 5px grey;
+    color: var(--body-dark);
+}
