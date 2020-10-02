@@ -1,24 +1,74 @@
+/* || Navigation Bar */
 
-.navbar {
-    width: 100%;
-    text-align: center;
-    position: fixed;
+.navbar-pane {
+    float: right;
     top: 12px;
-
+    vertical-align: middle;
+    position: relative;
+    margin-top: -1px;
 }
 
-.navbar ul li {
+.navbar-pane li {
     display: inline-block;
     margin-left: 10px;
     margin-right: 10px;
     font-size: 19px;
 
+
+
+    padding-bottom: 3px;
+    border-bottom: 5px solid var(--theme-blue);
+    transition: border .8s;
+    -webkit-transition: border .8s;
+
+}
+
+.navbar-pane li:hover {
+    border-bottom: 5px solid var(--theme-green);
+
+}
+
+.active {
+    border-bottom: 5px solid var(--theme-green);
 }
 
 
-.logo-wrapper {
+/* || Small logo */
+
+.smlogo-pane {
+    text-align: center;
+    padding: 0;
+    position: fixed;
+    
+}
+
+.smlogo-image {
+    width: 40px;
+    display: inline-block;
+    margin: 0 0 -5px 7px;
+    z-index: 92;
+}
+
+.smlogo-background {
+    width: 390px;
+    height: 12px;
+    margin: -10px auto 0;
+    z-index: 91;
+}
+
+.smlogo-text {
+    z-index: 92;
+    display: inline-block;
+    font-size: 33px;
+    margin-left: 13px;
+}
+
+/* || Large Logo Heading */
+
+.logo-pane {
     text-align: center;
     padding: 20px 20px 30px;
+    height: 120px;
 }
 
 .logo-image {
@@ -28,7 +78,6 @@
     z-index: 49;
     position: relative;
 }
-
 
 .logo-background {
     width: 732px;
@@ -48,6 +97,8 @@
 
 
 
+/* || Card */
+
 .card {
     display: inline-block;
     padding: 10px;
@@ -55,29 +106,203 @@
     border-radius: 5px;
 }
 
-.card-menu {
+.card-innerleft {
+    display: inline-block;
+}
+
+.card-innerright {
+    display: inline-block;
+}
+
+/* || Pages - Home */
+
+.greeting-pane--home {
+    font-size: 18px;
+    padding: 20px 0;
+    max-width: 732px;
+    margin: 0 auto;
+    position: relative;
+    height: 150px;
+}
+
+.greeting-pane--home h1 {
+    font-size: 60px;
+    margin: 28px 0 0 55px;
+    font-family: Sacramento, cursive;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.greeting-pane--home img {
+    width: 200px;
+    display: inline-block;
+    position: absolute;
+    right: 50px;
+    margin-top: -35px;
+}
+
+.card-pane--home {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card--home {
     width: 150px;
     height: 150px;
     vertical-align: top;
 }
 
-.card-menu p {
-    margin-top: 5px;
+.card--home p {
+    margin-top: 10px;
+    line-height: 1.25;
 }
 
-.card-services {
+.text-pane--home {
+    padding: 20px 0;
+    max-width: 732px;
+    margin: 0 auto;
+}
+
+.text-pane--home h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.text-pane--home p {
+    font-size: 18px;
+    display: inline-block;
+    max-width: 470px;
+    line-height: 1.5;
+    margin: 40px 0px 0px 38px;
+    vertical-align: top;
+}
+
+.text-pane--home img {
+    width: 220px;
+    display: inline-block;
+}
+
+/* || Pages - Services */
+
+.greeting-pane--services {
+    font-size: 18px;
+    max-width: 1000px;
+    height: 397px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.greeting-pane--services h1 {
+    font-size: 60px;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.greeting-img--services {
+    position: absolute;
+    z-index: 50;
+}
+
+.greeting-text--services {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+    z-index: 51;
+}
+
+.greeting-pane--services p {
+    line-height: 1.5;
+    margin: 10px auto;
+}
+
+
+.card-pane--services {
+    margin: -100px auto;
+    text-align: center;
+    z-index: 52;
+    position: relative;
+}
+
+.card--services {
     width: 230px;
-
+    height: 230px;
 }
 
-.services-innerleft {
+.card--services h3 {
+    padding: 10px;
+}
+
+.text-pane--services {
+    padding: 0 0 40px;
+    max-width: 770px;
+    margin: 0 auto ;
+}
+
+.text-pane--services h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.text-pane--services p {
+    font-size: 18px;
     display: inline-block;
-
-
+    max-width: 770px;
+    line-height: 1.5;
+    margin: 20px 0px 0px 38px;
+    vertical-align: top;
+    
 }
 
-.services-innerright {
+/* || Pages - Photos */
+
+.greeting-pane--photos {
+    max-width: 600px;
+    margin: 0px auto;
+    text-align: center;
+    
+}
+
+.greeting-pane--photos h1 {
+    font-size: 50px;
     display: inline-block;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
 
+.curator-pane {
+    max-width: 808px;
+    margin: 40px auto 30px;
+    border: 4px solid var(--theme-borders);
 
 }
+
+#curator-feed-test-layout {
+    padding: 0;
+}
+
+
+.horizontal-frame {
+    overflow-x: scroll;
+    width: 900px;
+    height: 320px;
+    margin: 0 auto;
+    overflow-y: hidden;
+}
+
+.inner-pane {
+    height: 300px;
+    width: 3000px;
+}
+
+/* || Pages - Blog Main */
+
+/* || Pages - Post */
+
+
+
+/* || Pages - Contact */

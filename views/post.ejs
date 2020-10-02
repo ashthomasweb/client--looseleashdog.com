@@ -1,0 +1,62 @@
+<%- include("../views/partials/header.ejs") -%>
+
+
+
+<% document.forEach(function(post) { %>
+    <% if ( title === post.data.title[0].text.replace(/\?/g, "") ) { %>
+    <div><%= post.data.title[0].text %></div>
+    <div><img src="<%= post.data.image.url %>"></div>
+
+  
+
+      <%# Slice Zone %>
+
+      <% post.data.body1.forEach(function(slice){ %> 
+        
+        <%# Body %>
+        <% if (slice.slice_type == "body") { %>
+          <%- PrismicDOM.RichText.asHtml(slice.primary.paragraph) %>
+        <% } %>
+
+
+        <%# Heading %>
+        <% if (slice.slice_type == "heading") { %>
+          <%- PrismicDOM.RichText.asHtml(slice.primary.heading) %>
+        <% } %> 
+
+
+        <%# Subheading %>
+        <% if (slice.slice_type == "subheading") { %>
+          <%- PrismicDOM.RichText.asHtml(slice.primary.subheading) %>
+        <% } %> 
+        
+
+        <%# Link %>
+        <% if (slice.slice_type == "link") { %>
+          <p><a href="<%= slice.primary.link.url %>">Animal Rescue League</a></p>
+        <% } %>
+
+
+        <%# Image Gallery %>
+        <% if (slice.slice_type == "image_gallery") { %>
+          <% slice.items.forEach(function(image){ %>
+            <img src="<%= image.gallery_image.url %>" style="width: 500px;"/>
+              <p><%= image.image_captions[0].text %></p>
+          <% }) %>
+        <% } %>
+    
+
+        <%# Quote %>
+        <% if (slice.slice_type == "quote1") { %>
+          <%- PrismicDOM.RichText.asHtml(slice.primary.quote) %>
+          <%- PrismicDOM.RichText.asHtml(slice.primary.author) %>
+        <% } %> 
+          
+
+      <% }) %>
+      
+<% } %>
+
+<% }); %>
+
+<%- include("../views/partials/footer.ejs") -%>

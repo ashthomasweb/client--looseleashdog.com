@@ -2,8 +2,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
-const blogInfo = require('./public/js/blogIndex.js')
 const favicon = require('express-favicon');
+const _ = require('lodash');
 var Prismic = require('prismic-javascript');
 var PrismicDOM = require('prismic-dom');
 
@@ -53,9 +53,9 @@ app.get('/', function (req, res) {
     res.render('home', {
         pageTitle: 'Home',
     });
-})
+});
 
-;
+
 
 app.get('/services', function (req, res) {
     res.render('services', {
@@ -63,15 +63,6 @@ app.get('/services', function (req, res) {
     });
 });
 
-app.get('/posts/:postTitle', function (req, res) {
-    let url = './posts/' + req.params.postTitle;
-    if (url) {
-        res.render(url, {
-            pageTitle: "Hello",
-
-        });
-    }
-});
 
 app.get('/photos', function (req, res) {
     res.render('photos', {
@@ -85,6 +76,7 @@ app.get('/contact', function (req, res) {
     });
 });
 
+
 app.get('/blog', function (req, res) {
     initApi(req).then(function (api) {
         api.query(
@@ -94,8 +86,26 @@ app.get('/blog', function (req, res) {
             res.render('blog', {
                 document: response.results,
                 pageTitle: "Blog",
-
             });
+        });
+    });
+});
+
+
+app.get('/posts/:postTitle', function (req, res) {
+    let url = './posts/' + req.params.postTitle;
+    initApi(req).then(function (api) {
+        api.query(
+            Prismic.Predicates.at('document.type', 'post')
+        ).then(function (response) {
+            // response is the response object. Render your views here.
+            if (url) {
+                res.render('post', {
+                    document: response.results,
+                    pageTitle: "Blog",
+                    title: req.params.postTitle.replace(/-/g, ' '),
+                });
+            }
         });
     });
 });

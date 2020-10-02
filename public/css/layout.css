@@ -1,58 +1,124 @@
-
-.divider-top {
-    width: 100%;
-    height: 40px;
-    border-top: 1px solid #e6e6e6;
-    background-image: linear-gradient(#f0f0f0, rgba(0,0,0,0));
-    
-}
-
-.divider-bottom {
-    width: 100%;
-    height: 40px;
-    border-bottom: 1px solid #e6e6e6;
-    background-image: linear-gradient(rgba(0,0,0,0), #f5f5f5);
-    
-}
+/* || Section Layout */
 
 
-.page-wrapper {
-    position: relative;
-}
-
-.body-wrapper {
-    padding: 0px 0px 0px 0px;
-    max-width: 1000px;
-    margin: 60px auto 0px auto;
-    min-height: calc(100vh - 120px);
-
-}
-
-.header-pane {
+.l-header {
+    padding-top: 6px;
     height: 60px;
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 99;
-}
-
-.footer-pane {
-    height: 60px;
-    bottom: 60;
-    position: absolute;
-    width: 100%;
-}
-
-
-.home-text-pane {
-    padding: 20px 0;
-    max-width: 732px;
-    margin: 0 auto;
-}
-
-
-
-.home-card-pane {
-    margin: 0 auto;
+    z-index: 90;
     text-align: center;
 }
+
+.l-header-wrapper {
+    width: 100%;
+    height: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.l-home-header {
+    height: 120px;
+    position: relative;
+}
+
+
+
+.l-body-wrapper--home {
+    max-width: 1000px;
+    margin: 0px auto 0px;
+    min-height: calc(100vh - 240px);
+}
+
+
+.l-body-wrapper {
+    max-width: 1000px;
+    margin: 60px auto 0px auto;
+    min-height: calc(100vh - 180px);
+}
+
+.l-content-wrapper {
+    position: relative;
+}
+
+.l-footer {
+    height: 120px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.l-footer-wrapper {
+    width: 100%;
+    height: 120px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 0;
+    padding: 20px 0;
+}
+
+.l-socialm img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+.l-attributions p {
+    line-height: 1.5;
+    font-size: 12px;
+    color: var(--copy-light);
+}
+
+.l-farewell {
+    font-size: 24px;
+    color: var(--copy-mid);
+    line-height: 1.5;
+}
+
+.l-box-thirds {
+    display: inline-block;
+    width: 333px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+
+/* || Section dividers */
+
+.l-divider {
+    width: 100%;
+    height: 40px;
+
+}
+.divider-top {
+    border-top: 1px solid #e6e6e6;
+    background-image: linear-gradient(#f0f0f0, rgba(0,0,0,0));
+}
+
+.divider-bottom {
+    border-bottom: 1px solid #e6e6e6;
+    background-image: linear-gradient(rgba(0,0,0,0), #f5f5f5);
+}
+
+.overhang-fix {
+    margin-bottom: 85px;
+}
+
+
+/* || Pages - Home */
+
+
+
+
+
+/* || Pages - Services */
+
+
+
+/* || Pages - Blog */
+
+/* || Pages - Photos */
+
+/* || Pages - Contact */
+
+/* || Default Post */

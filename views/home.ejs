@@ -1,46 +1,52 @@
-<%- include("../views/partials/header.ejs") -%>
-<div class="logo-wrapper">
-    <h1 class="logo-text">Reactive Dog Walking</h1>
-    <img class="logo-image" src="\images\icon.png" >
-    
-    <div class="logo-background"></div>
-</div>
-<div class="home-content-wrapper">
+<%- include("../views/partials/header--home.ejs") -%>
 
-    <div class="divider-top"></div>
 
-    <div class="home-card-pane">
-        <div class="card card-menu">
-            <h2>Services</h2>
-            <p>Check out what I have to offer your animal.</p>
-        </div>
-        <div class="card card-menu">
-            <h2>Blog</h2>
-            <p>Come learn ways to develop your relationship.</p>
-        </div>
-        <div class="card card-menu">
-            <h2>Photos</h2>
-            <p>All of my special friends deserve to be seen.</p>
-        </div>
-        <div class="card card-menu">
-            <h2>Contact</h2>
-            <p>Reach out with questions about services.</p>
-        </div>
+    <div class="greeting-pane--home ">
+        <h1>Hi, I'm Emily.</h2>
+        <img src="images/avatar.png">   
     </div>
 
-    
-    <div class="divider-bottom"></div>
+    <div class="l-divider divider-top"></div>
 
-    <div class="home-text-pane">
+    <div class="card-pane--home">
+        <a href="/services">
+            <div class="card card--home">
+                <h2>Services</h2>
+                <p>Check out what I have to offer your animal.</p>
+            </div>
+        </a>
+        <a href="/blog">
+            <div class="card card--home">
+                <h2>Blog</h2>
+                <p>Come learn ways to develop your relationship.</p>
+            </div>
+        </a>
+        <a href="/photos">
+            <div class="card card--home">
+                <h2>Photos</h2>
+                <p>All of my special friends deserve to be seen.</p>
+            </div>
+        </a>
+        <a href="/contact">
+            <div class="card card--home">
+                <h2>Contact</h2>
+                <p>Reach out with questions about services.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="l-divider divider-bottom"></div>
+
+    <div class="text-pane--home">
         <h2>Welcome!</h2>
-        <p>Hello Dog Lovers of Biddeford! I'm an experienced dog walker seeking new clients in the Biddeford/Saco area.
-            I love working with strong pullers and reactive dogs to help improve walking habits. Basic leash training is
-            included in all walks. Please visit my business page for more information about my services/pricing.</p>
+            <img class="text-pane--home" src="images/forest.png">
+            <p>Hello all Dog Lovers! I'm an experienced dog walker sharing my knowledge and skills with the world. I
+                love working with strong pullers and reactive dogs to help improve walking habits. On this site you can
+                find tips and tools that I have found successful, as well as learn about my services in the Biddeford/Saco area.
+                </p>
+
     </div>
 
 
-   
-
-</div>
 
 <%- include("../views/partials/footer.ejs") -%>

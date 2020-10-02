@@ -1,72 +1,94 @@
 :root {
     --theme-blue: #3fc5f0;
     --theme-lightblue: #c6edfa;
-    --theme-green: #6decb9;
+    --theme-green: #6decb9; /* rgba(109, 236, 185, 1) */
     --theme-yellow: #f2f6d0;
     --theme-borders: #3a3b48;
     --primary-background: #fff;
     --secondary-background: #f9f9f9;
-    --body-light: #b4b4b4;
-    --body-mid: #6a6a6a;
-    --body-dark: #3a3b48;
+    --copy-light: #b4b4b4;
+    --copy-mid: #6a6a6a;
+    --copy-dark: #3a3b48;
 }
 
 body {
     font-family: iskra, sans-serif;
     font-weight: 300;
     font-style: normal;
-    color: var(--body-mid);
+    color: var(--copy-mid);
 }
 
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: phoreuscherokee, serif;
     font-weight: 700;
     font-style: normal;
-    color: var(--body-dark);
+    color: var(--copy-dark);
 }
 
-
-.page-wrapper {
-    background-color: #ccc;
+body {
+    background-color:#ddd;
 }
 
-.body-wrapper {
- 
+.l-body-wrapper {
     background-color: var(--primary-background);
-  
-
 }
 
-.header-pane {
-   
-    background-color: var(--theme-blue);
-    
+.l-body-wrapper--home {
+    background-color: var(--primary-background);
 }
 
-.footer-pane {
+.l-header {
+    background-color: var(--theme-blue);  
+}
+
+.l-footer {
     background-color: var(--theme-yellow);
-   
 }
 
-.navbar ul li {
-   
-    color: var(--body-dark);
+.navbar-pane li {
+    color: var(--copy-dark);
 }
 
 .logo-background {
-   
+    background-color: var(--theme-green);
+}
+
+.smlogo-background {
     background-color: var(--theme-green);
 }
 
 .card {
     background-color: var(--theme-lightblue);
-    box-shadow: 4px 3px 5px grey;
-    color: var(--body-dark);
+    box-shadow: 4px 3px 5px rgb(165, 165, 165);
+    color: var(--copy-dark);
 }
+
+.greeting-pane--home h1 {
+    color: var(--copy-dark);
+}
+
+.greeting-pane--services h1 {
+    color: var(--copy-dark);
+}
+
+.greeting-pane--photos h1 {
+    color: var(--copy-dark);
+}
+
+/* || Link Styles */
+
+.footer-underborder-bold{
+    color: var(--theme-blue);
+    font-weight: 600;
+    border-bottom: 3px solid var(--theme-yellow);
+    padding-bottom: 1px;
+    transition: border-bottom 1s, color 1s;
+    -webkit-transition: border-bottom 1s, color 1s;
+}
+  
+.footer-underborder-bold:hover{
+    border-bottom: 3px solid var(--theme-blue);
+    color: var(--theme-blue);
+
+}
+
