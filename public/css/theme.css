@@ -92,3 +92,16 @@ body {
 
 }
 
+.link-underborder{
+    color: var(--theme-blue);
+    border-bottom: 2px solid var(--primary-background);
+    padding-bottom: 1px;
+    transition: border-bottom 1s, color 1s;
+    -webkit-transition: border-bottom 1s, color 1s;
+}
+  
+.link-underborder:hover{
+    border-bottom: 2px solid var(--theme-blue);
+    color: var(--theme-blue);
+
+}

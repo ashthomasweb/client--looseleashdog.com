@@ -1,62 +1,74 @@
 <%- include("../views/partials/header.ejs") -%>
 
-
-
-<% document.forEach(function(post) { %>
+  <% document.forEach(function(post) { %>
     <% if ( title === post.data.title[0].text.replace(/\?/g, "") ) { %>
-    <div><%= post.data.title[0].text %></div>
-    <div><img src="<%= post.data.image.url %>"></div>
 
-  
+      <div class="post-main-img">
+        <img src="<%= post.data.image.url %>">
+      </div>
+      
+      <div class="post-title">
+        <h1><%= post.data.title[0].text %></h1>
+      </div>
 
-      <%# Slice Zone %>
+      <div class="post-meta">
+        <h4 class="post-date">First pulished on <%= post.first_publication_date.slice(5, 10) %>, </h4>
+        <h4 class="post-date"><%= post.first_publication_date.slice(0, 4) %>.</h4>
+      </div>
+      <div class="l-divider divider-bottom"></div>
 
-      <% post.data.body1.forEach(function(slice){ %> 
-        
-        <%# Body %>
+      <%# Slice Zones %>
+
+      <% post.data.body1.forEach(function(slice){ %>
+
+        <%# Body Text%>
         <% if (slice.slice_type == "body") { %>
-          <%- PrismicDOM.RichText.asHtml(slice.primary.paragraph) %>
+          <div class="post-box slice-paragraph"><%- PrismicDOM.RichText.asHtml(slice.primary.paragraph) %></div>
         <% } %>
-
 
         <%# Heading %>
         <% if (slice.slice_type == "heading") { %>
-          <%- PrismicDOM.RichText.asHtml(slice.primary.heading) %>
-        <% } %> 
-
+          <div class="post-box slice-heading"><%- PrismicDOM.RichText.asHtml(slice.primary.heading) %> </div>
+        <% } %>
 
         <%# Subheading %>
         <% if (slice.slice_type == "subheading") { %>
-          <%- PrismicDOM.RichText.asHtml(slice.primary.subheading) %>
-        <% } %> 
-        
+          <div class="post-box slice-subheading"><%- PrismicDOM.RichText.asHtml(slice.primary.subheading) %> </div>
+        <% } %>
 
         <%# Link %>
         <% if (slice.slice_type == "link") { %>
-          <p><a href="<%= slice.primary.link.url %>">Animal Rescue League</a></p>
+          <div class="post-box slice-link">
+            <p><a href="<%= slice.primary.link.url %>">Animal Rescue League</a></p>
+          </div>
         <% } %>
-
-
-        <%# Image Gallery %>
-        <% if (slice.slice_type == "image_gallery") { %>
-          <% slice.items.forEach(function(image){ %>
-            <img src="<%= image.gallery_image.url %>" style="width: 500px;"/>
-              <p><%= image.image_captions[0].text %></p>
-          <% }) %>
-        <% } %>
-    
 
         <%# Quote %>
         <% if (slice.slice_type == "quote1") { %>
-          <%- PrismicDOM.RichText.asHtml(slice.primary.quote) %>
-          <%- PrismicDOM.RichText.asHtml(slice.primary.author) %>
-        <% } %> 
-          
+          <div class="post-box slice-quote">
+            <%- PrismicDOM.RichText.asHtml(slice.primary.quote) %>
+            <%- PrismicDOM.RichText.asHtml(slice.primary.author) %>
+          </div>
+        <% } %>
+
+        <%# Image Gallery %>
+        <% if (slice.slice_type == "image_gallery") { %>
+          <div class="slice-gallery">
+              <div class="carosel-slider" >
+                <% slice.items.forEach(function(image){ %>
+                  <div class="gallery-content-frame">
+                    <img class="post-carosel-img" src="<%= image.gallery_image.url %>" style="width: 270px;" />
+                    <p class="post-carosel-caption" ><%= image.image_captions[0].text %></p>
+                  </div>
+                <% }) %>
+              </div>
+          </div>
+        <% } %>
 
       <% }) %>
-      
-<% } %>
 
-<% }); %>
+    <% } %>
+
+  <% }); %>
 
 <%- include("../views/partials/footer.ejs") -%>

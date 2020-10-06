@@ -100,6 +100,8 @@ app.get('/posts/:postTitle', function (req, res) {
         ).then(function (response) {
             // response is the response object. Render your views here.
             if (url) {
+
+
                 res.render('post', {
                     document: response.results,
                     pageTitle: "Blog",
