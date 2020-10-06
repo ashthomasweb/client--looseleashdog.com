@@ -3,9 +3,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const favicon = require('express-favicon');
-const _ = require('lodash');
 var Prismic = require('prismic-javascript');
 var PrismicDOM = require('prismic-dom');
+const nodemailer = require('nodemailer');
+
 
 var linkResolver = function (doc) {
     // Pretty URLs for known types
