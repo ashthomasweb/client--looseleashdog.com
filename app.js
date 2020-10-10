@@ -5,7 +5,8 @@ const ejs = require('ejs');
 const favicon = require('express-favicon');
 var Prismic = require('prismic-javascript');
 var PrismicDOM = require('prismic-dom');
-const nodemailer = require('nodemailer');
+
+
 
 
 var linkResolver = function (doc) {
@@ -57,6 +58,11 @@ app.get('/', function (req, res) {
 });
 
 
+app.get('/about', function (req, res) {
+    res.render('about', {
+        pageTitle: "About",
+    });
+});
 
 app.get('/services', function (req, res) {
     res.render('services', {

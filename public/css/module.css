@@ -67,11 +67,24 @@
 
 .logo-pane {
     text-align: center;
-    padding: 20px 20px 30px;
-    height: 120px;
+    height: 90px;
+    margin-top: 10px;
 }
 
-.logo-image {
+.logo-main {
+    display: inline-block;
+    width: 700px;
+    margin-bottom: -5px;
+
+}
+
+.logo-sm {
+    display: inline-block;
+    width: 330px;
+    margin-top: 5px;
+}
+
+.logo-dog {
     width: 45px;
     display: inline-block;
     margin-left: 7px;
@@ -95,7 +108,14 @@
     margin-left: 13px;
 }
 
+.link-home-nav {
+    font-size: 20px;
+    font-family: phoreuscherokee, serif;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0!important;
 
+}
 
 /* || Card */
 
@@ -134,7 +154,7 @@
 }
 
 .greeting-pane--home img {
-    width: 200px;
+    width: 230px;
     display: inline-block;
     position: absolute;
     right: 50px;
@@ -148,8 +168,13 @@
 
 .card--home {
     width: 150px;
-    height: 150px;
+    height: 115px;
     vertical-align: top;
+    transition: background-color .4s ease-out;
+}
+
+.card--home:hover {
+    background-color: var(--theme-lightblue-alt);
 }
 
 .card--home p {
@@ -163,23 +188,23 @@
     margin: 0 auto;
 }
 
-.text-pane--home h2 {
+.text-pane--home h1 {
     text-align: center;
-    font-size: 35px;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
 .text-pane--home p {
     font-size: 18px;
     display: inline-block;
-    max-width: 470px;
+    max-width: 450px;
     line-height: 1.5;
-    margin: 40px 0px 0px 38px;
+    margin: 40px 0px 0px 30px;
     vertical-align: top;
 }
 
 .text-pane--home img {
-    width: 220px;
+    width: 240px;
     display: inline-block;
 }
 
@@ -297,6 +322,13 @@
     line-height: 1.5;
 }
 
+.crt-post-1 {
+position: absolute!important;
+right: 0!important;
+
+}
+
+
 .horizontal-frame {
     overflow-x: hidden;
     width: 900px;
@@ -393,8 +425,161 @@
 
 
 
-/* || Pages - Post */
+/* || Pages - About */
+/* 
+.greeting-pane--about {
+    font-size: 18px;
+    padding: 20px 0;
+    max-width: 732px;
+    margin: 0 auto;
+    position: relative;
+    height: 150px;
+}
 
+.greeting-pane--about h1 {
+    font-size: 60px;
+    margin: 28px 0 0 55px;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.greeting-pane--about img {
+    width: 200px;
+    display: inline-block;
+    position: absolute;
+    right: 50px;
+    margin-top: -35px;
+} */
+
+.avatar {
+    width: 220px;
+    margin-top: -20px;
+    position: absolute;
+    right: 150px;
+}
+
+.avatar-pane--about {
+    height: 175px;
+    width: 100%;
+}
+
+.avatar-pane--about h2 {
+    font-size: 60px;
+    margin: 50px 0 0 120px;
+    display: inline-block;
+}
+
+
+.greeting-pane--about {
+    padding: 20px 0;
+    max-width: 732px;
+    margin: 0 auto;
+}
+
+.greeting-pane--about h1 {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+
+.greeting-pane--about p {
+    font-size: 20px;
+    display: inline-block;
+    max-width: 440px;
+    line-height: 1.5;
+    margin: 40px 0px 0px 38px;
+    vertical-align: top;
+}
+
+.greeting-pane--about img {
+    width: 250px;
+    display: inline-block;
+}
+
+.text-pane--about {
+    text-align: center;
+    padding: 20px 0;
+    max-width: 732px;
+    margin: 0 auto;
+}
+
+.text-pane--about h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.text-pane--about p {
+    font-size: 20px;
+    display: inline-block;
+    max-width: 500px;
+    line-height: 1.5;
+    margin: 0px 0px 0px 38px;
+    vertical-align: top;
+}
 
 
 /* || Pages - Contact */
+
+.greeting-pane--contact {
+    max-width: 600px;
+    margin: 0px auto ;
+    text-align: center;
+    
+}
+
+.greeting-pane--contact h1 {
+    font-size: 50px;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+
+
+.greeting-pane--contact p {
+    line-height: 1.5;
+    margin: 10px auto;
+    font-size: 20px;
+}
+
+.contact-form-pane {
+    width: 540px;
+    margin: 0 auto;
+
+}
+
+.contact-form-card {
+    width: 500px;
+    height: 410px;
+    padding: 10px;
+}
+
+
+.form-item {
+    margin: 10px 0;
+}
+.form-textarea {
+    width: 100%;
+    height: 150px;
+}
+
+.form-button {
+    width: 100px;
+    height: 62px;
+    background-color: var(--theme-green);
+    font-family: phoreuscherokee, serif;
+}
+
+.form-title {
+    font-family: iskra, sans-serif;
+    color: var(--copy-dark);
+}
+
+.form-entry {
+    font-family: iskra, sans-serif;
+    color: var(--copy-mid);
+    width: 250px;
+}
+

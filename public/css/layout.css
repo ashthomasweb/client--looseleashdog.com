@@ -41,7 +41,7 @@
 
 .l-content-wrapper {
     position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 }
 
 .l-footer {
@@ -84,6 +84,11 @@
     width: 333px;
     font-size: 18px;
     vertical-align: middle;
+}
+
+.l-box-half {
+    display: inline-block;
+    
 }
 
 
@@ -132,6 +137,7 @@
 
 
 /* || Pages - Photos */
+
 
 /* || Pages - Contact */
 
