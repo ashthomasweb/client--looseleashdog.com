@@ -323,8 +323,8 @@
 }
 
 .crt-post-1 {
-position: absolute!important;
-right: 0!important;
+    position: absolute!important;
+    right: 0!important;
 
 }
 
@@ -554,6 +554,7 @@ right: 0!important;
     width: 500px;
     height: 410px;
     padding: 10px;
+    display: relative;
 }
 
 
@@ -581,5 +582,18 @@ right: 0!important;
     font-family: iskra, sans-serif;
     color: var(--copy-mid);
     width: 250px;
+}
+
+.form-response {
+    position: relative;
+    margin: 10px auto 0;
+    /* display: hidden */
+    text-align: center; 
+    top: 0;
+}
+
+.form-response p {
+    font-size: 24px;
+    font-weight: 700;
 }
 
