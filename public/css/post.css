@@ -14,45 +14,38 @@
 
 .post-main-img {
     margin: 10px 0;
-
 }
 
 .post-meta {
     text-align: center;
-
 }
 
 .post-date {
     display: inline-block;
-    
 }
 
 .slice-paragraph {
     font-size: 18px;
     text-align: left;
     margin-top: 40px;
-
 }
 
 .slice-heading {
     font-size: 24px;
     text-align: left;
     margin-top: 40px;
-
 }
 
 .slice-subheading {
     font-size: 20px;
     text-align: left;
     margin-top: 40px;
-
 }
 
 .slice-link {
     padding: 10px;
     border-left: 8px solid var(--theme-green);
     margin-top: 40px;
-
 }
 
 .slice-quote {
@@ -60,14 +53,11 @@
     padding: 10px;
     border-left: 8px solid var(--theme-green);
     margin-top: 40px;
-
 }
-
 
 .slice-quote p:nth-child(1) {
     font-size: 22px;
     font-style: italic;
-
 }
 
 .slice-quote p:nth-child(2) {
@@ -80,20 +70,17 @@
 .post-pane {
     text-align: center;
     margin-top: 40px;
-
 }
 
 .slice-gallery {
     font-size: 20px;
     text-align: center;
     margin-top: 40px;
-
 }
 
 .gallery-content-frame {
     display: inline-block;
     text-align: center;
-
 }
 
 .carosel-slider {
@@ -102,7 +89,6 @@
     line-height: 0;
     text-align: center;
     margin: 0 auto;
-    
 }
 
 .post-carosel-img {

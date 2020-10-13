@@ -4,36 +4,31 @@
     <p>Please use the form below to reach out and contact me about services or related questions. I will be in touch
         within 2 business days. Thanks for stopping by!
     </p>
-
 </div>
 
 <div class="contact-form-pane">
     <div class="card contact-form-card">
         <form id="contact-form">
-            <!-- <input type="hidden" name="inquiry_num"> -->
-                <label class="form-item form-title">Name</label>
-                <br>
-                <input class="form-item form-entry" type="text" name="user_name">
-                <br>
-                <label class="form-item form-title">Email</label>
-                <br>
-                <input class="form-item form-entry" type="email" name="user_email">
-                <br>
-
-                
-                <label class="form-item form-title">Message</label>
-                <br>
-                <textarea class="form-item form-textarea" name="message"></textarea>
-                <br>
-                <input class="form-item form-button" type="submit" value="Send">
-                
-                
-            </form>
-            <div class="hidden-response">
-                <div class="form-response">
-                    <p>Thanks! Your message has been sent. You will hear from me soon.</p>    
-                </div>
-                <input type="button" onclick="location.href='/blog';" value="Go to Blog" />            </div>
+            <label class="form-item form-title">Name</label>
+            <br>
+            <input id="form-user" class="form-item form-entry" type="text" name="user_name">
+            <br>
+            <label class="form-item form-title">Email</label>
+            <br>
+            <input class="form-item form-entry" type="email" name="user_email">
+            <br>
+            <label class="form-item form-title">Message</label>
+            <br>
+            <textarea class="form-item form-textarea" name="message"></textarea>
+            <br>
+            <button class="form-item form-button" type="submit" onclick="contactResponse()">Go</button>
+        </form>
+        <div id="hidden-response" class="hidden-response">
+            <div class="form-response">
+                <p>Thanks! Your message has been sent. You will hear from me soon.</p>
+                <input type="button" onclick="location.href='/blog';" value="Go to Blog" />
+            </div>
+        </div>
     </div>
 </div>
 

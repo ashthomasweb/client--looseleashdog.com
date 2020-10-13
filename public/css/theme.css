@@ -106,3 +106,13 @@ body {
     color: var(--theme-blue);
 
 }
+
+.divider-top {
+    border-top: 1px solid #e6e6e6;
+    background-image: linear-gradient(#f0f0f0, rgba(0,0,0,0));
+}
+
+.divider-bottom {
+    border-bottom: 1px solid #e6e6e6;
+    background-image: linear-gradient(rgba(0,0,0,0), #f5f5f5);
+}

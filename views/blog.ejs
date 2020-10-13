@@ -1,28 +1,30 @@
 <%- include("../views/partials/header.ejs") -%>
+
 <div class="greeting-pane--blog">
     <h2>Welcome to the Blog!</h2>
     <p>Glad you made it here. You can find some interesting things here about how to work with your dog on-leash. I also
         recommend certain equipment which you can also find amongst the posts.
     </p>
-
 </div>
 
 <div class="l-divider divider-bottom"></div>
 
 <% document.forEach(function(post) { %>
-<div class="l-blog-intro-section">
+    <div class="l-blog-intro-section">
 
-    <div class="intro-img">
-        <img class="intro-img" src=<%=post.data.image.url%> >
-    </div>
+        <div class="intro-img">
+            <img class="intro-img" src=<%=post.data.image.url%>>
+        </div>
 
-    <div class="intro-text-box">
-        <h3><%=post.data.title[0].text%></h3>
-        <p><%=post.first_publication_date.slice(0,10)%></p>
-        <p><%=post.data.description[0].text%></p>
-        <p><a class="link-underborder" href='./posts/<%=post.data.title[0].text.replace(/ /g, "-");%>'>Read&nbsp;More</a></p>
+        <div class="intro-text-box">
+            <h3><%=post.data.title[0].text%></h3>
+            <p><%=post.first_publication_date.slice(0,10)%></p>
+            <p><%=post.data.description[0].text%></p>
+            <p><a class="link-underborder"
+                    href='./posts/<%=post.data.title[0].text.replace(/ /g, "-");%>'>Read&nbsp;More</a></p>
+        </div>
+
     </div>
-</div>
 
 <% }); %>
 

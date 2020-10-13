@@ -13,25 +13,15 @@
     margin-left: 10px;
     margin-right: 10px;
     font-size: 19px;
-
-
-
     padding-bottom: 3px;
     border-bottom: 5px solid var(--theme-blue);
     transition: border .8s;
     -webkit-transition: border .8s;
-
 }
 
 .navbar-pane li:hover {
     border-bottom: 5px solid var(--theme-green);
-
 }
-
-.active {
-    border-bottom: 5px solid var(--theme-green);
-}
-
 
 /* || Small logo */
 
@@ -39,7 +29,6 @@
     text-align: center;
     padding: 0;
     position: fixed;
-    
 }
 
 .smlogo-image {
@@ -75,7 +64,6 @@
     display: inline-block;
     width: 700px;
     margin-bottom: -5px;
-
 }
 
 .logo-sm {
@@ -114,7 +102,6 @@
     font-weight: 700;
     line-height: 1;
     margin: 0!important;
-
 }
 
 /* || Card */
@@ -243,7 +230,6 @@
     margin: 10px auto;
 }
 
-
 .card-pane--services {
     margin: -100px auto;
     text-align: center;
@@ -279,7 +265,6 @@
     line-height: 1.5;
     margin: 20px 0px 0px 38px;
     vertical-align: top;
-    
 }
 
 /* || Pages - Photos */
@@ -288,7 +273,6 @@
     max-width: 600px;
     margin: 0px auto ;
     text-align: center;
-    
 }
 
 .greeting-pane--photos h1 {
@@ -298,7 +282,6 @@
     margin-bottom: 5px;
     margin-top: 30px;
 }
-
 
 .greeting-pane--photos p {
     line-height: 1.5;
@@ -311,7 +294,6 @@
     margin: 40px auto 30px;
     border: 5px solid var(--theme-borders);
     border-radius: 5px;
-
 }
 
 #curator-feed-test-layout {
@@ -325,9 +307,7 @@
 .crt-post-1 {
     position: absolute!important;
     right: 0!important;
-
 }
-
 
 .horizontal-frame {
     overflow-x: hidden;
@@ -349,7 +329,6 @@
     margin: 0 auto;
 }
 
-
 .text-pane--photos p {
     font-size: 18px;
     max-width: 500px;
@@ -361,8 +340,6 @@
 .photo-buttons {
     text-align: center;
 }
-
-
 
 /* || Pages - Blog Main */
 
@@ -407,7 +384,6 @@
 .intro-text-box p:nth-child(2){
     opacity: 0.7;
     font-size: 15px;
-
 }
 
 .intro-text-box p:nth-child(3){
@@ -423,33 +399,7 @@
     bottom: 0;
 }
 
-
-
 /* || Pages - About */
-/* 
-.greeting-pane--about {
-    font-size: 18px;
-    padding: 20px 0;
-    max-width: 732px;
-    margin: 0 auto;
-    position: relative;
-    height: 150px;
-}
-
-.greeting-pane--about h1 {
-    font-size: 60px;
-    margin: 28px 0 0 55px;
-    display: inline-block;
-    letter-spacing: 1px;
-}
-
-.greeting-pane--about img {
-    width: 200px;
-    display: inline-block;
-    position: absolute;
-    right: 50px;
-    margin-top: -35px;
-} */
 
 .avatar {
     width: 220px;
@@ -481,7 +431,6 @@
     font-size: 60px;
     margin-bottom: 10px;
 }
-
 
 .greeting-pane--about p {
     font-size: 20px;
@@ -519,14 +468,12 @@
     vertical-align: top;
 }
 
-
 /* || Pages - Contact */
 
 .greeting-pane--contact {
     max-width: 600px;
     margin: 0px auto ;
     text-align: center;
-    
 }
 
 .greeting-pane--contact h1 {
@@ -537,7 +484,6 @@
     margin-top: 30px;
 }
 
-
 .greeting-pane--contact p {
     line-height: 1.5;
     margin: 10px auto;
@@ -547,16 +493,14 @@
 .contact-form-pane {
     width: 540px;
     margin: 0 auto;
-
 }
 
 .contact-form-card {
     width: 500px;
     height: 410px;
     padding: 10px;
-    display: relative;
+    position: relative;
 }
-
 
 .form-item {
     margin: 10px 0;
@@ -585,15 +529,24 @@
 }
 
 .form-response {
-    position: relative;
     margin: 10px auto 0;
-    /* display: hidden */
-    text-align: center; 
-    top: 0;
+    max-width: 350px;
 }
 
 .form-response p {
     font-size: 24px;
     font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hidden-response {
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
