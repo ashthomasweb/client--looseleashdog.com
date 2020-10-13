@@ -1,4 +1,5 @@
 <%- include("../views/partials/header--contact.ejs") -%>
+
 <div class="greeting-pane--contact">
     <h1>Contact Me</h1>
     <p>Please use the form below to reach out and contact me about services or related questions. I will be in touch
@@ -7,24 +8,18 @@
 </div>
 
 <div class="contact-form-pane">
-    <div class="card contact-form-card">
-        <form id="contact-form">
-            <label class="form-item form-title">Name</label>
-            <br>
-            <input id="form-user" class="form-item form-entry" type="text" name="user_name">
-            <br>
-            <label class="form-item form-title">Email</label>
-            <br>
-            <input class="form-item form-entry" type="email" name="user_email">
-            <br>
-            <label class="form-item form-title">Message</label>
-            <br>
-            <textarea class="form-item form-textarea" name="message"></textarea>
-            <br>
-            <button class="form-item form-button" type="submit" onclick="contactResponse()">Go</button>
+    <div class="card card--contact">
+        <form id="contact-form" class="contact-form">
+            <label class="form-title">Name</label>
+            <input class="form-entry" type="text" name="user_name">
+            <label class="form-title">Email</label>
+            <input class="form-entry" type="email" name="user_email">
+            <label class="form-title">Message</label>
+            <textarea class="form-textarea" name="message"></textarea>
+            <button class="form-button" type="submit" onclick="contactResponse()">Go</button>
         </form>
         <div id="hidden-response" class="hidden-response">
-            <div class="form-response">
+            <div class="response-box">
                 <p>Thanks! Your message has been sent. You will hear from me soon.</p>
                 <input type="button" onclick="location.href='/blog';" value="Go to Blog" />
             </div>

@@ -72,39 +72,27 @@
     margin-top: 5px;
 }
 
-.logo-dog {
-    width: 45px;
-    display: inline-block;
-    margin-left: 7px;
-    z-index: 49;
-    position: relative;
+
+/* || Footer */
+
+.footer-social img {
+    width: 30px;
+    margin: 0 10px;
 }
 
-.logo-background {
-    width: 732px;
-    height: 22px;
-    margin: -22px auto 0;
-    z-index: 48;
-    position: relative;
+.footer-attributions p {
+    line-height: 1.5;
+    font-size: 12px;
+    color: var(--copy-light);
 }
 
-.logo-text {
-    z-index: 50;
-    display: inline-block;
-    position: relative;
-    font-size: 65px;
-    margin-left: 13px;
+.footer-goodbye {
+    font-size: 24px;
+    color: var(--copy-mid);
+    line-height: 1.5;
 }
 
-.link-home-nav {
-    font-size: 20px;
-    font-family: phoreuscherokee, serif;
-    font-weight: 700;
-    line-height: 1;
-    margin: 0!important;
-}
-
-/* || Card */
+/* || Card Global */
 
 .card {
     display: inline-block;
@@ -113,40 +101,12 @@
     border-radius: 5px;
 }
 
-.card-innerleft {
-    display: inline-block;
-}
 
-.card-innerright {
-    display: inline-block;
-}
+
+
+
 
 /* || Pages - Home */
-
-.greeting-pane--home {
-    font-size: 18px;
-    padding: 20px 0;
-    max-width: 732px;
-    margin: 0 auto;
-    position: relative;
-    height: 150px;
-}
-
-.greeting-pane--home h1 {
-    font-size: 60px;
-    margin: 28px 0 0 55px;
-    font-family: Sacramento, cursive;
-    display: inline-block;
-    letter-spacing: 1px;
-}
-
-.greeting-pane--home img {
-    width: 230px;
-    display: inline-block;
-    position: absolute;
-    right: 50px;
-    margin-top: -35px;
-}
 
 .card-pane--home {
     margin: 0 auto;
@@ -157,16 +117,19 @@
     width: 150px;
     height: 115px;
     vertical-align: top;
-    transition: background-color .4s ease-out;
-}
-
-.card--home:hover {
-    background-color: var(--theme-lightblue-alt);
 }
 
 .card--home p {
     margin-top: 10px;
     line-height: 1.25;
+}
+
+.card--home p:first-child {
+    font-size: 20px;
+    font-family: phoreuscherokee, serif;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0!important;
 }
 
 .text-pane--home {
@@ -181,6 +144,11 @@
     margin-bottom: 10px;
 }
 
+.text-pane--home img {
+    width: 240px;
+    display: inline-block;
+}
+
 .text-pane--home p {
     font-size: 18px;
     display: inline-block;
@@ -190,9 +158,66 @@
     vertical-align: top;
 }
 
-.text-pane--home img {
-    width: 240px;
+/* || Pages - About */
+
+.greeting-pane--about {
+    padding: 20px 0;
+    max-width: 732px;
+    margin: 0 auto;
+}
+
+.greeting-pane--about h1 {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.greeting-pane--about img {
+    width: 250px;
     display: inline-block;
+}
+
+.greeting-pane--about p {
+    font-size: 20px;
+    display: inline-block;
+    max-width: 440px;
+    line-height: 1.5;
+    margin: 40px 0px 0px 38px;
+    vertical-align: top;
+}
+
+.avatar-pane--about {
+    height: 175px;
+    width: 100%;
+}
+
+.avatar-pane--about h2 {
+    font-size: 60px;
+    margin: 50px 0 0 120px;
+    display: inline-block;
+}
+
+.avatar-img {
+    width: 220px;
+    margin-top: -20px;
+    position: absolute;
+    right: 150px;
+}
+
+.text-pane--about {
+    text-align: center;
+    padding: 20px 0;
+    max-width: 732px;
+    margin: 0 auto;
+}
+
+.text-pane--about p {
+    font-size: 20px;
+    display: inline-block;
+    max-width: 500px;
+    line-height: 1.5;
+    margin: 0px 0px 0px 38px;
+    vertical-align: top;
 }
 
 /* || Pages - Services */
@@ -225,7 +250,7 @@
     z-index: 51;
 }
 
-.greeting-pane--services p {
+.greeting-text--services p {
     line-height: 1.5;
     margin: 10px auto;
 }
@@ -244,6 +269,14 @@
 
 .card--services h3 {
     padding: 10px;
+}
+
+.card--services-innerleft {
+    display: inline-block;
+}
+
+.card--services-innerright {
+    display: inline-block;
 }
 
 .text-pane--services {
@@ -267,80 +300,6 @@
     vertical-align: top;
 }
 
-/* || Pages - Photos */
-
-.greeting-pane--photos {
-    max-width: 600px;
-    margin: 0px auto ;
-    text-align: center;
-}
-
-.greeting-pane--photos h1 {
-    font-size: 50px;
-    display: inline-block;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    margin-top: 30px;
-}
-
-.greeting-pane--photos p {
-    line-height: 1.5;
-    margin: 10px auto;
-    font-size: 20px;
-}
-
-.curator-pane {
-    max-width: 910px;
-    margin: 40px auto 30px;
-    border: 5px solid var(--theme-borders);
-    border-radius: 5px;
-}
-
-#curator-feed-test-layout {
-    padding: 0;
-}
-
-.crt-popup-text-body {
-    line-height: 1.5;
-}
-
-.crt-post-1 {
-    position: absolute!important;
-    right: 0!important;
-}
-
-.horizontal-frame {
-    overflow-x: hidden;
-    width: 900px;
-    height: 300px;
-    margin: 0 auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-}
-
-.inner-pane {
-    height: 300px;
-    width: 3000px;
-}
-
-.text-pane--photos {
-    padding: 0 0;
-    max-width: 732px;
-    margin: 0 auto;
-}
-
-.text-pane--photos p {
-    font-size: 18px;
-    max-width: 500px;
-    line-height: 1.5;
-    margin: 40px 0px 0px 0px;
-    vertical-align: top;
-}
-
-.photo-buttons {
-    text-align: center;
-}
-
 /* || Pages - Blog Main */
 
 .greeting-pane--blog {
@@ -349,7 +308,7 @@
     margin: 0 auto;
 }
 
-.greeting-pane--blog h2 {
+.greeting-pane--blog h1 {
     text-align: center;
     font-size: 35px;
 }
@@ -359,6 +318,11 @@
     max-width: 500px;
     line-height: 1.5;
     margin: 20px auto 0px auto;
+}
+
+.blog-intro-pane {
+    margin: 30px 30px 55px;
+    height: 155px;
 }
 
 .intro-img {
@@ -399,73 +363,64 @@
     bottom: 0;
 }
 
-/* || Pages - About */
+/* || Pages - Photos */
 
-.avatar {
-    width: 220px;
-    margin-top: -20px;
-    position: absolute;
-    right: 150px;
-}
-
-.avatar-pane--about {
-    height: 175px;
-    width: 100%;
-}
-
-.avatar-pane--about h2 {
-    font-size: 60px;
-    margin: 50px 0 0 120px;
-    display: inline-block;
-}
-
-
-.greeting-pane--about {
-    padding: 20px 0;
-    max-width: 732px;
-    margin: 0 auto;
-}
-
-.greeting-pane--about h1 {
+.greeting-pane--photos {
+    max-width: 600px;
+    margin: 0px auto ;
     text-align: center;
-    font-size: 60px;
-    margin-bottom: 10px;
 }
 
-.greeting-pane--about p {
-    font-size: 20px;
+.greeting-pane--photos h1 {
+    font-size: 50px;
     display: inline-block;
-    max-width: 440px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+
+.greeting-pane--photos p {
     line-height: 1.5;
-    margin: 40px 0px 0px 38px;
-    vertical-align: top;
-}
-
-.greeting-pane--about img {
-    width: 250px;
-    display: inline-block;
-}
-
-.text-pane--about {
-    text-align: center;
-    padding: 20px 0;
-    max-width: 732px;
-    margin: 0 auto;
-}
-
-.text-pane--about h2 {
-    text-align: center;
-    font-size: 35px;
-    margin-bottom: 10px;
-}
-
-.text-pane--about p {
+    margin: 10px auto;
     font-size: 20px;
-    display: inline-block;
-    max-width: 500px;
+}
+
+/* || Curator Carosel */
+
+.carosel-pane {
+    max-width: 910px;
+    margin: 40px auto 30px;
+    border: 5px solid var(--theme-borders);
+    border-radius: 5px;
+}
+
+.horizontal-frame {
+    overflow-x: hidden;
+    width: 900px;
+    height: 300px;
+    margin: 0 auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+.inner-pane {
+    height: 300px;
+    width: 3000px;
+}
+
+.carosel-controls {
+    text-align: center;
+}
+
+/* || classes generated by curator */
+
+.crt-post-1 { 
+    position: absolute!important;
+    right: 0!important;
+}
+
+.crt-popup-text-body {
     line-height: 1.5;
-    margin: 0px 0px 0px 38px;
-    vertical-align: top;
 }
 
 /* || Pages - Contact */
@@ -495,26 +450,16 @@
     margin: 0 auto;
 }
 
-.contact-form-card {
+.card--contact {
     width: 500px;
     height: 410px;
     padding: 10px;
     position: relative;
 }
 
-.form-item {
+.contact-form * {
+    display: block;
     margin: 10px 0;
-}
-.form-textarea {
-    width: 100%;
-    height: 150px;
-}
-
-.form-button {
-    width: 100px;
-    height: 62px;
-    background-color: var(--theme-green);
-    font-family: phoreuscherokee, serif;
 }
 
 .form-title {
@@ -528,15 +473,16 @@
     width: 250px;
 }
 
-.form-response {
-    margin: 10px auto 0;
-    max-width: 350px;
+.form-textarea {
+    width: 100%;
+    height: 150px;
 }
 
-.form-response p {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
+.form-button {
+    width: 100px;
+    height: 62px;
+    background-color: var(--theme-green);
+    font-family: phoreuscherokee, serif;
 }
 
 .hidden-response {
@@ -548,5 +494,16 @@
     left: 0;
     right: 0;
     margin: 0 auto;
+}
+
+.response-box {
+    margin: 10px auto 0;
+    max-width: 350px;
+}
+
+.response-box p {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 

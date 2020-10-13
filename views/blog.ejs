@@ -1,16 +1,16 @@
 <%- include("../views/partials/header.ejs") -%>
 
 <div class="greeting-pane--blog">
-    <h2>Welcome to the Blog!</h2>
+    <h1>Welcome to the Blog!</h1>
     <p>Glad you made it here. You can find some interesting things here about how to work with your dog on-leash. I also
-        recommend certain equipment which you can also find amongst the posts.
+        recommend certain equipment which you can also find among the posts.
     </p>
 </div>
 
 <div class="l-divider divider-bottom"></div>
 
 <% document.forEach(function(post) { %>
-    <div class="l-blog-intro-section">
+    <div class="blog-intro-pane">
 
         <div class="intro-img">
             <img class="intro-img" src=<%=post.data.image.url%>>

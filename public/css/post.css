@@ -1,9 +1,5 @@
-.post-box {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.5;
-    font-size: 18px;
+.post-main-img {
+    margin: 10px 0;
 }
 
 .post-title {
@@ -12,16 +8,20 @@
     margin-top: 20px;
 }
 
-.post-main-img {
-    margin: 10px 0;
-}
-
 .post-meta {
     text-align: center;
 }
 
 .post-date {
     display: inline-block;
+}
+
+.slice-box {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    font-size: 18px;
 }
 
 .slice-paragraph {
@@ -44,14 +44,12 @@
 
 .slice-link {
     padding: 10px;
-    border-left: 8px solid var(--theme-green);
     margin-top: 40px;
 }
 
 .slice-quote {
     text-align: center;
     padding: 10px;
-    border-left: 8px solid var(--theme-green);
     margin-top: 40px;
 }
 
@@ -67,23 +65,14 @@
     margin-top: 6px;
 }
 
-.post-pane {
-    text-align: center;
-    margin-top: 40px;
-}
-
 .slice-gallery {
     font-size: 20px;
     text-align: center;
     margin-top: 40px;
 }
 
-.gallery-content-frame {
-    display: inline-block;
-    text-align: center;
-}
 
-.carosel-slider {
+.post-gallery {
     width: 90%;
     font-size: 0;
     line-height: 0;
@@ -91,11 +80,17 @@
     margin: 0 auto;
 }
 
-.post-carosel-img {
-    margin: 0 15px 10px;
+.gallery-content-frame {
+    display: inline-block;
+    text-align: center;
 }
 
-.post-carosel-caption {
+.post-gallery-img {
+    margin: 0 15px 10px;
+    width: 270px;
+}
+
+.post-gallery-caption {
     margin: 0 15px 10px;
     font-size: 22px;
     line-height: 1.5;
