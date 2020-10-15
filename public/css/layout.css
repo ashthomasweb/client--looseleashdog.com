@@ -3,14 +3,12 @@
 /* || Header */
 
 .l-header {
-    padding-top: 6px;
-    height: 60px;
+    height: 63px;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 90;
     text-align: center;
-    border-bottom: 3px solid rgba(0,0,0,0.15);
 }
 
 .l-header-wrapper {
@@ -29,18 +27,19 @@
 .l-body-wrapper--home {
     max-width: 1000px;
     margin: 0px auto 0px;
-    min-height: calc(100vh - 240px);
+    min-height: calc(100vh - 243px);
 }
 
 .l-body-wrapper {
     max-width: 1000px;
     margin: 60px auto 0px auto;
-    min-height: calc(100vh - 180px);
+    min-height: calc(100vh - 183px);
 }
 
 .l-content-wrapper {
     position: relative;
     padding-bottom: 40px;
+
 }
 
 /* || Footer */
@@ -50,7 +49,7 @@
     position: absolute;
     width: 100%;
     text-align: center;
-    border-top: 3px solid rgba(0,0,0,0.05);
+    box-sizing: content-box;
 }
 
 .l-footer-wrapper {
@@ -59,10 +58,8 @@
     max-width: 1000px;
     margin: 0 auto;
     font-size: 0;
-    padding: 20px 0;
+    padding: 35px 0;
 }
-
-
 
 /* || Layout Boxes */
 

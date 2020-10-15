@@ -1,6 +1,4 @@
 
-
-
 * {
     box-sizing: border-box;
 }
@@ -8,17 +6,49 @@
 a {
     text-decoration: none;
     color: inherit;
+    transition: color .5s;
 }
 
+a:hover {
+    color: var(--theme-blue);
+}
 
 body {
     font-family: iskra, sans-serif;
     font-weight: 300;
     font-style: normal;
+    overflow-y: scroll;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: phoreuscherokee, serif;
     font-weight: 700;
     font-style: normal;
+    letter-spacing: 0.5px;
 }
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+

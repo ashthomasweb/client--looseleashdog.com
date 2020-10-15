@@ -2,68 +2,40 @@
 
 .navbar-pane {
     float: right;
-    top: 12px;
-    vertical-align: middle;
+    top: 20px;
     position: relative;
-    margin-top: -1px;
 }
 
 .navbar-pane li {
     display: inline-block;
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 19px;
-    padding-bottom: 3px;
-    border-bottom: 5px solid var(--theme-blue);
-    transition: border .8s;
-    -webkit-transition: border .8s;
+    font-size: 20px;
+    
 }
 
-.navbar-pane li:hover {
-    border-bottom: 5px solid var(--theme-green);
-}
+
 
 /* || Small logo */
 
 .smlogo-pane {
     text-align: center;
-    padding: 0;
+    padding: 8px 0 0 10px;
     position: fixed;
 }
 
-.smlogo-image {
-    width: 40px;
-    display: inline-block;
-    margin: 0 0 -5px 7px;
-    z-index: 92;
-}
-
-.smlogo-background {
-    width: 320px;
-    height: 12px;
-    margin: -10px auto 0;
-    z-index: 91;
-}
-
-.smlogo-text {
-    z-index: 92;
-    display: inline-block;
-    font-size: 33px;
-    margin-left: 13px;
-}
-
-/* || Large Logo Heading */
+/* || Large Logo  */
 
 .logo-pane {
     text-align: center;
     height: 90px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .logo-main {
     display: inline-block;
     width: 700px;
-    margin-bottom: -5px;
+    margin-top: 20px;
 }
 
 .logo-sm {
@@ -76,20 +48,24 @@
 /* || Footer */
 
 .footer-social img {
-    width: 30px;
-    margin: 0 10px;
+    width: 50px;
+    margin: 0px 10px;
 }
 
-.footer-attributions p {
+.footer-attributions {
+    margin-top: -7px;
+    height: 52px;
     line-height: 1.5;
-    font-size: 12px;
+    font-size: 11px;
     color: var(--copy-light);
 }
 
 .footer-goodbye {
-    font-size: 24px;
+    margin-top: -5px;
     color: var(--copy-mid);
     line-height: 1.5;
+    font-weight: 700;
+    letter-spacing: .5px;
 }
 
 /* || Card Global */
@@ -97,23 +73,19 @@
 .card {
     display: inline-block;
     padding: 10px;
-    margin: 20px;
     border-radius: 5px;
 }
-
-
-
-
-
 
 /* || Pages - Home */
 
 .card-pane--home {
     margin: 0 auto;
     text-align: center;
+    
 }
 
 .card--home {
+    margin: 30px 20px 25px;
     width: 150px;
     height: 115px;
     vertical-align: top;
@@ -269,6 +241,7 @@
 
 .card--services h3 {
     padding: 10px;
+    font-size: 22px;
 }
 
 .card--services-innerleft {

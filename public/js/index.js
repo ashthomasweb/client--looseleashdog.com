@@ -1,3 +1,5 @@
+// || curator carosel buttons
+
 {
     let scrollCount = 0;
 
@@ -17,3 +19,25 @@
         }
     }
 }
+
+// || navbar active link styling
+
+function currentPage() {
+    
+    const links = Array.from(document.getElementsByClassName("nav-link"));
+    
+    links.forEach(checkActive)
+    function checkActive(link) {
+        let currentPage = window.location.href;
+        if (currentPage == link.firstChild.parentNode.parentNode.href) {
+            link.style.paddingBottom = "4px";
+            link.style.borderBottom = "5px solid var(--theme-yellow)";
+            link.style.color = "var(--theme-yellow)";
+        }        
+    }
+    // console.log(window.location.href);
+    // console.log(links);
+}
+currentPage();
+
+
