@@ -1,10 +1,15 @@
 :root {
     --theme-blue: #3fc5f0;
+    --theme-darkblue: #239cc4;
     --theme-lightblue: #cdf3ff;
-    --theme-lightblue-alt: #a7ddf0;
+    --theme-lightblue-alt: #b0e9ff;
     --theme-green: #6decb9; /* rgba(109, 236, 185, 1) */
+    --theme-lightgreen: #9bffd7; 
     --theme-yellow: #f2f6d0;
+    --theme-lightyellow: #f5f7de;
     --theme-borders: #3a3b48;
+    --theme-lightborders: #4d4f60;
+
     --primary-background:#ffffff;
     --secondary-background: #f9f9f9;
     --copy-light: #b4b4b4;
@@ -23,13 +28,11 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--copy-dark);
 }
 
-
-
 /* || Layout Elements */
 
 .l-header {
     background-color: var(--theme-blue);  
-    /* border-bottom: 3px solid rgba(0,0,0,0.05); */
+    /* border-bottom: 3px solid rgba(0,0,0,0.2); */
 
 }
 
@@ -37,8 +40,8 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--copy-dark);
     border-bottom: 5px solid var(--theme-blue);
     padding-bottom: 3px;
-    transition: border .8s;
-    -webkit-transition: border .8s;
+    transition: border .1s;
+    -webkit-transition: border .15s ease-out;
 
 }
 
@@ -60,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .l-footer {
-    background-color: var(--theme-yellow);
+    background-color: var(--theme-lightgreen);
     border-top: 3px solid rgba(0,0,0,0.05);
 }
 
@@ -78,16 +81,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .card {
     background-color: var(--theme-lightblue);
-    box-shadow: 4px 3px 5px var(--shadow);
+    box-shadow: 3px 2px 7px var(--shadow);
     color: var(--copy-dark);
+    border: 2px solid var(--theme-lightblue-alt);
 }
 
 .card--home {
-    transition: background-color .4s ease-out;
+    background-color: var(--theme-lightblue);
+    transition: border .1s linear;
 }
 
 .card--home:hover {
-    background-color: var(--theme-lightblue-alt);
+    background-color: #dcf7ff;
+    border: 2px solid var(--theme-blue);
 }
 
 /* || Post Elements */
@@ -108,9 +114,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: phoreuscherokee, serif;
     font-weight: 700;
     font-style: normal;
-    border-top: 4px solid var(--theme-yellow);
+    border-top: 4px solid var(--theme-lightgreen);
 
-    border-bottom: 4px solid var(--theme-yellow);
+    border-bottom: 4px solid var(--theme-lightgreen);
     padding-bottom: 3px;
     transition: border-bottom 1s, border-top 1s, color 1s;
     -webkit-transition: border-bottom 1s, border-top 1s, color 1s;
@@ -134,4 +140,16 @@ h1, h2, h3, h4, h5, h6 {
 .link-underborder:hover{
     border-bottom: 2px solid var(--theme-blue);
     color: var(--theme-blue);
+}
+
+.linkjs-underborder{
+    border-bottom: 2px solid var(--theme-borders);
+    padding-bottom: 1px;
+    transition: border-bottom 1s, color 1s;
+    -webkit-transition: border-bottom 1s, color 1s;
+}
+  
+.linkjs-underborder:hover{
+    border-bottom: 2px solid var(--theme-borders);
+    /* color: var(--theme-blue); */
 }

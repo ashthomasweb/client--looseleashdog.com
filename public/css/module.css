@@ -35,7 +35,7 @@
 .logo-main {
     display: inline-block;
     width: 700px;
-    margin-top: 20px;
+    margin-top: 19px;
 }
 
 .logo-sm {
@@ -81,27 +81,54 @@
 .card-pane--home {
     margin: 0 auto;
     text-align: center;
-    
+}
+
+.link-box {
+    width: 150px;
+    height: 120px;
+    display: inline-block;
 }
 
 .card--home {
     margin: 30px 20px 25px;
     width: 150px;
-    height: 115px;
+    height: 120px;
+    padding: 0;
     vertical-align: top;
 }
 
-.card--home p {
-    margin-top: 10px;
-    line-height: 1.25;
+.link-box * {
+    pointer-events: none;
 }
 
-.card--home p:first-child {
-    font-size: 20px;
+.card--home p {
+    margin: 5px;
+    line-height: 1.25;
+    color: var(--copy-mid);
+}
+
+
+
+.card--home h2 {
+    display: inline-block;
+    padding-bottom: 4px;
+    padding-top: 10px;
+    border-bottom: 3px solid var(--theme-lightblue);
+    font-size: 22px;
     font-family: phoreuscherokee, serif;
     font-weight: 700;
     line-height: 1;
-    margin: 0!important;
+    margin: 0;
+}
+
+.card--home-hoverjs {
+    
+}
+
+.card--home-hoverjs h2{
+    color: var(--theme-borders);
+    transition: border-bottom .15s ease-out;
+    border-bottom: 3px solid var(--theme-darkblue);
 }
 
 .text-pane--home {
