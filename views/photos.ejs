@@ -8,19 +8,36 @@
     </p>
 </div>
 
-<div class="carosel-pane">
-    <div id="scroll-pane" class="horizontal-frame">
-        <div class="inner-pane">
-            <div id="curator-feed-wide-layout"><a href="https://curator.io" target="_blank"
-                    class="crt-logo crt-tag">Powered
-                    by Curator.io</a></div>
+<div id="photo-overlay" class="overlay-pane--photos" onclick="closeOverlay()">
+    <div class="overlay-postbox--photos">
+        <div class="box-overlay-img">
+            <div class="vertical-center-wrap">
+
+                <img id="photo-overlay-img" src="">
+
+            </div>
+
         </div>
+        <div class="box-overlay-text">
+
+            <p id="photo-overlay-text"></p>
+        </div>
+        <div class="box-overlay-links">
+            <p id="photo-overlay-links"></p>
+        </div>
+        <div class="box-overlay-insta">
+            <button id="instaBtn" class="insta" type="button" onclick="instaRoute()">View on Instagram</button>
+        </div>
+
     </div>
 </div>
-
-<div class="carosel-controls">
-    <button onclick="scrollWinLeft()">Left</button>
-    <button onclick="scrollWinRight()">Right</button>
-</div>
+                    
+     
+        
+        <script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
+        <link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
+        <ul class="juicer-feed" data-feed-id="looseleashdog" data-per="15"></ul>
+<br>
+        
 
 <%- include("../views/partials/footer.ejs") -%>

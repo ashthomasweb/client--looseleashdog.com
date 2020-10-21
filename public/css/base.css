@@ -48,4 +48,8 @@ h6 {
     font-size: 18px;
 }
 
+/* || Juicer styles  */
 
+.j-navigate {
+    display: none;
+}
