@@ -1,6 +1,7 @@
 
 * {
     box-sizing: border-box;
+ 
 }
 
 a {
@@ -48,8 +49,45 @@ h6 {
     font-size: 18px;
 }
 
-/* || Juicer styles  */
 
-.j-navigate {
-    display: none;
+
+/* || Juicer overrides  */
+
+.feed-item {
+    background-color: var(--theme-blue)!important;
 }
+
+.referral {
+    display: none!important;
+}
+
+.juicer {
+    float: left!important;
+    display: none!important;
+}
+
+.j-overlay {
+    display: none!important;
+}
+
+.j-video {
+    display: none!important;
+}
+
+.j-message a {
+    color: var(--copy-light)!important;
+}
+
+.slick-track {
+    transition: left 0.25s ease-out!important;
+    
+}
+
+.j-text {
+    float: left!important;
+    display: none!important;
+
+}
+
+
+

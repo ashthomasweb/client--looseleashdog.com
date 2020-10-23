@@ -49,6 +49,11 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 5px solid var(--theme-yellow);
 }
 
+.current {
+    border-bottom: 5px solid var(--theme-yellow)!important;
+    color: var(--theme-yellow)!important;
+}
+
 .l-body-wrapper {
     background-color: rgba(0,0,0,0);
 }
@@ -81,9 +86,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .card {
     background-color: var(--theme-lightblue);
-    box-shadow: 3px 2px 7px var(--shadow);
+    box-shadow: 4px 2px 12px var(--shadow);
     color: var(--copy-dark);
     border: 2px solid var(--theme-lightblue-alt);
+}
+
+.card--services {
+    border: 4px solid var(--theme-lightblue-alt);
+
 }
 
 .card--home {
@@ -153,22 +163,5 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 2px solid var(--theme-borders);
     /* color: var(--theme-blue); */
 }
-.feed-item {
-    background-color: var(--theme-blue)!important;
-}
 
-.referral {
-    display: none!important;
-}
 
-.juicer {
-    display: none!important;
-}
-
-.j-overlay {
-    display: none!important;
-}
-
-.j-video {
-    display: none!important;
-}

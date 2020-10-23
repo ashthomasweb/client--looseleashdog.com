@@ -36,16 +36,22 @@
 
             <div class="navbar-pane">
                 <ul>
-                    <a href="/about"><li class="nav-link" id="about">About</li></a>
-                    <a href="/services"><li class="nav-link" id="services">Services</li></a>
-                    <a href="/blog"><li class="nav-link" id="blog">Blog</li></a>
-                    <a href="/photos"><li class="nav-link" id="photos">Photos</li></a>
-                    <a href="/contact"><li class="nav-link" id="contact">Contact</li></a>
+                    <a href="/about"><li id="about" <% if (pageTitle === "About") { %> class="current" <% } %> >About</li></a>
+                    <a href="/services"><li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %> >Services</li></a>
+                    <a href="/blog"><li id="blog" <% if (pageTitle === "Blog") { %> class="current" <% } %> >Blog</li></a>
+                    <a href="/photos"><li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %> >Photos</li></a>
+                    <a href="/contact"><li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %> >Contact</li></a>
+
+                    
                 </ul>
             </div>
 
         </div>
     </div>
-
+    
+    
     <div class="l-body-wrapper">
         <div class="l-content-wrapper">
+            
+            
+           
