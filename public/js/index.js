@@ -47,7 +47,7 @@ function juicerFeed() {
       
         // || Text post error hide
         let x = document.getElementsByClassName("j-stack");
-        console.log(x[0].children);
+        // console.log(x[0].children);
         const posts1 = Array.from(x[0].children);
         const posts2 = Array.from(x[1].children);
         const posts = posts1.concat(posts2);
@@ -96,18 +96,41 @@ function juicerFeed() {
 
         }
 
-    }, 1500);
+
+        // //stack length equalizer
+        // console.log(document.getElementsByClassName("j-stack")[0].children)
+        // function stackLength() {
+        //     let stack = Array.from(document.getElementsByClassName("j-stack"));
+        //     console.log(stack);
+        //     stack2.forEach(functionA);
+        //     function functionA(item){
+        //         console.log(item.style);
+
+        //     }
+
+
+        // }
+        // stackLength();
+
+
+
+
+    }, 800);
 }
 
-juicerFeed();
+
 
 function closeOverlay() {
     document.getElementById("photo-overlay").style.display = "none";
 }
 
+function curatorLeft() {
+    document.getElementById("curator-slider").scrollBy(-300, 0);
+}
 
-
-
+function curatorRight() {
+    document.getElementById("curator-slider").scrollBy(300, 0);
+}
 
 
 

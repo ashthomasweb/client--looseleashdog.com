@@ -1,7 +1,7 @@
 :root {
     --theme-blue: #3fc5f0;
     --theme-darkblue: #239cc4;
-    --theme-lightblue: #cdf3ff;
+    --theme-lightblue: #ccf2fd;
     --theme-lightblue-alt: #b0e9ff;
     --theme-green: #6decb9; /* rgba(109, 236, 185, 1) */
     --theme-lightgreen: #9bffd7; 
@@ -32,17 +32,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .l-header {
     background-color: var(--theme-blue);  
-    /* border-bottom: 3px solid rgba(0,0,0,0.2); */
+    border-bottom: 3px solid rgba(0,0,0,0.1);
 
 }
 
 .navbar-pane li {
     color: var(--copy-dark);
-    border-bottom: 5px solid var(--theme-blue);
     padding-bottom: 3px;
-    transition: border .1s;
-    -webkit-transition: border .15s ease-out;
-
+    border-radius: 4px;
 }
 
 .navbar-pane li:hover {

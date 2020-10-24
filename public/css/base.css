@@ -66,6 +66,8 @@ h6 {
     display: none!important;
 }
 
+
+
 .j-overlay {
     display: none!important;
 }
@@ -90,4 +92,7 @@ h6 {
 }
 
 
+#juicer {
+    margin: 0 auto -40px !important;
+}
 

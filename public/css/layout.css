@@ -3,7 +3,7 @@
 /* || Header */
 
 .l-header {
-    height: 63px;
+    height: 66px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -27,13 +27,13 @@
 .l-body-wrapper--home {
     max-width: 1000px;
     margin: 0px auto 0px;
-    min-height: calc(100vh - 243px);
+    min-height: calc(100vh - 246px);
 }
 
 .l-body-wrapper {
     max-width: 1000px;
     margin: 60px auto 0px auto;
-    min-height: calc(100vh - 183px);
+    min-height: calc(100vh - 186px);
 }
 
 .l-content-wrapper {
