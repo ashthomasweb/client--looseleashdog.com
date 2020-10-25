@@ -21,6 +21,7 @@
 body {
     background-color: #cef1fd;
     background-image: url(/images/flowers.png);
+    background-attachment: fixed;
     color: var(--copy-mid);
 }
 

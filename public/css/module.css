@@ -73,7 +73,7 @@
 .card {
     display: inline-block;
     padding: 10px;
-    border-radius: 7px;
+    border-radius: 9px;
 }
 
 /* || Pages - Home */
@@ -134,42 +134,49 @@
 
 .text-pane--home {
     padding: 20px 0;
-    max-width: 732px;
+    max-width: 750px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .text-pane--home h1 {
     text-align: center;
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 60px;
+    margin: 25px auto 20px;
+    letter-spacing: 1px;
+
 }
 
 .text-pane--home img {
-    width: 240px;
+    width: 200px;
     display: inline-block;
+    vertical-align: middle;
+    
 }
 
 .text-pane--home p {
-    font-size: 18px;
+    font-size: 20px;
     display: inline-block;
     max-width: 450px;
-    line-height: 1.5;
-    margin: 40px 0px 0px 30px;
-    vertical-align: top;
+    line-height: 1.6;
+    margin: 0px 40px 0px 0px;
+    vertical-align: middle;
+    text-align: left;
+
 }
 
 /* || Pages - About */
 
 .greeting-pane--about {
     padding: 20px 0;
-    max-width: 732px;
+    max-width: 750px;
     margin: 0 auto;
 }
 
 .greeting-pane--about h1 {
     text-align: center;
     font-size: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .greeting-pane--about img {
@@ -180,9 +187,9 @@
 .greeting-pane--about p {
     font-size: 20px;
     display: inline-block;
-    max-width: 440px;
-    line-height: 1.5;
-    margin: 40px 0px 0px 38px;
+    max-width: 450px;
+    line-height: 1.6;
+    margin: 30px 0px 0px 38px;
     vertical-align: top;
 }
 
@@ -207,15 +214,15 @@
 .text-pane--about {
     text-align: center;
     padding: 20px 0;
-    max-width: 732px;
+    max-width: 750px;
     margin: 0 auto;
 }
 
 .text-pane--about p {
     font-size: 20px;
     display: inline-block;
-    max-width: 500px;
-    line-height: 1.5;
+    max-width: 550px;
+    line-height: 1.6;
     margin: 0px 0px 0px 38px;
     vertical-align: top;
 }
@@ -243,16 +250,17 @@
 }
 
 .greeting-text--services {
-    max-width: 400px;
+    max-width: 450px;
     margin: 0 auto;
     position: relative;
-    top: 50px;
+    top: 60px;
     z-index: 51;
 }
 
 .greeting-text--services p {
-    line-height: 1.5;
-    margin: 10px auto;
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 15px auto;
 }
 
 .card-pane--services {
@@ -276,9 +284,9 @@
 .card--services img {
     margin: 8px 0;
     border: 2px solid var(--theme-blue); 
-    box-shadow: 3px 2px 5px var(--shadow);
+    box-shadow: 2px 1px 2px var(--shadow);
     background-color: var(--theme-blue);
-    border-radius: 5px;
+    border-radius: 7px;
     width: 110px;
 }
 
@@ -304,7 +312,7 @@
 
 .text-pane--services {
     padding: 30px 0 40px;
-    max-width: 770px;
+    max-width: 700px;
     margin: 0px auto 0;
 }
 
@@ -315,11 +323,10 @@
 }
 
 .text-pane--services p {
-    font-size: 18px;
+    font-size: 20px;
     display: inline-block;
-    max-width: 770px;
-    line-height: 1.5;
-    margin: 20px 0px 0px 38px;
+    line-height: 1.6;
+    margin: 20px 0px 0px 0px;
     vertical-align: top;
 }
 
@@ -327,20 +334,21 @@
 
 .greeting-pane--blog {
     padding: 20px 0;
-    max-width: 732px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 .greeting-pane--blog h1 {
     text-align: center;
-    font-size: 35px;
+    font-size: 60px;
+    letter-spacing: 1px;
 }
 
 .greeting-pane--blog p {
-    font-size: 18px;
-    max-width: 500px;
-    line-height: 1.5;
-    margin: 20px auto 0px auto;
+    font-size: 20px;
+    max-width: 620px;
+    line-height: 1.6;
+    margin: 15px auto 0px auto;
 }
 
 .card--blog-intro {
@@ -407,23 +415,26 @@
 /* || Pages - Photos */
 
 .greeting-pane--photos {
-    max-width: 600px;
     margin: 0px auto ;
     text-align: center;
+    padding: 20px 0;
+    max-width: 700px;
+
+    
 }
 
 .greeting-pane--photos h1 {
-    font-size: 50px;
+    font-size: 60px;
     display: inline-block;
     letter-spacing: 1px;
-    margin-bottom: 5px;
-    margin-top: 30px;
 }
 
 .greeting-pane--photos p {
-    line-height: 1.5;
-    margin: 10px auto;
     font-size: 20px;
+    line-height: 1.6;
+    margin: 15px auto 0;
+    max-width: 620px;
+    text-align: left;
 }
 
 .text-pane--photos {
@@ -436,10 +447,11 @@
 .text-pane--photos p {
     font-size: 20px;
     display: inline-block;
-    max-width: 500px;
-    line-height: 1.5;
+    max-width: 550px;
+    line-height: 1.6;
     margin: 0px 0px 0px 38px;
     vertical-align: top;
+    text-align: left;
 }
 
 .overlay-pane--photos {
@@ -597,16 +609,16 @@
 
 .greeting-pane--contact {
     z-index: 1;
-    max-width: 600px;
+    max-width: 450px;
     margin: 0px auto ;
     text-align: center;
-    padding: 30px;
+    padding: 50px 0;
 }
 
 .greeting-pane--contact h1 {
     z-index: 1;
     position: relative;
-    font-size: 50px;
+    font-size: 60px;
     display: inline-block;
     letter-spacing: 1px;
     margin-bottom: 5px;
@@ -616,7 +628,7 @@
 .greeting-pane--contact p {
     z-index: 1;
     position: relative;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 10px auto;
     font-size: 20px;
 }
