@@ -196,19 +196,25 @@
 .avatar-pane--about {
     height: 175px;
     width: 100%;
+    text-align: center;
+    position: relative;
 }
 
 .avatar-pane--about h2 {
-    font-size: 60px;
-    margin: 50px 0 0 120px;
+    font-size: 55px;
     display: inline-block;
+    position: absolute;
+    left: 15%;
+    top: 32%;
+    
 }
 
 .avatar-img {
     width: 220px;
-    margin-top: -20px;
+    display: inline-block;
     position: absolute;
-    right: 150px;
+    right: 15%;
+    top: -13%;
 }
 
 .text-pane--about {
@@ -223,7 +229,7 @@
     display: inline-block;
     max-width: 550px;
     line-height: 1.6;
-    margin: 0px 0px 0px 38px;
+    margin: 0px 0px 0px 0px;
     vertical-align: top;
 }
 
@@ -377,7 +383,12 @@
     display: inline-block;
     width: 250px; 
     height: 155px;
-    border-radius: 5px;
+}
+
+.intro-img img {
+    
+    border-radius: 7px;
+    border: 2px solid var(--theme-blue);
 }
 
 .intro-text-box {
