@@ -12,7 +12,7 @@
       </div>
 
       <div class="post-meta">
-        <h4 class="post-date">First pulished on <%= post.first_publication_date.slice(5, 10) %>, </h4>
+        <h4 class="post-date">First published on <%= post.first_publication_date.slice(5, 10) %>, </h4>
         <h4 class="post-date"><%= post.first_publication_date.slice(0, 4) %>.</h4>
       </div>
       <div class="l-divider divider-bottom"></div>
@@ -26,12 +26,12 @@
           <div class="slice-box slice-paragraph"><%- PrismicDOM.RichText.asHtml(slice.primary.paragraph) %></div>
         <% } %>
 
-        <%# Heading %>
+        <%# Heading h2%>
         <% if (slice.slice_type == "heading") { %>
           <div class="slice-box slice-heading"><%- PrismicDOM.RichText.asHtml(slice.primary.heading) %> </div>
         <% } %>
 
-        <%# Subheading %>
+        <%# Subheading h3%>
         <% if (slice.slice_type == "subheading") { %>
           <div class="slice-box slice-subheading"><%- PrismicDOM.RichText.asHtml(slice.primary.subheading) %> </div>
         <% } %>

@@ -38,7 +38,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-// Initialize the prismic.io api
+// Initialize the prismic api
 function initApi(req) {
     return Prismic.getApi(prismicEndpoint, {
         req: req
@@ -109,11 +109,17 @@ app.get('/contact', function (req, res) {
     });
 });
 
+
+
+// || working manual refresh for localhost and ftp-ready 
 let port = process.env.PORT;
 if (port == null || port == "") {
     port = 3000;
     console.log('Server started on port 3000.');
 }
+app.listen(port), function () {};
 
-app.listen(port, function () {});
+
+
+
 

@@ -11,23 +11,26 @@
 <div class="l-divider divider-bottom"></div>
 
 <% document.forEach(function(post) { %>
-    <div class="card card--blog-intro">
-        <div class="blog-intro-pane">
+<div class="card card--blog-intro">
 
-            <div class="intro-img">
-                <img class="intro-img" src=<%=post.data.image.url%>>
-            </div>
-
-            <div class="intro-text-box">
-                <h2><%=post.data.title[0].text%></h2>
-                <p><%=post.first_publication_date.slice(0,10)%></p>
-                <p><%=post.data.description[0].text%></p>
-                <p><a class="link-underborder"
-                        href='./posts/<%=post.data.title[0].text.replace(/ /g, "-");%>'>Read&nbsp;More</a></p>
-            </div>
-
+    <div class="card-img-section">
+        <div class="intro-img">
+            <img src=<%=post.data.image.url%>>
         </div>
     </div>
+
+    <div class="card-text-section">
+        <div class="intro-text-box">
+            <h2><%=post.data.title[0].text%></h2>
+            <p>published on <%=post.first_publication_date.slice(5, 10)%>, <%=post.first_publication_date.slice(0, 4)%></p>
+
+            <p><%=post.data.description[0].text.slice(0, 225)%></p>
+            <button class="intro-read-more" type="button" onclick="location.href='./posts/<%=post.data.title[0].text.replace(/ /g, '-') %>' ">
+                    Read More</button>
+        </div>
+    </div>
+
+</div>
 <% }); %>
 
 <%- include("../views/partials/footer.ejs") -%>

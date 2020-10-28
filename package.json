@@ -8,6 +8,7 @@
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
+    "livereload": "^0.9.1",
     "prismic-dom": "^2.2.3",
     "prismic-javascript": "^3.0.2"
   },
@@ -16,7 +17,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC"

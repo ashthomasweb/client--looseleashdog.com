@@ -1,6 +1,7 @@
 :root {
     --theme-blue: #3fc5f0;
     --theme-darkblue: #239cc4;
+    --theme-verylightblue: #ebfbff;
     --theme-lightblue: #ccf2fd;
     --theme-lightblue-alt: #b0e9ff;
     --theme-green: #6decb9; /* rgba(109, 236, 185, 1) */
@@ -9,13 +10,13 @@
     --theme-lightyellow: #f5f7de;
     --theme-borders: #3a3b48;
     --theme-lightborders: #4d4f60;
-
     --primary-background:#ffffff;
     --secondary-background: #f9f9f9;
     --copy-light: #b4b4b4;
     --copy-mid: #6a6a6a;
     --copy-dark: #3a3b48;
     --shadow: rgba(0, 0, 0, 0.4);
+    /*#48899f*/
 }
 
 body {
@@ -139,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .link-underborder{
     color: var(--theme-blue);
-    border-bottom: 2px solid var(--primary-background);
+    border-bottom: 2px solid var(--theme-blue);
     padding-bottom: 1px;
     transition: border-bottom 1s, color 1s;
     -webkit-transition: border-bottom 1s, color 1s;
@@ -149,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 2px solid var(--theme-blue);
     color: var(--theme-blue);
 }
-
+/* 
 .linkjs-underborder{
     border-bottom: 2px solid var(--theme-borders);
     padding-bottom: 1px;
@@ -160,6 +161,6 @@ h1, h2, h3, h4, h5, h6 {
 .linkjs-underborder:hover{
     border-bottom: 2px solid var(--theme-borders);
     /* color: var(--theme-blue); */
-}
+} */
 
 

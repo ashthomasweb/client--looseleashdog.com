@@ -4,12 +4,23 @@
 
 .post-title {
     text-align: center;
-    font-size: 30px;
     margin-top: 20px;
+}
+
+.post-title h1 {
+    font-size: 50px;
+
 }
 
 .post-meta {
     text-align: center;
+    
+}
+
+.post-meta h4 {
+    font-size: 16px;
+    color: var(--copy-light);
+
 }
 
 .post-date {
