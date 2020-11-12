@@ -9,6 +9,7 @@ var prismicEndpoint = 'https://ashleyth-test.prismic.io/api/v2';
 
 const app = express();
 
+
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -118,7 +119,6 @@ if (port == null || port == "") {
     console.log('Server started on port 3000.');
 }
 app.listen(port), function () {};
-
 
 
 

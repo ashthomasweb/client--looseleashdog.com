@@ -9,50 +9,76 @@
     <meta name="author" content="" />
     <meta name="copyright" content="" />
     <title><%=pageTitle%></title>
-
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/module.css">
-    <link rel="stylesheet" href="/css/state.css">
     <link rel="stylesheet" href="/css/theme.css">
     <link rel="stylesheet" href="/css/post.css">
-
+    <link rel="stylesheet" href="/css/mquery.css">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/atn3lzq.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400&family=Sacramento&display=swap">
-    <script src="https://kit.fontawesome.com/3ca2dc3dad.js" crossorigin="anonymous"></script>
-
-
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_i2jhWUzjMEJrRku3U92ZB');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('ashley_service', 'contact_form', this);
+                document.getElementById("hidden-response").style.display = "block";
+                document.getElementById("contact-form").style.display = "none";
+            });
+        }
+    </script>
+    <!-- END EmailJS -->
 </head>
 
 <body>
+<% if ( pageTitle === "Home" ) { %>
+    <div class="l-header l-home-header">
+        <div class="l-header-wrapper l-home-header">
+            <div class="logo-pane">
+                <img class="logo-main" src="/images/logo.png" >
+            </div>
+        </div>
+    </div>
+    <div class="l-body-wrapper--home ">
+        <div class="l-content-wrapper"> 
+<%} else { %>
     <div class="l-header">
         <div class="l-header-wrapper">
-
             <div class="smlogo-pane">
                 <a href="/"><img class="logo-sm" src="/images/logo.png"></a>
             </div>
-
             <div class="navbar-pane">
                 <ul>
-                    <a href="/about"><li id="about" <% if (pageTitle === "About") { %> class="current" <% } %> >About</li></a>
-                    <a href="/services"><li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %> >Services</li></a>
-                    <a href="/blog"><li id="blog" <% if (pageTitle === "Blog") { %> class="current" <% } %> >Blog</li></a>
-                    <a href="/photos"><li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %> >Photos</li></a>
-                    <a href="/contact"><li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %> >Contact</li></a>
-
-                    
+                    <a href="/about">
+                        <li id="about" <% if (pageTitle === "About") { %> class="current" <% } %>>About</li>
+                    </a>
+                    <a href="/services">
+                        <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services</li>
+                    </a>
+                    <a href="/blog">
+                        <li id="blog" <% if (pageTitle === "Blog") { %> class="current" <% } %>>Blog</li>
+                    </a>
+                    <a href="/photos">
+                        <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
+                    </a>
+                    <a href="/contact">
+                        <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact</li>
+                    </a>
                 </ul>
             </div>
-
         </div>
     </div>
-    
-    
     <div class="l-body-wrapper">
         <div class="l-content-wrapper">
-            
-            
-           
+<% } %>

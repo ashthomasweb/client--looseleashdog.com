@@ -22,7 +22,22 @@
     position: relative;
 }
 
-/* || Body (code lives in partials) */
+/* || Navigation Bar */
+
+.navbar-pane {
+    float: right;
+    top: 21px;
+    position: relative;
+}
+
+.navbar-pane li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 21px;
+}
+
+/* || Body */
 
 .l-body-wrapper--home {
     max-width: 1000px;
@@ -77,6 +92,22 @@
 }
 
 
+/* || Card Global */
+
+.card {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.card-hr {
+    border: none;
+    height: 2px;
+    background-color: var(--theme-lightblue-alt);
+    width: 50%;
+}
+
+
 /* || Section Dividers */
 
 .l-divider {
@@ -84,20 +115,24 @@
     height: 40px;
 }
 
-.divider-top {
-    /* style in theme.css */
-}
-
-.divider-bottom {
-    /* style in theme.css */
-}
-
-.overhang-fix {
+.overfix-bottom {
     margin-bottom: 85px;
 }
 
-.overhang-fix-top {
+.overfix-top {
     margin-top: 85px;
+}
+
+.pull-top {
+    margin-top: -30px;
+}
+
+.pull-bottom {
+    margin-bottom: 40px
+}
+
+.space-bottom {
+    margin-bottom: 40px
 }
 
 /* || Pages - Home */
@@ -113,3 +148,54 @@
 /* || Pages - Contact */
 
 /* || Default Post */
+
+
+
+/* || Small logo */
+
+.smlogo-pane {
+    text-align: center;
+    padding: 8px 0 0 10px;
+    position: fixed;
+}
+
+/* || Large Logo  */
+
+.logo-pane {
+    text-align: center;
+    height: 90px;
+    /* margin-top: 10px; */
+}
+
+.logo-main {
+    display: inline-block;
+    width: 700px;
+    margin-top: 19px;
+}
+
+.logo-sm {
+    display: inline-block;
+    width: 330px;
+    margin-top: 5px;
+}
+
+/* || Footer */
+
+.footer-social img {
+    width: 50px;
+    margin: 0px 10px;
+}
+
+.footer-attributions {
+    margin-top: -7px;
+    height: 52px;
+    line-height: 1.6;
+    font-size: 11px;
+}
+
+.footer-goodbye {
+    margin-top: -5px;
+    line-height: 1.5;
+    font-weight: 700;
+    letter-spacing: .5px;
+}

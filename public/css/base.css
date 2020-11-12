@@ -1,15 +1,7 @@
 
 * {
     box-sizing: border-box;
- 
 }
-
-a {
-    text-decoration: none;
-    color: var(--theme-blue);
-}
-
-
 
 body {
     font-family: iskra, sans-serif;
@@ -25,122 +17,6 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.5px;
 }
 
-h1 {
-    font-size: 32px;
-}
-
-h2 {
-    font-size: 26px;
-}
-
-h3 {
-    font-size: 24px;
-}
-
-h4 {
-    font-size: 20px;
-}
-
-h5 {
-    font-size: 18px;
-}
-
-h6 {
-    font-size: 18px;
-}
-
 button:focus {
     outline: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* || Juicer overrides  */
-/* 
-.feed-item {
-    background-color: var(--theme-blue)!important;
-}
-
-.referral {
-    display: none!important;
-}
-
-.juicer {
-    float: left!important;
-    display: none!important;
-}
-
-
-
-.j-overlay {
-    display: none!important;
-}
-
-.j-video {
-    display: none!important;
-}
-
-.j-message a {
-    color: var(--copy-light)!important;
-}
-
-.slick-track {
-    transition: left 0.25s ease-out!important;
-    
-}
-
-.j-text {
-    float: left!important;
-    display: none!important;
-
-}
-
-
-#juicer {
-    margin: 0 auto -40px !important;
-}
- */

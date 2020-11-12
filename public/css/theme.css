@@ -4,18 +4,22 @@
     --theme-verylightblue: #ebfbff;
     --theme-lightblue: #ccf2fd;
     --theme-lightblue-alt: #b0e9ff;
+    --theme-darkgreen: #00d681; /* rgba(109, 236, 185, 1) */
     --theme-green: #6decb9; /* rgba(109, 236, 185, 1) */
     --theme-lightgreen: #9bffd7; 
     --theme-yellow: #f2f6d0;
     --theme-lightyellow: #f5f7de;
     --theme-borders: #3a3b48;
     --theme-lightborders: #4d4f60;
+    --border-light: #e6e6e6;
     --primary-background:#ffffff;
     --secondary-background: #f9f9f9;
     --copy-light: #b4b4b4;
     --copy-mid: #6a6a6a;
     --copy-dark: #3a3b48;
     --shadow: rgba(0, 0, 0, 0.4);
+    --darken: rgba(0,0,0,0.1);
+    --clear: rgba(0, 0, 0, 0);
     /*#48899f*/
 }
 
@@ -30,92 +34,22 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--copy-dark);
 }
 
-/* || Layout Elements */
+/* || Link Styling */
 
-.l-header {
-    background-color: var(--theme-blue);  
-    border-bottom: 3px solid rgba(0,0,0,0.1);
-
+a {
+    text-decoration: none;
+    color: var(--theme-green);
+    padding: 1px;    
 }
 
-.navbar-pane li {
-    color: var(--copy-dark);
-    padding-bottom: 3px;
-    border-radius: 4px;
+p a {
+    border-bottom: 2px solid var(--clear);
+    transition: border-bottom .1s ease-out;
 }
 
-.navbar-pane li:hover {
-    border-bottom: 5px solid var(--theme-yellow);
+p a:hover {
+    border-bottom: 2px solid var(--theme-green);
 }
-
-.current {
-    border-bottom: 5px solid var(--theme-yellow)!important;
-    color: var(--theme-yellow)!important;
-}
-
-.l-body-wrapper {
-    background-color: rgba(0,0,0,0);
-}
-
-.l-body-wrapper--home {
-    background-color: rgba(0,0,0,0);
-}
-
-.l-content-wrapper {
-    background-color: var(--primary-background);
-    box-shadow: 0px 0px 8px var(--shadow);
-}
-
-.l-footer {
-    background-color: var(--theme-lightgreen);
-    border-top: 3px solid rgba(0,0,0,0.05);
-}
-
-.divider-top {
-    border-top: 1px solid #e6e6e6;
-    background-image: linear-gradient(#f0f0f0, rgba(0,0,0,0));
-}
-
-.divider-bottom {
-    border-bottom: 1px solid #e6e6e6;
-    background-image: linear-gradient(rgba(0,0,0,0), #f5f5f5);
-}
-
-/* || Card Elements */
-
-.card {
-    background-color: var(--theme-lightblue);
-    box-shadow: 4px 2px 12px var(--shadow);
-    color: var(--copy-dark);
-    border: 2px solid var(--theme-lightblue-alt);
-}
-
-.card--services {
-    border: 4px solid var(--theme-lightblue-alt);
-
-}
-
-.card--home {
-    background-color: var(--theme-lightblue);
-    transition: border .1s linear;
-}
-
-.card--home:hover {
-    background-color: #dcf7ff;
-    border: 2px solid var(--theme-blue);
-}
-
-/* || Post Elements */
-
-.slice-link {
-    border-left: 8px solid var(--theme-green);
-}
-
-.slice-quote {
-    border-left: 8px solid var(--theme-green);
-}
-
-/* || Link Styles */
 
 .link-underborder-impact{
     color: var(--theme-blue);
@@ -124,7 +58,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     font-style: normal;
     border-top: 4px solid var(--theme-lightgreen);
-
     border-bottom: 4px solid var(--theme-lightgreen);
     padding-bottom: 3px;
     transition: border-bottom 1s, border-top 1s, color 1s;
@@ -134,7 +67,6 @@ h1, h2, h3, h4, h5, h6 {
 .link-underborder-impact:hover{
     border-bottom: 4px solid var(--theme-blue);
     border-top: 4px solid var(--theme-blue);
-
     color: var(--theme-blue);
 }
 
@@ -150,17 +82,144 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 2px solid var(--theme-blue);
     color: var(--theme-blue);
 }
-/* 
-.linkjs-underborder{
-    border-bottom: 2px solid var(--theme-borders);
-    padding-bottom: 1px;
-    transition: border-bottom 1s, color 1s;
-    -webkit-transition: border-bottom 1s, color 1s;
+
+/* || Navbar  */
+
+.navbar-pane li {
+    color: var(--copy-dark);
+    padding-bottom: 3px;
+    border-radius: 4px; /* curve of underline edge */
 }
-  
-.linkjs-underborder:hover{
-    border-bottom: 2px solid var(--theme-borders);
-    /* color: var(--theme-blue); */
-} */
+
+.navbar-pane li:hover {
+    border-bottom: 5px solid var(--theme-yellow);
+}
+
+.current {
+    border-bottom: 5px solid var(--theme-yellow)!important;
+    color: var(--theme-yellow)!important;
+}
+
+/* || Main Layout Elements */
+
+.l-header {
+    background-color: var(--theme-blue);  
+    border-bottom: 3px solid var(--darken);
+}
+
+.l-body-wrapper {
+    background-color: var(--clear);
+}
+
+.l-content-wrapper {
+    background-color: var(--primary-background);
+    box-shadow: 0px 0px 8px var(--shadow);
+}
+
+.l-footer {
+    background-color: var(--theme-lightgreen);
+    border-top: 3px solid var(--darken);
+}
+
+.divider-top {
+    border-top: 1px solid var(--border-light);
+    background-image: linear-gradient(#f0f0f0, var(--clear));
+}
+
+.divider-bottom {
+    border-bottom: 1px solid var(--border-light);
+    background-image: linear-gradient(var(--clear), #f5f5f5);
+}
+
+/* || Card Elements */
+
+.card {
+    background-color: var(--theme-lightblue);
+    box-shadow: 4px 2px 12px var(--shadow);
+    color: var(--copy-dark);
+    border: 2px solid var(--theme-lightblue-alt);
+}
+
+.card--services {
+    border: 4px solid var(--theme-lightblue-alt);
+}
+
+.card--home {
+    background-color: var(--theme-lightblue);
+    transition: border .1s linear;
+}
+
+.card--home:hover {
+    background-color: #dcf7ff;
+    border: 2px solid var(--theme-blue);
+}
+
+/* || Post Elements */
+
+.slice-link {
+    border-left: 10px solid var(--theme-darkgreen);
+}
+
+.slice-quote {
+    border-left: 10px solid var(--theme-blue);
+}
+
+.post-meta p {
+    color: var(--copy-light);
+}
+
+.slice-quote p:nth-child(1) {
+    color: var(--theme-blue);
+}
+
+.slice-quote p:nth-child(2) {
+    opacity: 0.8;
+    color: var(--theme-blue);
+}
+
+.slice-gallery {
+    background-color: var(--theme-lightblue);
+    border-top: 3px solid var(--theme-lightblue-alt);
+    border-bottom: 3px solid var(--theme-lightblue-alt);
+}
+
+.post-gallery-img {
+    border: 1px solid var(--theme-blue);
+}
+
+.post-gallery-caption {
+    color: var(--copy-mid);
+}
+
+ 
+/* || Contact Form  */
+
+input:focus {
+    outline: 1px solid var(--theme-blue);
+}
+
+textarea:focus {
+    outline: 1px solid var(--theme-blue);
+}
 
 
+/* || Footer */
+
+.footer-attributions {
+    color: var(--copy-light);
+}
+
+.footer-goodbye {
+    color: var(--copy-mid);
+}
+
+/* || Pages - Home  */
+
+
+.card--home p {
+    color: var(--copy-mid);
+}
+
+.card--home h2 {
+    border-bottom: 3px solid var(--theme-lightblue);
+}

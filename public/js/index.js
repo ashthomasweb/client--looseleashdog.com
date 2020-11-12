@@ -11,12 +11,12 @@ function homeLinkStyle() {
         card.addEventListener("mouseout", functionB)
 
         function functionA(card) {
-            console.log(this);
-            this.classList.add("card--home-hoverjs");
+            // console.log(this);
+            this.classList.add("active-nav");
         }
 
         function functionB(card) {
-            this.classList.remove("card--home-hoverjs");
+            this.classList.remove("active-nav");
         }
     }
 }
@@ -46,7 +46,7 @@ document.getElementById("curator-hover").addEventListener("mouseout", function (
 function jrSlider() {
     let image = document.getElementById("junior-image");
     let imagesArray = ["./images/pluto.jpg", "./images/cincy.jpg", "./images/junior.jpg", "./images/rosie.jpg"];
-
+    
     image.addEventListener("mouseover", hoverPhotoChange);
     image.addEventListener("mouseout", hoverOff);
 
@@ -110,6 +110,24 @@ function rosieSlider() {
 rosieSlider();
 
 
+// || contact form field checker 
+
+
+
+function formFieldCheck() {
+    let name = document.forms["contact"]["user_name"].value;
+    let email = document.forms["contact"]["user_email"].value;
+    let message = document.forms["contact"]["message"].value;
+    let elem = document.getElementById("contact-button");
+    
+    if (name == "" || email == "" || message == "") {
+        elem.style.opacity = ".5";
+        elem.style.pointerEvents = "none";
+    } else {
+        elem.style.opacity = "1";
+        elem.style.pointerEvents = "auto";
+    }
+}
 
 
 

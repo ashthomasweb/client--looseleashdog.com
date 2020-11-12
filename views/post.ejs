@@ -1,74 +1,73 @@
 <%- include("../views/partials/header.ejs") -%>
 
-  <% document.forEach(function(post) { %>
-    <% if ( title === post.data.title[0].text.replace(/\?/g, "") ) { %>
+<% document.forEach(function(post) { %>
+  <% if ( title === post.data.title[0].text.replace(/\?/g, "")) { %>
 
-      <div class="post-main-img">
-        <img src="<%= post.data.image.url %>">
-      </div>
-      
-      <div class="post-title">
-        <h1><%= post.data.title[0].text %></h1>
-      </div>
+    <div class="post-main-img">
+      <img src="<%= post.data.image.url %>">
+    </div>
 
-      <div class="post-meta">
-        <h4 class="post-date">First published on <%= post.first_publication_date.slice(5, 10) %>, </h4>
-        <h4 class="post-date"><%= post.first_publication_date.slice(0, 4) %>.</h4>
-      </div>
-      <div class="l-divider divider-bottom"></div>
+    <div class="post-title">
+      <h1><%= post.data.title[0].text %></h1>
+    </div>
 
-      <%# Slice Zones %>
+    <div class="post-meta">
+      <p class="post-date"><i>First published on <%= post.first_publication_date.slice(5, 10) %>, </i></p>
+      <p class="post-date"><i><%= post.first_publication_date.slice(0, 4) %></i></p>
+    </div>
 
-      <% post.data.body1.forEach(function(slice){ %>
+    <div class="l-divider divider-bottom space-bottom"></div>
 
-        <%# Body Text%>
-        <% if (slice.slice_type == "body") { %>
-          <div class="slice-box slice-paragraph"><%- PrismicDOM.RichText.asHtml(slice.primary.paragraph) %></div>
-        <% } %>
+    <%# Slice Zones %>
+    <% post.data.body1.forEach(function(slice) { %>
 
-        <%# Heading h2%>
-        <% if (slice.slice_type == "heading") { %>
-          <div class="slice-box slice-heading"><%- PrismicDOM.RichText.asHtml(slice.primary.heading) %> </div>
-        <% } %>
+      <%# Body Text%>
+      <% if (slice.slice_type == "body") { %>
+        <div class="slice-paragraph"><%- PrismicDOM.RichText.asHtml(slice.primary.paragraph) %></div>
+      <% } %>
 
-        <%# Subheading h3%>
-        <% if (slice.slice_type == "subheading") { %>
-          <div class="slice-box slice-subheading"><%- PrismicDOM.RichText.asHtml(slice.primary.subheading) %> </div>
-        <% } %>
+      <%# Heading h2%>
+      <% if (slice.slice_type == "heading") { %>
+        <div class="slice-heading"><%- PrismicDOM.RichText.asHtml(slice.primary.heading) %></div>
+      <% } %>
 
-        <%# Link %>
-        <% if (slice.slice_type == "link") { %>
-          <div class="slice-box slice-link">
-            <p><a href="<%= slice.primary.link.url %>">Animal Rescue League</a></p>
+      <%# Subheading h3%>
+      <% if (slice.slice_type == "subheading") { %>
+        <div class="slice-subheading"><%- PrismicDOM.RichText.asHtml(slice.primary.subheading) %></div>
+      <% } %>
+
+      <%# Link %>
+      <% if (slice.slice_type == "link1") { %>
+        <div class="slice-link">
+          <p><a href="<%= slice.primary.link[0].spans[0].data.url %>" target="__blank"><%=slice.primary.link[0].text%></a></p>
+        </div>
+      <% } %>
+
+      <%# Quote %>
+      <% if (slice.slice_type == "quote1") { %>
+        <div class="slice-quote">
+          <%- PrismicDOM.RichText.asHtml(slice.primary.quote) %>
+          <%- PrismicDOM.RichText.asHtml(slice.primary.author) %>
+        </div>
+      <% } %>
+
+      <%# Image Gallery %>
+      <% if (slice.slice_type == "image_gallery") { %>
+        <div class="slice-gallery">
+          <div class="post-gallery">
+            <% slice.items.forEach(function(image) { %>
+            <div class="gallery-content-frame">
+              <img class="post-gallery-img" src="<%= image.gallery_image.url %>"/>
+              <p class="post-gallery-caption"><%= image.image_captions[0].text %></p>
+            </div>
+            <% }) %>
           </div>
-        <% } %>
+        </div>
+      <% }; %>
 
-        <%# Quote %>
-        <% if (slice.slice_type == "quote1") { %>
-          <div class="slice-box slice-quote">
-            <%- PrismicDOM.RichText.asHtml(slice.primary.quote) %>
-            <%- PrismicDOM.RichText.asHtml(slice.primary.author) %>
-          </div>
-        <% } %>
+    <% }); %>
 
-        <%# Image Gallery %>
-        <% if (slice.slice_type == "image_gallery") { %>
-          <div class="slice-gallery">
-              <div class="post-gallery" >
-                <% slice.items.forEach(function(image){ %>
-                  <div class="gallery-content-frame">
-                    <img class="post-gallery-img" src="<%= image.gallery_image.url %>" />
-                    <p class="post-gallery-caption" ><%= image.image_captions[0].text %></p>
-                  </div>
-                <% }) %>
-              </div>
-          </div>
-        <% } %>
-
-      <% }) %>
-
-    <% } %>
-
-  <% }); %>
+  <% }; %>
+<% }); %>
 
 <%- include("../views/partials/footer.ejs") -%>
