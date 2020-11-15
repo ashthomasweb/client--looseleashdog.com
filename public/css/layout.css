@@ -1,33 +1,33 @@
-/* || Section Layout */
+/* || CSS file for "looseleashdog" layout  */
 
 /* || Header */
 
 .l-header {
-    height: 66px;
-    width: 100%;
-    position: fixed;
-    top: 0;
     z-index: 90;
+    position: fixed;
     text-align: center;
+    top: 0;
+    width: 100%;
+    height: 66px;
 }
 
 .l-header-wrapper {
-    width: 100%;
     max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .l-home-header {
-    height: 120px;
     position: relative;
+    height: 120px;
 }
 
 /* || Navigation Bar */
 
 .navbar-pane {
-    float: right;
-    top: 21px;
     position: relative;
+    top: 21px;
+    float: right;
 }
 
 .navbar-pane li {
@@ -41,56 +41,54 @@
 
 .l-body-wrapper--home {
     max-width: 1000px;
-    margin: 0px auto 0px;
     min-height: calc(100vh - 246px);
+    margin: 0px auto 0px;
 }
 
 .l-body-wrapper {
     max-width: 1000px;
-    margin: 60px auto 0px auto;
     min-height: calc(100vh - 186px);
+    margin: 60px auto 0px auto;
 }
 
 .l-content-wrapper {
     padding-bottom: 40px;
-
 }
 
 /* || Footer */
 
 .l-footer {
-    height: 120px;
     position: absolute;
-    width: 100%;
     text-align: center;
     box-sizing: content-box;
+    width: 100%;
+    height: 120px;
 }
 
 .l-footer-wrapper {
+    max-width: 1000px;
     width: 100%;
     height: 120px;
-    max-width: 1000px;
+    padding: 35px 0;
     margin: 0 auto;
     font-size: 0;
-    padding: 35px 0;
 }
 
 /* || Layout Boxes */
 
 .l-box-third {
     display: inline-block;
+    vertical-align: middle;
     width: 333px;
     font-size: 18px;
-    vertical-align: middle;
 }
 
 .l-box-half {
     display: inline-block;
-    line-height: 0;
-    font-size: 0;
     width: 50%;
+    font-size: 0;
+    line-height: 0;
 }
-
 
 /* || Card Global */
 
@@ -101,12 +99,11 @@
 }
 
 .card-hr {
-    border: none;
-    height: 2px;
-    background-color: var(--theme-lightblue-alt);
     width: 50%;
+    height: 2px;
+    border: none;
+    background-color: var(--theme-lightblue-alt);
 }
-
 
 /* || Section Dividers */
 
@@ -135,28 +132,12 @@
     margin-bottom: 40px
 }
 
-/* || Pages - Home */
-
-/* || Pages - Services */
-
-/* || Pages - Blog Main */
-
-
-
-/* || Pages - Photos */
-
-/* || Pages - Contact */
-
-/* || Default Post */
-
-
-
 /* || Small logo */
 
 .smlogo-pane {
+    position: fixed;
     text-align: center;
     padding: 8px 0 0 10px;
-    position: fixed;
 }
 
 /* || Large Logo  */
@@ -187,15 +168,15 @@
 }
 
 .footer-attributions {
-    margin-top: -7px;
     height: 52px;
-    line-height: 1.6;
+    margin-top: -7px;
     font-size: 11px;
+    line-height: 1.6;
 }
 
 .footer-goodbye {
     margin-top: -5px;
-    line-height: 1.5;
     font-weight: 700;
+    line-height: 1.5;
     letter-spacing: .5px;
 }

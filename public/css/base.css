@@ -1,19 +1,20 @@
+/* || CSS file for "looseleashdog" base */
 
 * {
     box-sizing: border-box;
 }
 
 body {
+    overflow-y: scroll;
     font-family: iskra, sans-serif;
     font-weight: 300;
     font-style: normal;
-    overflow-y: scroll;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: phoreuscherokee, serif;
-    font-weight: 700;
     font-style: normal;
+    font-weight: 700;
     letter-spacing: 0.5px;
 }
 

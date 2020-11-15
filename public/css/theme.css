@@ -1,3 +1,5 @@
+/* || CSS file for "looseleashdog" theme  */
+
 :root {
     --theme-blue: #3fc5f0;
     --theme-darkblue: #239cc4;
@@ -24,9 +26,9 @@
 }
 
 body {
-    background-color: #cef1fd;
     background-image: url(/images/flowers.png);
     background-attachment: fixed;
+    background-color: #cef1fd;
     color: var(--copy-mid);
 }
 
@@ -37,9 +39,9 @@ h1, h2, h3, h4, h5, h6 {
 /* || Link Styling */
 
 a {
+    padding: 1px;    
     text-decoration: none;
     color: var(--theme-green);
-    padding: 1px;    
 }
 
 p a {
@@ -52,30 +54,30 @@ p a:hover {
 }
 
 .link-underborder-impact{
-    color: var(--theme-blue);
-    font-size: 35px;
-    font-family: phoreuscherokee, serif;
-    font-weight: 700;
-    font-style: normal;
+    padding-bottom: 3px;
     border-top: 4px solid var(--theme-lightgreen);
     border-bottom: 4px solid var(--theme-lightgreen);
-    padding-bottom: 3px;
     transition: border-bottom 1s, border-top 1s, color 1s;
     -webkit-transition: border-bottom 1s, border-top 1s, color 1s;
+    color: var(--theme-blue);
+    font-family: phoreuscherokee, serif;
+    font-style: normal;
+    font-size: 35px;
+    font-weight: 700;
 }
   
 .link-underborder-impact:hover{
-    border-bottom: 4px solid var(--theme-blue);
     border-top: 4px solid var(--theme-blue);
+    border-bottom: 4px solid var(--theme-blue);
     color: var(--theme-blue);
 }
 
 .link-underborder{
-    color: var(--theme-blue);
-    border-bottom: 2px solid var(--theme-blue);
     padding-bottom: 1px;
+    border-bottom: 2px solid var(--theme-blue);
     transition: border-bottom 1s, color 1s;
     -webkit-transition: border-bottom 1s, color 1s;
+    color: var(--theme-blue);
 }
   
 .link-underborder:hover{
@@ -86,9 +88,9 @@ p a:hover {
 /* || Navbar  */
 
 .navbar-pane li {
-    color: var(--copy-dark);
     padding-bottom: 3px;
     border-radius: 4px; /* curve of underline edge */
+    color: var(--copy-dark);
 }
 
 .navbar-pane li:hover {
@@ -103,8 +105,8 @@ p a:hover {
 /* || Main Layout Elements */
 
 .l-header {
-    background-color: var(--theme-blue);  
     border-bottom: 3px solid var(--darken);
+    background-color: var(--theme-blue);  
 }
 
 .l-body-wrapper {
@@ -112,13 +114,13 @@ p a:hover {
 }
 
 .l-content-wrapper {
-    background-color: var(--primary-background);
     box-shadow: 0px 0px 8px var(--shadow);
+    background-color: var(--primary-background);
 }
 
 .l-footer {
-    background-color: var(--theme-lightgreen);
     border-top: 3px solid var(--darken);
+    background-color: var(--theme-lightgreen);
 }
 
 .divider-top {
@@ -134,10 +136,10 @@ p a:hover {
 /* || Card Elements */
 
 .card {
-    background-color: var(--theme-lightblue);
-    box-shadow: 4px 2px 12px var(--shadow);
-    color: var(--copy-dark);
     border: 2px solid var(--theme-lightblue-alt);
+    box-shadow: 4px 2px 12px var(--shadow);
+    background-color: var(--theme-lightblue);
+    color: var(--copy-dark);
 }
 
 .card--services {
@@ -150,8 +152,8 @@ p a:hover {
 }
 
 .card--home:hover {
-    background-color: #dcf7ff;
     border: 2px solid var(--theme-blue);
+    background-color: #dcf7ff;
 }
 
 /* || Post Elements */
@@ -178,9 +180,9 @@ p a:hover {
 }
 
 .slice-gallery {
-    background-color: var(--theme-lightblue);
     border-top: 3px solid var(--theme-lightblue-alt);
     border-bottom: 3px solid var(--theme-lightblue-alt);
+    background-color: var(--theme-lightblue);
 }
 
 .post-gallery-img {
@@ -191,7 +193,6 @@ p a:hover {
     color: var(--copy-mid);
 }
 
- 
 /* || Contact Form  */
 
 input:focus {
@@ -201,7 +202,6 @@ input:focus {
 textarea:focus {
     outline: 1px solid var(--theme-blue);
 }
-
 
 /* || Footer */
 
@@ -214,7 +214,6 @@ textarea:focus {
 }
 
 /* || Pages - Home  */
-
 
 .card--home p {
     color: var(--copy-mid);

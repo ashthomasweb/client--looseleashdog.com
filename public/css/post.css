@@ -1,3 +1,4 @@
+/* || CSS file for "looseleashdog" blog posts  */
 /* || main image and title section  */
 
 .post-main-img {
@@ -14,8 +15,8 @@
 }
 
 .post-meta {
-    margin-top: 5px;
     text-align: center;
+    margin-top: 5px;
 }
 
 .post-meta p {
@@ -27,23 +28,21 @@
     display: inline-block;
 }
 
-
-
 /* || text paragraph   */
 
 .slice-paragraph {
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
     font-size: 18px;
     line-height: 1.7;
-    max-width: 600px;
-    text-align: left;
-    margin: 20px auto;
 }
 
 /* || h2 and container  */
 
 .slice-heading {
-    max-width: 600px;
     text-align: left;
+    max-width: 600px;
     margin: 50px auto 20px;
 }
 
@@ -54,8 +53,8 @@
 /* || h3 and container */
 
 .slice-subheading {
-    max-width: 600px;
     text-align: left;
+    max-width: 600px;
     margin: 50px auto 20px;
 }
 
@@ -71,21 +70,19 @@
     padding: 15px;
     margin: 60px auto;
     font-size: 24px;
-
 }
 
 .slice-link p {
     max-width: 400px;
     margin: 0 auto;
     line-height: 1.4;
-
 }
 
 /* || highlighted quote  */
 
 .slice-quote {
-    max-width: 600px;
     text-align: center;
+    max-width: 600px;
     padding: 20px;
     margin: 60px auto;
 }
@@ -93,46 +90,44 @@
 .slice-quote p:nth-child(1) {
     font-size: 22px;
     font-style: italic;
-    letter-spacing: 0.5px;
-    
+    letter-spacing: 0.5px;   
 }
 
 .slice-quote p:nth-child(2) {
-    font-size: 16px;
-    margin-top: 10px;
-    text-transform: uppercase;
-    font-weight: 700;
     position: relative;
     left: 70px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 /* || image gallery */
 
 .slice-gallery {
-    font-size: 20px;
     text-align: center;
-    margin: 50px auto;
     padding: 30px 0 13px;
-
+    margin: 50px auto;
+    font-size: 20px;
 }
 
 .post-gallery {
+    text-align: center;
     width: 90%;
+    margin: 0 auto;
     font-size: 0;
     line-height: 0;
-    text-align: center;
-    margin: 0 auto;
 }
 
 .gallery-content-frame {
-    display: inline-block;
     text-align: center;
+    display: inline-block;
 }
 
 .post-gallery-img {
-    margin: 0 15px 10px;
     width: 270px;
     border-radius: 12px;
+    margin: 0 15px 10px;
 }
 
 .post-gallery-caption {

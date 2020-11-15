@@ -112,14 +112,13 @@ app.get('/contact', function (req, res) {
 
 
 
-// || working manual refresh for localhost and ftp-ready 
+// ||  
+
+
 let port = process.env.PORT;
-if (port == null || port == "") {
-    port = 3000;
-    console.log('Server started on port 3000.');
+if (port == null || port == "") { 
+    port = 3000; 
 }
-app.listen(port), function () {};
-
-
+app.listen(port, () => console.log(`Server started at port ${port}.`));
 
 
