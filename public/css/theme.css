@@ -9,6 +9,8 @@
     --theme-darkgreen: #00d681; /* rgba(109, 236, 185, 1) */
     --theme-green: #6decb9; /* rgba(109, 236, 185, 1) */
     --theme-lightgreen: #9bffd7; 
+    --theme-lightgreen-alt: #9cefdb;
+
     --theme-yellow: #f2f6d0;
     --theme-lightyellow: #f5f7de;
     --theme-borders: #3a3b48;

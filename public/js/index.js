@@ -22,7 +22,7 @@ function homeLinkStyle() {
 }
 homeLinkStyle();
 
-// || curator carosel control buttons 
+// || curator carousel control buttons 
 
 function curatorLeft() {
     document.getElementById("curator-slider").scrollBy(-310, 0);
@@ -121,10 +121,10 @@ function formFieldCheck() {
     let elem = document.getElementById("contact-button");
     
     if (name == "" || email == "" || message == "") {
-        elem.style.opacity = ".5";
+        elem.style.backgroundColor = "var(--theme-lightgreen-alt)";
         elem.style.pointerEvents = "none";
     } else {
-        elem.style.opacity = "1";
+        elem.style.backgroundColor = "var(--theme-green)";
         elem.style.pointerEvents = "auto";
     }
 }

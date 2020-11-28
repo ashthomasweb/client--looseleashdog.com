@@ -11,6 +11,7 @@
     display: inline-block;
     width: 150px;
     height: 120px;
+    padding: 2px 5px;
 }
 
 .link-box * {
@@ -40,7 +41,6 @@
     font-weight: 700;
     line-height: 1;
 }
-
 
 .active-nav h2 {
     border-bottom: 3px solid var(--theme-blue);
@@ -78,6 +78,23 @@
     font-size: 20px;
     line-height: 1.6;
 }
+
+.text-pane--home {
+    max-width: 750px;
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text-pane--home p {
+    display: inline-block;
+    max-width: 650px;
+    margin: 0px 0px 0px 0px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
 
 /* || Pages - About */
 
@@ -636,13 +653,12 @@
     border-bottom-left-radius: 12px;
     border-top-right-radius: 12px;
     margin: 0 auto;
-    background-color: var(--theme-green);
+    background-color: var(--theme-lightgreen-alt);
     font-family: phoreuscherokee, serif;
     font-size: 36px;
     font-weight: 700;
     color: var(--copy-dark);
     pointer-events: none;
-    opacity: .5;
     transition: background-color .1s ease-out;
 }
 
