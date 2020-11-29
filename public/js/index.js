@@ -43,71 +43,71 @@ document.getElementById("curator-hover").addEventListener("mouseout", function (
 });
 
 // || junior and rosie hover slideshow
-function jrSlider() {
-    let image = document.getElementById("junior-image");
-    let imagesArray = ["./images/pluto.jpg", "./images/cincy.jpg", "./images/junior.jpg", "./images/rosie.jpg"];
+// function jrSlider() {
+//     let image = document.getElementById("junior-image");
+//     let imagesArray = ["./images/pluto.jpg", "./images/cincy.jpg", "./images/junior.jpg", "./images/rosie.jpg"];
     
-    image.addEventListener("mouseover", hoverPhotoChange);
-    image.addEventListener("mouseout", hoverOff);
+//     image.addEventListener("mouseover", hoverPhotoChange);
+//     image.addEventListener("mouseout", hoverOff);
 
-    let i = 0;
-    var timer;
+//     let i = 0;
+//     var timer;
 
-    function photoChange() {
-        i++;
-        image.src = imagesArray[i];
-        if (i < 3) {
-            i++;
-        } else {
-            i = 0;
-        };
-    }
+//     function photoChange() {
+//         i++;
+//         image.src = imagesArray[i];
+//         if (i < 3) {
+//             i++;
+//         } else {
+//             i = 0;
+//         };
+//     }
 
-    function hoverPhotoChange() {
-        image.src = imagesArray[i];
-        timer = setInterval(photoChange, 3000);
-    };
+//     function hoverPhotoChange() {
+//         image.src = imagesArray[i];
+//         timer = setInterval(photoChange, 3000);
+//     };
 
-    function hoverOff() {
-        clearInterval(timer);
-        image.src = "./images/junior.jpg";
-    }
-}
+//     function hoverOff() {
+//         clearInterval(timer);
+//         image.src = "./images/junior.jpg";
+//     }
+// }
 
-jrSlider();
+// jrSlider();
 
-function rosieSlider() {
-    let image = document.getElementById("rosie-image");
-    let imagesArray = ["./images/pluto.jpg", "./images/cincy.jpg", "./images/junior.jpg", "./images/rosie.jpg"];
+// function rosieSlider() {
+//     let image = document.getElementById("rosie-image");
+//     let imagesArray = ["./images/pluto.jpg", "./images/cincy.jpg", "./images/junior.jpg", "./images/rosie.jpg"];
 
-    image.addEventListener("mouseover", hoverPhotoChange);
-    image.addEventListener("mouseout", hoverOff);
+//     image.addEventListener("mouseover", hoverPhotoChange);
+//     image.addEventListener("mouseout", hoverOff);
 
-    let i = 0;
-    var timer;
+//     let i = 0;
+//     var timer;
 
-    function photoChange() {
-        i++;
-        image.src = imagesArray[i];
-        if (i < 3) {
-            i++;
-        } else {
-            i = 0;
-        };
-    }
+//     function photoChange() {
+//         i++;
+//         image.src = imagesArray[i];
+//         if (i < 3) {
+//             i++;
+//         } else {
+//             i = 0;
+//         };
+//     }
 
-    function hoverPhotoChange() {
-        image.src = imagesArray[i];
-        timer = setInterval(photoChange, 3000);
-    };
+//     function hoverPhotoChange() {
+//         image.src = imagesArray[i];
+//         timer = setInterval(photoChange, 3000);
+//     };
 
-    function hoverOff() {
-        clearInterval(timer);
-        image.src = "./images/rosie.jpg";
-    }
-}
+//     function hoverOff() {
+//         clearInterval(timer);
+//         image.src = "./images/rosie.jpg";
+//     }
+// }
 
-rosieSlider();
+// rosieSlider();
 
 
 // || contact form field checker 
