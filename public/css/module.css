@@ -212,8 +212,8 @@
 .card--services-left {
     position: relative;
     display: inline-block;
-    width: 310px;
-    height: 250px;
+    width: 300px;
+    height: 282px;
     margin: 0 30px;
     padding: 4px;
     border: 0 !important;
@@ -223,8 +223,8 @@
 .card--services-right {
     position: relative;
     display: inline-block;
-    width: 310px;
-    height: 250px;
+    width: 300px;
+    height: 282px;
     margin: 0px 30px;
     padding: 4px;
     border: 0 !important;
@@ -257,7 +257,7 @@
 }
 
 .services-card-top-section h3 {
-    padding-top: 10px;
+    padding-top: 9px;
     font-size: 26px;
 }
 
@@ -272,12 +272,23 @@
 
 .card--services-innerleft {
     display: inline-block;
-    margin: 10px 10px;
+    width: 118px;
+    margin: 9px 0px 10px 18px;
+    padding: 8px 8px 25px;
+    border: 1px solid var(--theme-lightblue);
+    border-radius: 12px;
+    float: left;
 }
 
 .card--services-innerright {
     display: inline-block;
-    margin: 10px 10px 10px 30px;
+    width: 118px;
+
+    margin: 9px 18px 10px 0;
+    padding: 8px 0px 25px;
+    border: 1px solid var(--theme-lightblue);
+    border-radius: 12px;
+    float: right;
 }
 
 .text-pane--services {
