@@ -332,54 +332,70 @@
     line-height: 1.6;
 }
 
-.card--blog-intro {
+
+
+
+.card--blog-main {
+    position: relative;
     display: block;
     width: 80%;
-    padding: 0px;
-    border: 4px solid var(--theme-lightblue-alt) !important;
+    height: 205px;
+    padding: 4px;
+    border: none !important;
     margin: 50px auto;
-    background-color: var(--theme-verylightblue) !important;
+    background-color: var(--theme-lightblue-alt) !important;
     /* transition: background-color .3s ease-out, border .1s linear!important; */
 }
 
-.card-img-section {
+.blog-card-inner-wrap {
+    position: absolute;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    border-radius: 8px;
+    background-color: var(--theme-verylightblue);
+}
+
+.blog-card-left-section {
+    position: relative;
     display: inline-block;
-    width: 291px;
-    padding: 20px 20px 20px 20px;
-    border: solid 1px var(--theme-lightblue-alt);
+    width: 292px;
+    height: 197px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    margin-top: -1px;
-    margin-bottom: -1px;
+    border-right: 1px solid var(--theme-lightblue-alt);
     background-color: var(--theme-lightblue);
+    padding: 22px;
 }
 
-.intro-img {
-    display: inline-block;
-    width: 250px;
-    height: 154px;
-}
-
-.intro-img img {
-    width: 250px;
-    height: 154px;
-    border: 1px solid var(--theme-blue);
-    border-radius: 12px;
-    background-color: var(--theme-blue);
-    /* box-shadow: 0px 0px 6px var(--shadow); */
-}
-
-.card-text-section {
-    display: inline-block;
+.blog-card-right-section {
     vertical-align: top;
-    width: 497px;
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 296px); 
     height: 197px;
 }
 
+
+.intro-img {
+    display: inline-block;
+    width: 248px;
+    height: 153px;
+    margin: 0 auto;
+}
+
+.intro-img img {
+    width: 248px;
+    height: 153px;
+    border: 1px solid var(--theme-blue);
+    border-radius: 12px;
+    background-color: var(--theme-blue);
+}
+
 .intro-text-box {
+    z-index: 80;
     position: relative;
     vertical-align: top;
-    width: 497px;
+    width: 100%;
     height: 197px;
     padding-top: 15px;
 }

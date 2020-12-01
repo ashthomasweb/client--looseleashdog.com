@@ -5,31 +5,47 @@
 <div class="greeting-pane--blog">
     <h1>Welcome to the Blog!</h1>
     <p>Glad you made it here. You can find some interesting things here about how to work with your dog on-leash. I also
-        recommend certain equipment which you can also find among the posts.
+        recommend certain equipment which you can find among the posts.
     </p>
 </div>
 
 <div class="l-divider divider-bottom"></div>
 
 <% document.forEach(function(post) { %>
-    <div class="card card--blog-intro">
 
-        <div class="card-img-section">
-            <div class="intro-img">
-                <img src=<%=post.data.image.url%>>
-            </div>
-        </div>
+    
+<div class="card card--blog-main">
+    <div class="blog-card-inner-wrap">
 
-        <div class="card-text-section">
-            <div class="intro-text-box">
-                <h2><%=post.data.title[0].text%></h2>
-                <p>published on <%=post.first_publication_date.slice(5, 10)%>, <%=post.first_publication_date.slice(0, 4)%></p>
-                <p><%=post.data.description[0].text.slice(0, 225)%></p>
-                <button class="intro-read-more" type="button" onclick="location.href='./posts/<%=post.data.title[0].text.replace(/ /g, '-') %>' ">Read More</button>
+            <div class="blog-card-left-section">
+              
+                    <div class="intro-img">
+                        <img src=<%=post.data.image.url%>>
+                    </div>
+            
+
             </div>
-        </div>
+            
+            <div class="blog-card-right-section">
+                <div class="intro-text-box">
+                    <h2><%=post.data.title[0].text%></h2>
+                    <p>published on <%=post.first_publication_date.slice(5, 10)%>, <%=post.first_publication_date.slice(0, 4)%></p>
+                    <p><%=post.data.description[0].text.slice(0, 225)%></p>
+                    <button class="intro-read-more" type="button" onclick="location.href='./posts/<%=post.data.title[0].text.replace(/ /g, '-') %>' ">Read More</button>
+                </div>
+
+
+            </div>
+
+        </form>
 
     </div>
+</div>
+
+
+
+
+
 <% }); %>
 
 <%- include("../views/partials/footer.ejs") -%>

@@ -125,9 +125,10 @@
 }
 
 .post-gallery-img {
-    width: 270px;
+    width: 268px;
     border-radius: 12px;
     margin: 0 15px 10px;
+    background-color: var(--theme-blue);
 }
 
 .post-gallery-caption {
