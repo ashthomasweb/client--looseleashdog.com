@@ -53,30 +53,49 @@
     max-width: 750px;
     padding: 20px 0;
     margin: 0 auto;
-    text-align: center;
 }
 
 .greeting-pane--home h1 {
-    margin: 25px auto 20px;
+    margin-bottom: 15px;
     text-align: center;
     font-size: 60px;
-    letter-spacing: 1px;
 }
 
 .greeting-pane--home img {
     display: inline-block;
-    vertical-align: middle;
-    width: 200px;
+    width: 250px;
 }
 
 .greeting-pane--home p {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     max-width: 450px;
-    margin: 0px 40px 0px 0px;
-    text-align: left;
+    margin: 30px 0px 0px 38px;
     font-size: 20px;
     line-height: 1.6;
+}
+
+.avatar-pane--home {
+    position: relative;
+    width: 100%;
+    height: 175px;
+    text-align: center;
+}
+
+.avatar-pane--home h2 {
+    position: absolute;
+    top: 32%;
+    left: 15%;
+    display: inline-block;
+    font-size: 55px;
+}
+
+.avatar-img {
+    position: absolute;
+    right: 15%;
+    top: -13%;
+    display: inline-block;
+    width: 220px;
 }
 
 .text-pane--home {
@@ -95,73 +114,6 @@
     line-height: 1.6;
 }
 
-
-/* || Pages - About */
-
-.greeting-pane--about {
-    max-width: 750px;
-    padding: 20px 0;
-    margin: 0 auto;
-}
-
-.greeting-pane--about h1 {
-    margin-bottom: 15px;
-    text-align: center;
-    font-size: 60px;
-}
-
-.greeting-pane--about img {
-    display: inline-block;
-    width: 250px;
-}
-
-.greeting-pane--about p {
-    display: inline-block;
-    vertical-align: top;
-    max-width: 450px;
-    margin: 30px 0px 0px 38px;
-    font-size: 20px;
-    line-height: 1.6;
-}
-
-.avatar-pane--about {
-    position: relative;
-    width: 100%;
-    height: 175px;
-    text-align: center;
-}
-
-.avatar-pane--about h2 {
-    position: absolute;
-    top: 32%;
-    left: 15%;
-    display: inline-block;
-    font-size: 55px;
-}
-
-.avatar-img {
-    position: absolute;
-    right: 15%;
-    top: -13%;
-    display: inline-block;
-    width: 220px;
-}
-
-.text-pane--about {
-    max-width: 750px;
-    padding: 20px 0;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.text-pane--about p {
-    display: inline-block;
-    vertical-align: top;
-    max-width: 550px;
-    margin: 0px 0px 0px 0px;
-    font-size: 20px;
-    line-height: 1.6;
-}
 
 /* || Pages - Services */
 
