@@ -1,4 +1,4 @@
-/* || CSS file for "looseleashdog" theme  */
+/* || Theme CSS file for "looseleashdog" */
 
 :root {
     --theme-blue: #3fc5f0;
@@ -10,7 +10,6 @@
     --theme-green: #6decb9; /* rgba(109, 236, 185, 1) */
     --theme-lightgreen: #9bffd7; 
     --theme-lightgreen-alt: #9cefdb;
-
     --theme-yellow: #f2f6d0;
     --theme-lightyellow: #f5f7de;
     --theme-borders: #3a3b48;
@@ -24,7 +23,6 @@
     --shadow: rgba(0, 0, 0, 0.4);
     --darken: rgba(0,0,0,0.1);
     --clear: rgba(0, 0, 0, 0);
-    /*#48899f*/
 }
 
 body {
@@ -59,13 +57,13 @@ p a:hover {
     padding-bottom: 3px;
     border-top: 4px solid var(--theme-lightgreen);
     border-bottom: 4px solid var(--theme-lightgreen);
-    transition: border-bottom 1s, border-top 1s, color 1s;
-    -webkit-transition: border-bottom 1s, border-top 1s, color 1s;
     color: var(--theme-blue);
     font-family: phoreuscherokee, serif;
     font-style: normal;
     font-size: 35px;
     font-weight: 700;
+    transition: border-bottom 1s, border-top 1s, color 1s;
+    -webkit-transition: border-bottom 1s, border-top 1s, color 1s;
 }
   
 .link-underborder-impact:hover{
@@ -77,9 +75,9 @@ p a:hover {
 .link-underborder{
     padding-bottom: 1px;
     border-bottom: 2px solid var(--theme-blue);
+    color: var(--theme-blue);
     transition: border-bottom 1s, color 1s;
     -webkit-transition: border-bottom 1s, color 1s;
-    color: var(--theme-blue);
 }
   
 .link-underborder:hover{
@@ -224,3 +222,6 @@ textarea:focus {
 .card--home h2 {
     border-bottom: 3px solid var(--theme-lightblue);
 }
+
+
+/* || END of document  */

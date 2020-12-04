@@ -1,13 +1,14 @@
-/* || CSS file for "looseleashdog" blog posts  */
-/* || main image and title section  */
+/* || Blog Post CSS file for "looseleashdog" */
+
+/* || Main image and title section  */
 
 .post-main-img {
     margin: 10px 0;
 }
 
 .post-title {
-    text-align: center;
     margin-top: 30px;
+    text-align: center;
 }
 
 .post-title h1 {
@@ -15,8 +16,8 @@
 }
 
 .post-meta {
-    text-align: center;
     margin-top: 5px;
+    text-align: center;
 }
 
 .post-meta p {
@@ -28,47 +29,47 @@
     display: inline-block;
 }
 
-/* || text paragraph   */
+/* || Text paragraph   */
 
 .slice-paragraph {
-    text-align: left;
     max-width: 600px;
     margin: 20px auto;
+    text-align: left;
     font-size: 18px;
     line-height: 1.7;
 }
 
-/* || h2 and container  */
+/* || H2 and container  */
 
 .slice-heading {
-    text-align: left;
     max-width: 600px;
     margin: 50px auto 20px;
+    text-align: left;
 }
 
 .slice-heading h2 {
     font-size: 32px;
 }
 
-/* || h3 and container */
+/* || H3 and container */
 
 .slice-subheading {
-    text-align: left;
     max-width: 600px;
     margin: 50px auto 20px;
+    text-align: left;
 }
 
 .slice-subheading h3 {
     font-size: 26px;
 }
 
-/* || highlighted link  */
+/* || Highlighted link  */
 
 .slice-link {
-    text-align: center;
     max-width: 600px;
     padding: 15px;
     margin: 60px auto;
+    text-align: center;
     font-size: 24px;
 }
 
@@ -78,13 +79,13 @@
     line-height: 1.4;
 }
 
-/* || highlighted quote  */
+/* || Highlighted quote  */
 
 .slice-quote {
-    text-align: center;
     max-width: 600px;
     padding: 20px;
     margin: 60px auto;
+    text-align: center;
 }
 
 .slice-quote p:nth-child(1) {
@@ -102,26 +103,26 @@
     text-transform: uppercase;
 }
 
-/* || image gallery */
+/* || Image gallery */
 
 .slice-gallery {
-    text-align: center;
     padding: 30px 0 13px;
     margin: 50px auto;
+    text-align: center;
     font-size: 20px;
 }
 
 .post-gallery {
-    text-align: center;
     width: 90%;
     margin: 0 auto;
+    text-align: center;
     font-size: 0;
     line-height: 0;
 }
 
 .gallery-content-frame {
-    text-align: center;
     display: inline-block;
+    text-align: center;
 }
 
 .post-gallery-img {
@@ -137,3 +138,6 @@
     font-size: 17px;
     line-height: 1.2;
 }
+
+
+/* || END of document */
