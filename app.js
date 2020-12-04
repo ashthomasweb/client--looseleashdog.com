@@ -1,4 +1,6 @@
-/* --- Dependencies --- */
+// app.js for "Looseleashdog" 
+
+// Dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
@@ -8,7 +10,6 @@ var PrismicDOM = require('prismic-dom');
 var prismicEndpoint = 'https://ashleyth-test.prismic.io/api/v2';
 
 const app = express();
-
 
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.set('view engine', 'ejs');
@@ -46,7 +47,7 @@ function initApi(req) {
     });
 }
 
-/* --- Routes --- */
+// Routes 
 
 app.get('/', function (req, res) {
     res.render('home', {
@@ -110,10 +111,7 @@ app.get('/contact', function (req, res) {
     });
 });
 
-
-
-// ||  
-
+// || Listener 
 
 let port = process.env.PORT;
 if (port == null || port == "") { 
@@ -121,4 +119,4 @@ if (port == null || port == "") {
 }
 app.listen(port, () => console.log(`Server started at port ${port}.`));
 
-
+// || END of document

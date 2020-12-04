@@ -1,6 +1,6 @@
+// JavaScript for "Looseleashdog"
 
-
-// || curator carousel control buttons 
+// || Curator carousel control buttons 
 
 function curatorLeft() {
     document.getElementById("curator-slider").scrollBy(-310, 0);
@@ -20,7 +20,7 @@ document.getElementById("curator-hover").addEventListener("mouseout", function (
     document.getElementById("right-button").style.opacity = "0.2";
 });
 
-
+// || Contact form field button color 
 
 function formFieldCheck() {
     let name = document.forms["contact"]["user_name"].value;
@@ -29,10 +29,12 @@ function formFieldCheck() {
     let elem = document.getElementById("contact-button");
     
     if (name == "" || email == "" || message == "") {
-        elem.style.backgroundColor = "var(--theme-lightgreen-alt)";
+        elem.style.backgroundColor = "var(--theme-lightgreen)";
         elem.style.pointerEvents = "none";
     } else {
-        elem.style.backgroundColor = "var(--theme-green)";
+        elem.style.backgroundColor = "var(--theme-blue)";
         elem.style.pointerEvents = "auto";
     }
 }
+
+/* || END of document  */

@@ -1,3 +1,5 @@
+<!-- Blog main page for "Looseleashdog" -->
+
 <%- include("../views/partials/header.ejs") -%>
 
 <div class="l-divider divider-top"></div>
@@ -13,7 +15,6 @@
 
 <% document.forEach(function(post) { %>
 
-    
 <div class="card card--blog-main">
     <div class="blog-card-inner-wrap">
 
@@ -23,7 +24,6 @@
                         <img src=<%=post.data.image.url%>>
                     </div>
             
-
             </div>
             
             <div class="blog-card-right-section">
@@ -34,18 +34,13 @@
                     <button class="intro-read-more" type="button" onclick="location.href='./posts/<%=post.data.title[0].text.replace(/ /g, '-') %>' ">Read More</button>
                 </div>
 
-
             </div>
-
-        </form>
 
     </div>
 </div>
 
-
-
-
-
 <% }); %>
 
 <%- include("../views/partials/footer.ejs") -%>
+
+<!-- || END of document -->

@@ -37,7 +37,7 @@
     padding-bottom: 4px;
     padding-top: 10px;
     margin: 0;
-    border-bottom: 3px solid;
+    border-bottom: 2px solid;
     font-family: phoreuscherokee, serif;
     font-size: 22px;
     font-weight: 700;
@@ -168,7 +168,6 @@
     height: 282px;
     margin: 0 30px;
     padding: 4px;
-    border: 0 !important;
 }
 
 .card--services-right {
@@ -178,7 +177,6 @@
     height: 282px;
     margin: 0px 30px;
     padding: 4px;
-    border: 0 !important;
 }
 
 .services-card-inner-wrap {
@@ -279,7 +277,6 @@
     width: 80%;
     height: 205px;
     padding: 4px;
-    border: none !important;
     margin: 50px auto;
 }
 
@@ -583,7 +580,6 @@
     width: 540px;
     height: 410px;
     padding: 4px;
-    border: 0 !important;
     margin: 0 auto 30px;
 }
 
@@ -705,7 +701,7 @@
     margin: 0 auto;
     border: 4px solid;
     font-family: phoreuscherokee, serif;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
 }
 

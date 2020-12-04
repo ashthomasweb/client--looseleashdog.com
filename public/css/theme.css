@@ -2,19 +2,16 @@
 
 :root {
     --theme-blue: #3fc5f0;
-    --theme-darkblue: #239cc4;
-    --theme-verylightblue: #ebfbff;
     --theme-lightblue: #ccf2fd;
     --theme-lightblue-alt: #b0e9ff;
-    --theme-darkgreen: #00d681; /* rgba(109, 236, 185, 1) */
+    --theme-washedblue: #dcf7ff;
+    --theme-verylightblue: #ebfbff;
+    --theme-darkgreen: #00bf79; /* rgba(109, 236, 185, 1) */
     --theme-green: #6decb9; /* rgba(109, 236, 185, 1) */
-    --theme-lightgreen: #9bffd7; 
-    --theme-lightgreen-alt: #9cefdb;
-    --theme-yellow: #f2f6d0;
-    --theme-lightyellow: #f5f7de;
+    --theme-lightgreen: #9cefcd; 
+    --theme-yellow: #f2f5d1;    
     --theme-borders: #3a3b48;
-    --theme-lightborders: #4d4f60;
-    --border-light: #e6e6e6;
+    --theme-border-light: #e6e6e6;
     --primary-background:#ffffff;
     --secondary-background: #f9f9f9;
     --copy-light: #b4b4b4;
@@ -23,12 +20,14 @@
     --shadow: rgba(0, 0, 0, 0.4);
     --darken: rgba(0,0,0,0.1);
     --clear: rgba(0, 0, 0, 0);
+    --divider-top: #f0f0f0;
+    --divider-bottom: #f5f5f5;
 }
 
 body {
     background-image: url(/images/flowers.png);
     background-attachment: fixed;
-    background-color: #cef1fd;
+    background-color: var(--theme-lightblue);
     color: var(--copy-mid);
 }
 
@@ -40,34 +39,29 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     padding-bottom: 1px;    
-    color: var(--theme-green);
+    border-bottom: 4px solid var(--clear);
+    color: var(--theme-darkgreen);
     text-decoration: none;
 }
 
 p a {
-    border-bottom: 2px solid var(--clear);
-    transition: border-bottom .1s ease-out;
+    border-bottom: 4px solid var(--clear);
+    transition: border-bottom .6s;
 }
 
 p a:hover {
-    border-bottom: 2px solid var(--theme-green);
+    border-bottom: 4px solid var(--theme-darkgreen);
 }
 
-
-.link-underborder {
-    padding-bottom: 1px;
-    border-bottom: 2px solid var(--theme-blue);
-    color: var(--theme-blue);
-    transition: border-bottom 1s, color 1s;
-    -webkit-transition: border-bottom 1s, color 1s;
-}
-  
-.link-underborder:hover {
-    border-bottom: 2px solid var(--theme-blue);
-    color: var(--theme-blue);
+footer a {
+    border-bottom: none;
 }
 
-.link-underborder-impact {
+footer a:hover {
+    border-bottom: none;
+}
+
+.link-impact {
     padding-bottom: 3px;
     border-top: 4px solid var(--theme-lightgreen);
     border-bottom: 4px solid var(--theme-lightgreen);
@@ -76,22 +70,23 @@ p a:hover {
     font-size: 35px;
     font-weight: 700;
     color: var(--theme-blue);
-    transition: border-bottom 1s, border-top 1s, color 1s;
-    -webkit-transition: border-bottom 1s, border-top 1s, color 1s;
+    transition: border-bottom .6s, border-top .6s, color .6s;
+    -webkit-transition: border-bottom .6s, border-top .6s, color .6s;
 }
   
-.link-underborder-impact:hover {
+.link-impact:hover {
     border-top: 4px solid var(--theme-blue);
     border-bottom: 4px solid var(--theme-blue);
     color: var(--theme-blue);
 }
 
-/* curator overlay links */
+/* || Curator overlay links */
+
 .crt-popup-text-body a {
     padding-bottom: 2px;
     border-bottom: 1px solid var(--clear);
     color: var(--theme-darkgreen) !important;
-    transition: border-bottom-color .1s ease-out;
+    transition: border-bottom-color;
 }
 
 .crt-popup-text-body a:hover {
@@ -102,7 +97,7 @@ p a:hover {
     padding-bottom: 1px;
     border-bottom: 1px solid var(--clear);
     color: var(--theme-darkgreen) !important;
-    transition: border-bottom-color .1s ease-out;
+    transition: border-bottom-color;
 }
 
 .crt-post-text a:hover {
@@ -131,19 +126,18 @@ p a:hover {
 }
 
 .divider-top {
-    border-top-color: var(--border-light);
-    background-image: linear-gradient(#f0f0f0, var(--clear));
+    border-top-color: var(--theme-border-light);
+    background-image: linear-gradient(var(--divider-top), var(--clear));
 }
 
 .divider-bottom {
-    border-bottom-color: var(--border-light);
-    background-image: linear-gradient(var(--clear), #f5f5f5);
+    border-bottom-color: var(--theme-border-light);
+    background-image: linear-gradient(var(--clear), var(--divider-bottom));
 }
 
 /* || Card Elements */
 
 .card {
-    border-color: var(--theme-lightblue-alt);
     box-shadow: 4px 2px 12px var(--shadow);
     background-color: var(--theme-lightblue);
     color: var(--copy-dark);
@@ -175,11 +169,12 @@ p a:hover {
 .card--home {
     background-color: var(--theme-lightblue);
     transition: border .1s linear;
+    border-color: var(--theme-lightblue-alt);
 }
 
 .card--home:hover {
     border-color: var(--theme-blue);
-    background-color: #dcf7ff;
+    background-color: var(--theme-washedblue);
 }
 
 .card--home p {
@@ -187,17 +182,17 @@ p a:hover {
 }
 
 .card--home h2 {
-    border-bottom-color: var(--theme-lightblue);
+    border-bottom-color: var(--theme-lightblue-alt);
 }
 
 /* || Pages - Services */
 
 .card--services-left {
-    background-color: var(--theme-lightblue-alt) !important;
+    background-color: var(--theme-lightblue-alt);
 }
 
 .card--services-right {
-    background-color: var(--theme-lightblue-alt) !important;
+    background-color: var(--theme-lightblue-alt);
 }
 
 .services-card-inner-wrap {
@@ -225,7 +220,7 @@ p a:hover {
 /* || Pages - Blog Main */
 
 .card--blog-main {
-    background-color: var(--theme-lightblue-alt) !important;
+    background-color: var(--theme-lightblue-alt);
 }
 
 .blog-card-inner-wrap {
@@ -296,6 +291,7 @@ p a:hover {
 .post-gallery-img {
     border-color: var(--theme-blue);
     border-radius: 12px;
+    background-color: var(--theme-blue);
 }
 
 .post-gallery-caption {
@@ -367,7 +363,7 @@ p a:hover {
 /* || Contact Form  */
 
 .card--contact-form {
-    background-color: var(--theme-lightblue-alt) !important;
+    background-color: var(--theme-lightblue-alt);
 }
 
 .contact-card-inner-wrap {
@@ -403,16 +399,12 @@ textarea:focus {
     border-color: var(--theme-lightblue-alt);
 }
 
-.form-button {
-    background-color: var(--theme-green);
-}
-
 .contact-submit {
     border-color: var(--theme-lightblue-alt);
     border-bottom-left-radius: 12px;
     border-top-right-radius: 12px;
     color: var(--copy-dark);
-    background-color: var(--theme-lightgreen-alt);
+    background-color: var(--theme-lightgreen);
     transition: background-color .1s ease-out;
 }
 
@@ -429,6 +421,5 @@ textarea:focus {
 .footer-goodbye {
     color: var(--copy-mid);
 }
-
 
 /* || END of document  */
