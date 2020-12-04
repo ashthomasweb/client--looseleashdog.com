@@ -8,6 +8,7 @@
     top: 0;
     width: 100%;
     height: 66px;
+    border-bottom: 3px solid;
     text-align: center;
 }
 
@@ -63,6 +64,7 @@
     height: 120px;
     text-align: center;
     width: 100%;
+    border-top: 3px solid;
 }
 
 .l-footer-wrapper {
@@ -95,6 +97,7 @@
 .card {
     display: inline-block;
     padding: 10px;
+    border: 2px solid;
     border-radius: 12px;
 }
 
@@ -102,7 +105,6 @@
     width: 50%;
     height: 2px;
     border: none;
-    background-color: var(--theme-lightblue-alt);
 }
 
 /* || Section Dividers */
@@ -110,6 +112,14 @@
 .l-divider {
     width: 100%;
     height: 40px;
+}
+
+.divider-top {
+    border-top: 1px solid;
+}
+
+.divider-bottom {
+    border-bottom: 1px solid;
 }
 
 .overfix-bottom {
