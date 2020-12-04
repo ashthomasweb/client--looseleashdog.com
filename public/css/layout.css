@@ -158,8 +158,9 @@
 
 .logo-main {
     display: inline-block;
-    width: 700px;
-    margin-top: 19px;
+    width: 800px;
+    margin-top: 7px;
+    margin-left: -5px;
 }
 
 .logo-sm {
