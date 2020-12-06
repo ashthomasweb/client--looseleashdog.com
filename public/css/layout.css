@@ -81,7 +81,8 @@
 .l-box-third {
     display: inline-block;
     vertical-align: middle;
-    width: 333px;
+    width: 300px;
+    margin: 0px auto;
     font-size: 18px;
 }
 
@@ -179,9 +180,17 @@
 
 .footer-attributions {
     height: 52px;
-    margin-top: -7px;
+    margin-top: 10px;
     font-size: 11px;
     line-height: 1.6;
+}
+
+.footer-attributions p:nth-child(1) {
+    display: inline-block;
+}
+
+.footer-attributions p:nth-child(2) {
+    display: inline-block;
 }
 
 .footer-goodbye {

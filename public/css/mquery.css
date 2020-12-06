@@ -1,1 +1,81 @@
 /* || Media Query CSS file for "looseleashdog" */
+
+
+/* || Landing page  */
+
+@media screen and (max-width: 800px) {
+
+
+    .l-home-header {
+        position: relative;
+        height: fit-content;
+    }
+
+    .logo-pane {
+        height: fit-content;
+        text-align: center;
+    }
+
+    .logo-main {
+        display: inline-block;
+        width: 95%;
+        margin-top: 0px;
+        margin-left: 0;
+    }
+
+    .logo-sm {
+        display: inline-block;
+        width: 330px;
+        margin-top: 4px;
+        margin-left: -10px;
+    }
+
+
+
+
+}
+
+
+/* THESE NEED TO BE REFACTORED AND USE RELATIVE POSITIONING */
+@media screen and (max-width: 899px) {
+
+    .l-footer {
+        height: fit-content;
+    }
+
+    .l-footer-wrapper {
+        height: fit-content;
+        padding-bottom: 10px;
+    }
+
+    #footer-social {
+        margin-left: -73px;
+    }
+
+
+
+    #attributions-box {
+        margin-top: 10px;
+    }
+
+
+
+    @media screen and (max-width: 620px) {
+
+        #footer-social {
+            margin-left: 0px;
+        }
+
+        .footer-goodbye {
+            margin-top: 20px;
+        }
+
+
+
+    }
+
+
+
+    @media screen and (max-width: 900px) {}
+
+    /* || END of document  */
