@@ -3,22 +3,23 @@
 
 /* || Landing page  */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 812px) {
 
 
     .l-home-header {
         position: relative;
-        height: fit-content;
+        height: auto;
+        padding: 3px 0;
     }
 
     .logo-pane {
-        height: fit-content;
+        height: auto;
         text-align: center;
     }
 
     .logo-main {
         display: inline-block;
-        width: 95%;
+        width: 100%;
         margin-top: 0px;
         margin-left: 0;
     }
@@ -30,52 +31,65 @@
         margin-left: -10px;
     }
 
+    @media screen and (max-width: 787px) {
 
+        /* .wrap-home1 {
+            bottom: 5px;
+        } */
 
+        .wrap-home2 {
+            bottom: 30px;
+        }
+
+        .card-pane--home {
+            height: 316px;
+        }
+
+    }
 
 }
 
 
-/* THESE NEED TO BE REFACTORED AND USE RELATIVE POSITIONING */
-@media screen and (max-width: 899px) {
+/* || Footer  */
+
+@media screen and (max-width: 917px) {
 
     .l-footer {
-        height: fit-content;
+        height: 205px;
     }
 
     .l-footer-wrapper {
-        height: fit-content;
-        padding-bottom: 10px;
+        height: 205px;
+        padding: 10px;
     }
 
-    #footer-social {
-        margin-left: -73px;
+    #footer-box1 {
+        top: 72px;
+        display: block;
     }
 
-
-
-    #attributions-box {
-        margin-top: 10px;
+    #footer-box2 {
+        bottom: 45px;
+        display: block;
     }
 
+    #footer-box3 {
+        display: block;
+        top: 32px;
+    }
 
+    @media screen and (max-width: 330px) {
 
-    @media screen and (max-width: 620px) {
-
-        #footer-social {
-            margin-left: 0px;
+        .l-box-third {
+            width: 100%;
         }
 
-        .footer-goodbye {
-            margin-top: 20px;
+        .footer-goodbye h3 a {
+            font-size: 30px;
         }
-
-
-
     }
 
+}
 
 
-    @media screen and (max-width: 900px) {}
-
-    /* || END of document  */
+/* || END of document  */
