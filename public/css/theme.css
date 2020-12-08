@@ -20,6 +20,7 @@
     --shadow: rgba(0, 0, 0, 0.4);
     --darken: rgba(0,0,0,0.1);
     --clear: rgba(0, 0, 0, 0);
+    --haze: rgba(255, 255, 255, 0.8);
     --divider-top: #f0f0f0;
     --divider-bottom: #f5f5f5;
 }
