@@ -128,13 +128,23 @@ footer a:hover {
 
 .divider-top {
     border-top-color: var(--theme-border-light);
+    background-image: -moz-linear-gradient(var(--divider-top), var(--clear));
+    background-image: -webkit-linear-gradient(var(--divider-top), var(--clear));
+    background-image: -o-linear-gradient(var(--divider-top), var(--clear));
+    background-image: -ms-linear-gradient(var(--divider-top), var(--clear));
     background-image: linear-gradient(var(--divider-top), var(--clear));
 }
 
 .divider-bottom {
     border-bottom-color: var(--theme-border-light);
+    background-image: -moz-linear-gradient(var(--clear), var(--divider-bottom));
+    background-image: -webkit-linear-gradient(var(--clear), var(--divider-bottom));
+    background-image: -o-linear-gradient(var(--clear), var(--divider-bottom));
+    background-image: -ms-linear-gradient(var(--clear), var(--divider-bottom));
     background-image: linear-gradient(var(--clear), var(--divider-bottom));
 }
+
+
 
 /* || Card Elements */
 
