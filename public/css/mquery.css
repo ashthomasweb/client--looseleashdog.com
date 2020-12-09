@@ -266,7 +266,12 @@
 
 }
 
+@media screen and (min-width: 701px) {
+    .h-menu-drop {
+        display: none;
+    }
 
+}
 
 
 

@@ -9,17 +9,18 @@
     top: 13px;
     right: 13px;
     display: none;
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
+    padding: 0px;
 }
 
 .h-menu-pane input {
     z-index: 112;
     position: absolute;
-    top: -2px;
-    left: -2px;
-    width: 40px;
-    height: 40px;
+    top: 0px;
+    left: 0px;
+    width: 38px;
+    height: 38px;
     margin: 0;
     opacity: 0;
     border: 0;
@@ -28,27 +29,25 @@
 .h-menu-box {
     z-index: 110;
     position: absolute;
-    width: 36px;
-    height: 36px; 
-    padding: 2px 0 0;   
+    width: 38px;
+    height: 38px; 
+    padding: 1px 0 0;   
     border: 3px solid var(--theme-lightblue-alt);
     border-radius: 8px;
-    background-color: var(--theme-yellow);
+    background-color: var(--theme-lightblue);
+    transition: background-color 1s;
 }
 
 .h-menu-bar {
+    box-sizing: content-box;
     z-index: 111;
     position: relative;
-    width: 22px;
-    height: 2px;
+    width: 20px;
+    height: 1px;
     border-radius: 1px;
-    margin: 5px auto;
+    margin: 7px auto;
     background-color: var(--theme-blue);
 }
-
-
-
-
 
 /* || Pages - Home */
 

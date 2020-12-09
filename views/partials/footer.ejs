@@ -16,12 +16,20 @@
                             src="../images/instagram.png"></a>
                 </div>
             </div>
-
+            
+            
+            
             <div id="footer-box2" class="l-box-third">
                 <div class="footer-goodbye">
-                    <h3><a class="link-impact" href="/contact">Contact me here</a></h3>
+                    <% if ( pageTitle === "Contact" ) { %>
+                        <h3 style="pointer-events: none;"><a class="link-impact" href="/contact">Let's get started!</a></h3>
+                    <%} else { %>
+                        <h3><a class="link-impact" href="/contact">Contact me here</a></h3>
+                    <% } %>
                 </div>
             </div>
+
+
 
 
             <div id="footer-box3" class="l-box-third">

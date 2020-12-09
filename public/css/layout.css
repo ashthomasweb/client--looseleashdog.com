@@ -50,10 +50,9 @@
 }
 
 .h-menu-drop {
-    display: none;
     z-index: 60;
-    position: absolute;
-    top: 65px;
+    position: fixed;
+    top: 20px;
     right: 0;
     width: auto;
     height: 45px;
