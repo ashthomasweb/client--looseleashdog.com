@@ -250,4 +250,24 @@
 
 }
 
+
+/* || Hamburger menu  */
+
+@media screen and (max-width: 700px) {
+
+    .navbar-pane {
+        display: none;
+    }
+
+    .h-menu-pane {
+        display: block;
+    }
+
+
+}
+
+
+
+
+
 /* || END of document  */

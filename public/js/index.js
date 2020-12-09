@@ -27,13 +27,26 @@ function formFieldCheck() {
     let email = document.forms["contact"]["user_email"].value;
     let message = document.forms["contact"]["message"].value;
     let elem = document.getElementById("contact-button");
-    
+
     if (name == "" || email == "" || message == "") {
         elem.style.backgroundColor = "var(--theme-lightgreen)";
         elem.style.pointerEvents = "none";
     } else {
         elem.style.backgroundColor = "var(--theme-blue)";
         elem.style.pointerEvents = "auto";
+    }
+}
+
+// || Hamburger Menu 
+
+function hamburger() {
+    let menuState;
+    menuState = document.getElementById("h-menu-input").checked;
+    
+    if (menuState == true) {
+        document.getElementById("h-menu").style.display = "block";
+    } else {
+        document.getElementById("h-menu").style.display = "none";
     }
 }
 

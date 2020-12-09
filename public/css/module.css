@@ -1,5 +1,55 @@
 /* || CSS file for "looseleashdog" modules  */
 
+
+/* || Hamburger menu  */
+
+.h-menu-pane {
+    z-index: 105;
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    display: none;
+    width: 40px;
+    height: 40px;
+}
+
+.h-menu-pane input {
+    z-index: 112;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    opacity: 0;
+    border: 0;
+}
+
+.h-menu-box {
+    z-index: 110;
+    position: absolute;
+    width: 36px;
+    height: 36px; 
+    padding: 2px 0 0;   
+    border: 3px solid var(--theme-lightblue-alt);
+    border-radius: 8px;
+    background-color: var(--theme-yellow);
+}
+
+.h-menu-bar {
+    z-index: 111;
+    position: relative;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    margin: 5px auto;
+    background-color: var(--theme-blue);
+}
+
+
+
+
+
 /* || Pages - Home */
 
 .card-pane--home {

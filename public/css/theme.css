@@ -170,6 +170,17 @@ footer a:hover {
     border-bottom: 5px solid var(--theme-yellow);
 }
 
+.h-menu-drop li {
+    padding-bottom: 3px;
+    border-radius: 4px; /* curve of underline */
+    color: var(--copy-dark);
+}
+
+.h-menu-pane li:hover {
+    border-bottom: 5px solid var(--theme-yellow);
+    
+}
+
 .current { /* this class is assigned via ejs in views/partials/header */
     border-bottom-color: var(--theme-yellow)!important;
     color: var(--theme-yellow)!important;

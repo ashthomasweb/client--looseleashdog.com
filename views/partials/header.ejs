@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="/css/mquery.css">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/atn3lzq.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400&family=Sacramento&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400&family=Sacramento&display=swap">
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -44,26 +45,22 @@
 </head>
 
 <body>
-<% if ( pageTitle === "Home" ) { %>
+    <% if ( pageTitle === "Home" ) { %>
     <div class="l-header l-home-header">
         <div class="l-header-wrapper l-home-header">
             <div class="logo-pane">
-                <img class="logo-main" src="/images/logo2.png" >
+                <img class="logo-main" src="/images/logo2.png">
             </div>
         </div>
     </div>
     <div class="l-body-wrapper--home ">
-        <div class="l-content-wrapper"> 
-<%} else { %>
-    <div class="l-header">
-        <div class="l-header-wrapper">
-            <div class="smlogo-pane">
-                <a href="/"><img class="logo-sm" src="/images/logo2.png"></a>
-            </div>
-            <div class="navbar-pane">
+        <div class="l-content-wrapper">
+            <%} else { %>
+            <div id="h-menu" class="h-menu-drop">
                 <ul>
                     <a href="/services">
-                        <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services</li>
+                        <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services
+                        </li>
                     </a>
                     <a href="/blog">
                         <li id="blog" <% if (pageTitle === "Blog") { %> class="current" <% } %>>Blog</li>
@@ -72,14 +69,51 @@
                         <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
                     </a>
                     <a href="/contact">
-                        <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact</li>
+                        <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact
+                        </li>
                     </a>
                 </ul>
             </div>
-        </div>
-    </div>
-    <div class="l-body-wrapper">
-        <div class="l-content-wrapper">
-<% } %>
+            <div class="l-header">
+                <div class="l-header-wrapper">
+                    <div class="smlogo-pane">
+                        <a href="/"><img class="logo-sm" src="/images/logo2.png"></a>
+                    </div>
 
-<!-- || END of document -->
+                    <div class="navbar-pane">
+                        <ul>
+                            <a href="/services">
+                                <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services
+                                </li>
+                            </a>
+                            <a href="/blog">
+                                <li id="blog" <% if (pageTitle === "Blog") { %> class="current" <% } %>>Blog</li>
+                            </a>
+                            <a href="/photos">
+                                <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
+                            </a>
+                            <a href="/contact">
+                                <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+
+                    <div class="h-menu-pane">
+                        <input id="h-menu-input" type="checkbox" onclick="hamburger()">
+                        <div class="h-menu-box">
+                            <div class="h-menu-bars">
+                                <div class="h-menu-bar"></div>
+                                <div class="h-menu-bar"></div>
+                                <div class="h-menu-bar"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="l-body-wrapper">
+                <div class="l-content-wrapper">
+                    <% } %>
+
+                    <!-- || END of document -->
