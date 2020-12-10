@@ -291,9 +291,39 @@
     @media screen and (max-width: 768px) {
 
 
+        .card--blog-main {
+            height: 440px;
+            width: 300px;
+        }
+
+        .blog-card-right-section {
+            width: 292px;
+        }
+
+        .intro-text-box h2 { /* heading */
+            font-size: 24px;
+        }
+
+        .intro-text-box p:nth-child(2) { /* description */
+            max-height: 132px;
+        }
+
+        .intro-text-box {
+            height: 231px;
+        }
+
+        .intro-text-box h2 { /* heading */
+            top: 28px;
+        }
+
+        .blog-card-left-section {
+            border-right: 0;
+            border-bottom: 1px solid var(--theme-lightblue-alt);
+            border-bottom-left-radius: 0px;
+        }
 
 
-
+    }
 
 
 
