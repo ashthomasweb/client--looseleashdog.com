@@ -164,7 +164,7 @@
                 width: 44vw;
                 height: 38vw;
                 margin: 0 auto;
-                padding: calc((100% - 140px) / 2 ) 0px;
+                padding: calc((100% - 140px) / 2) 0px;
             }
 
             .greeting-pane--home h1 {
@@ -174,7 +174,7 @@
             .greeting-pane--home p {
                 max-width: 90%;
             }
-    
+
             .text-pane--home p {
                 max-width: 90%;
             }
@@ -187,18 +187,18 @@
                 width: 44vw;
                 height: 38vw;
                 margin: -7px auto 0;
-                padding: calc((100% - 140px) / 2 ) 0px;
+                padding: calc((100% - 140px) / 2) 0px;
             }
 
             .greeting-pane--home p {
-               font-size: 19px;
-               max-width: 95%;
+                font-size: 19px;
+                max-width: 95%;
 
             }
-    
+
             .text-pane--home p {
                 font-size: 19px;
-               max-width: 95%;
+                max-width: 95%;
 
             }
 
@@ -253,7 +253,7 @@
 
 /* || Hamburger menu  */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
 
     .navbar-pane {
         display: none;
@@ -266,10 +266,39 @@
 
 }
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 769px) {
     .h-menu-drop {
         display: none;
     }
+
+}
+
+/* || Blog Main  */
+
+@media screen and (max-width: 1018px) {
+
+
+    .card--blog-main {
+        width: 800px;
+    }
+
+    @media screen and (max-width: 889px) {
+        .card--blog-main {
+            width: 91%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+
+
+
+
+
+
+
+
+
 
 }
 

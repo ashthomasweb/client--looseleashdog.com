@@ -149,7 +149,7 @@ function hamburger() {
                     bar3.style.transform = "rotate(-" + barsRot + "deg)";
                 }
             }
-        }, 10);
+        }, 30);
 
         let animD = setInterval(menuAppear, 1);
         function menuAppear() {
