@@ -1,6 +1,23 @@
 /* || Media Query CSS file for "looseleashdog" */
 
 
+/* || Navbar  */
+
+@media screen and (max-width: 390px) {
+    .logo-sm {
+        width: 85%;
+        position: relative;
+        top: 21px;
+        transform: translateY(-50%);
+        float: left;
+
+    }
+
+
+
+
+}
+
 /* || Landing page  */
 
 @media screen and (max-width: 812px) {
@@ -24,12 +41,7 @@
         margin-left: 0;
     }
 
-    .logo-sm {
-        display: inline-block;
-        width: 330px;
-        margin-top: 4px;
-        margin-left: -10px;
-    }
+
 
     @media screen and (max-width: 787px) {
 
@@ -300,11 +312,13 @@
             width: 292px;
         }
 
-        .intro-text-box h2 { /* heading */
+        .intro-text-box h2 {
+            /* heading */
             font-size: 24px;
         }
 
-        .intro-text-box p:nth-child(2) { /* description */
+        .intro-text-box p:nth-child(2) {
+            /* description */
             max-height: 132px;
         }
 
@@ -312,7 +326,8 @@
             height: 231px;
         }
 
-        .intro-text-box h2 { /* heading */
+        .intro-text-box h2 {
+            /* heading */
             top: 28px;
         }
 
@@ -322,16 +337,92 @@
             border-bottom-left-radius: 0px;
         }
 
-
     }
-
-
-
-
-
 
 }
 
+/* Contact Page  */
+
+@media screen and (max-width: 600px) {
+
+    .card--contact-form {
+        width: 91%;
+    }
+
+    .contact-submit {
+        height: 81px;
+    }
+
+    .contact-card-top-section input:nth-child(2) {
+        width: calc(100% - 160px);
+    }
+
+    .greeting-pane--contact p {
+        max-height: 96px;
+        padding: 0 15px;
+    }
+
+    @media screen and (max-width: 421px) {
+
+        .card--contact-form {
+            height: 460px;
+            margin-bottom: 0px;
+        }
+
+        .contact-card-top-section input:nth-child(2) {
+            width: 100%;
+        }
+
+        .contact-card-top-section input:nth-child(4) {
+            width: 100%;
+        }
+
+        .contact-submit {
+            height: 67px;
+            width: calc(100% - 60px);
+            top: 389px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            border-bottom-right-radius: 0px;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 12px;
+        }
+
+        .greeting-pane--contact h1 {
+            margin-top: -13px;
+        }
+
+        @media screen and (max-width: 390px) {
+
+            .greeting-pane--contact h1 {
+                font-size: 15vw;
+            }
+
+            .greeting-pane--contact p {
+                line-height: 1.4;
+            }
+
+            @media screen and (max-width: 321px) {
+
+                .greeting-pane--contact h1 {
+                    margin-top: -18px;
+                }
+
+                .card--contact-form {
+                    margin-top: 27px;
+                }
+
+                .h-menu-drop li {
+                    font-size: 16px;
+                    margin: 0 7px;
+                }
+
+            }
+        }
 
 
-/* || END of document  */
+    }
+
+    /* || END of document  */
