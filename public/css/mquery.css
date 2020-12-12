@@ -1,27 +1,44 @@
 /* || Media Query CSS file for "looseleashdog" */
 
-
 /* || Navbar  */
 
 @media screen and (max-width: 390px) {
+
     .logo-sm {
-        width: 85%;
         position: relative;
         top: 21px;
         transform: translateY(-50%);
         float: left;
-
+        width: 85%;
     }
 
+}
 
+/* || Hamburger menu  */
 
+@media screen and (max-width: 768px) {
+
+    .navbar-pane {
+        display: none;
+    }
+
+    .h-menu-pane {
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+
+    .h-menu-drop {
+        display: none;
+    }
 
 }
 
 /* || Landing page  */
 
 @media screen and (max-width: 812px) {
-
 
     .l-home-header {
         position: relative;
@@ -41,8 +58,6 @@
         margin-left: 0;
     }
 
-
-
     @media screen and (max-width: 787px) {
 
         .wrap-home2 {
@@ -54,21 +69,21 @@
         }
 
         .greeting-pane--home {
-            text-align: center;
             padding: 30px 0 50px;
+            text-align: center;
         }
 
         .greeting-pane--home img {
-            display: none;
             bottom: -10px;
+            display: none;
             margin-left: 0;
         }
 
         .greeting-pane--home p {
             bottom: -10px;
-            text-align: left;
             max-width: 85%;
             margin: 0;
+            text-align: left;
         }
 
         .text-pane--home p {
@@ -175,8 +190,8 @@
             .link-box {
                 width: 44vw;
                 height: 38vw;
-                margin: 0 auto;
                 padding: calc((100% - 140px) / 2) 0px;
+                margin: 0 auto;
             }
 
             .greeting-pane--home h1 {
@@ -198,20 +213,18 @@
             .link-box {
                 width: 44vw;
                 height: 38vw;
-                margin: -7px auto 0;
                 padding: calc((100% - 140px) / 2) 0px;
+                margin: -7px auto 0;
             }
 
             .greeting-pane--home p {
-                font-size: 19px;
                 max-width: 95%;
-
+                font-size: 19px;
             }
 
             .text-pane--home p {
-                font-size: 19px;
                 max-width: 95%;
-
+                font-size: 19px;
             }
 
         }
@@ -220,67 +233,56 @@
 
 }
 
+/* Services Page  */
 
-/* || Footer  */
+@media screen and (max-width: 740px) {
 
-@media screen and (max-width: 917px) {
-
-    .l-footer {
-        height: 205px;
+    .card--services-right {
+        margin-top: 25px;
     }
 
-    .l-footer-wrapper {
-        height: 205px;
-        padding: 10px;
+    .text-pane--services p {
+        padding-left: 25px;
     }
 
-    #footer-box1 {
-        top: 72px;
-        display: block;
-    }
+    @media screen and (max-width: 361px) {
 
-    #footer-box2 {
-        bottom: 45px;
-        display: block;
-    }
-
-    #footer-box3 {
-        display: block;
-        top: 32px;
-    }
-
-    @media screen and (max-width: 330px) {
-
-        .l-box-third {
-            width: 100%;
+        .text-pane--services h2 {
+            font-size: 11.5vw;
         }
 
-        .footer-goodbye h3 a {
-            font-size: 30px;
+        .card--services-left {
+            width: 280px;
+            height: 266px;
+            margin: 0 auto;
         }
-    }
 
-}
+        .card--services-right {
+            width: 280px;
+            height: 266px;
+            margin: 25px auto 0;
+        }
 
+        .card--services-innerleft {
+            margin: 9px 6px 10px 12px;
+        }
 
-/* || Hamburger menu  */
+        .card--services-innerright {
+            margin: 9px 12px 10px 6px;
+        }
 
-@media screen and (max-width: 768px) {
+        .services-card-bottom-section {
+            padding: 3px 0 14px;
+        }
 
-    .navbar-pane {
-        display: none;
-    }
+        @media screen and (max-width: 333px) {
 
-    .h-menu-pane {
-        display: block;
-    }
+            .greeting-text--services {
+                top: 20px;
+            }
 
+        }
 
-}
-
-@media screen and (min-width: 769px) {
-    .h-menu-drop {
-        display: none;
     }
 
 }
@@ -288,7 +290,6 @@
 /* || Blog Main  */
 
 @media screen and (max-width: 1018px) {
-
 
     .card--blog-main {
         width: 800px;
@@ -302,10 +303,9 @@
 
     @media screen and (max-width: 768px) {
 
-
         .card--blog-main {
-            height: 440px;
             width: 300px;
+            height: 440px;
         }
 
         .blog-card-right-section {
@@ -378,16 +378,16 @@
         }
 
         .contact-submit {
-            height: 67px;
-            width: calc(100% - 60px);
             top: 389px;
             left: 0;
             right: 0;
+            height: 67px;
+            width: calc(100% - 60px);
             margin: 0 auto;
-            border-bottom-right-radius: 0px;
             border-top-left-radius: 12px;
-            border-bottom-left-radius: 0px;
             border-top-right-radius: 12px;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
         }
 
         .greeting-pane--contact h1 {
@@ -415,14 +415,60 @@
                 }
 
                 .h-menu-drop li {
-                    font-size: 16px;
                     margin: 0 7px;
+                    font-size: 16px;
                 }
 
             }
-        }
 
+        }
 
     }
 
-    /* || END of document  */
+}
+
+/* || Footer  */
+
+@media screen and (max-width: 917px) {
+
+    .l-footer {
+        height: 205px;
+    }
+
+    .l-footer-wrapper {
+        height: 205px;
+        padding: 10px;
+    }
+
+    #footer-box1 {
+        top: 72px;
+        display: block;
+    }
+
+    #footer-box2 {
+        bottom: 45px;
+        display: block;
+    }
+
+    #footer-box3 {
+        display: block;
+        top: 32px;
+    }
+
+    @media screen and (max-width: 330px) {
+
+        .l-box-third {
+            width: 100%;
+        }
+
+        .footer-goodbye h3 a {
+            font-size: 30px;
+        }
+
+    }
+
+}
+
+
+
+/* || END of document  */

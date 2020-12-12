@@ -305,7 +305,8 @@
 .text-pane--services p {
     display: inline-block;
     vertical-align: top;
-    margin: 20px 0px 0px 0px;
+    padding: 15px;
+    margin: 0px 0px 0px 0px;
     font-size: 20px;
     line-height: 1.6;
 }
@@ -627,7 +628,6 @@
     left: 0px;
     margin: 0 auto;
     overflow: hidden;
-    
 }
 
 .greeting-img--contact img {
