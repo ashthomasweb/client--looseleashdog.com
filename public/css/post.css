@@ -7,12 +7,13 @@
 }
 
 .post-title {
-    margin-top: 30px;
+    margin: 30px 0 20px;
     text-align: center;
 }
 
 .post-title h1 {
     font-size: 50px;
+    padding: 0 15px 0 20px;
 }
 
 .post-meta {
@@ -32,7 +33,8 @@
 /* || Text paragraph   */
 
 .slice-paragraph {
-    max-width: 600px;
+    max-width: 630px;
+    padding: 0 15px 0 25px;
     margin: 20px auto;
     text-align: left;
     font-size: 18px;
@@ -42,7 +44,8 @@
 /* || H2 and container  */
 
 .slice-heading {
-    max-width: 600px;
+    max-width: 630px;
+    padding: 0 15px 0 25px;
     margin: 50px auto 20px;
     text-align: left;
 }
@@ -54,7 +57,8 @@
 /* || H3 and container */
 
 .slice-subheading {
-    max-width: 600px;
+    max-width: 630px;
+    padding: 0 15px 0 25px;
     margin: 50px auto 20px;
     text-align: left;
 }
@@ -66,8 +70,8 @@
 /* || Highlighted link  */
 
 .slice-link {
-    max-width: 600px;
-    padding: 10px;
+    max-width: 630px;
+    padding: 10px 15px 0 25px;
     margin: 60px auto;
     text-align: center;
     font-size: 24px;
@@ -84,15 +88,18 @@
 /* || Highlighted quote  */
 
 .slice-quote {
-    max-width: 600px;
-    padding: 20px;
+    position: relative;
+    left: 25px;
+    max-width: 630px;
+    padding: 20px 15px 0 25px;
     border-left: 10px solid;
     margin: 60px auto;
-
     text-align: center;
 }
 
 .slice-quote p:nth-child(1) {
+    position: relative;
+    right: 25px;
     font-size: 22px;
     font-style: italic;
     letter-spacing: 0.5px;   
@@ -100,7 +107,7 @@
 
 .slice-quote p:nth-child(2) {
     position: relative;
-    left: 70px;
+    left: 25px;
     margin-top: 10px;
     font-size: 16px;
     font-weight: 700;
@@ -110,7 +117,7 @@
 /* || Image gallery */
 
 .slice-gallery {
-    padding: 30px 0 13px;
+    padding: 20px 0px 13px;
     border-top: 3px solid;
     border-bottom: 3px solid;
     margin: 50px auto;
@@ -119,7 +126,6 @@
 }
 
 .post-gallery {
-    width: 90%;
     margin: 0 auto;
     text-align: center;
     font-size: 0;
@@ -129,6 +135,7 @@
 .gallery-content-frame {
     display: inline-block;
     text-align: center;
+    margin: 10px 0;
 }
 
 .post-gallery-img {

@@ -431,7 +431,6 @@
             margin-left: 0;
         }
 
-
         @media screen and (max-width: 379px) {
 
             .l-content-wrapper {
@@ -449,15 +448,14 @@
                 background-position: center;
                 opacity: 1;
                 border-radius: 12px;
-
             }
 
-            .left-button-center  {
+            .left-button-center {
                 opacity: 1;
             }
 
 
-            .right-button-center  {
+            .right-button-center {
                 opacity: 1;
             }
 
@@ -471,7 +469,6 @@
                 background-color: var(--theme-blue);
                 background-position: center;
                 border-radius: 12px;
-
             }
 
             .carousel--curator {
@@ -484,94 +481,132 @@
                 margin-top: 50px;
             }
 
-
-
         }
-
-
 
     }
 
+}
 
 
-    /* Contact Page  */
+/* || Blog Post  */
 
-    @media screen and (max-width: 600px) {
+@media screen and (max-width: 1018px) {
 
-        .card--contact-form {
-            width: 91%;
+    .post-main-img img {
+        position: relative;
+        top: -4px;
+        width: 100vw;
+    }
+
+    .l-content-wrapper {
+        overflow: hidden;
+    }
+
+    @media screen and (max-width: 662px) {
+        .post-gallery {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        .contact-submit {
-            height: 81px;
+
+        @media screen and (max-width: 530px) {
+
+            .post-gallery-img {
+                margin: 0 auto 10px;
+            }
+
+            @media screen and (max-width: 450px) {
+
+                .post-title h1 {
+                    font-size: 11vw;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+/* Contact Page  */
+
+@media screen and (max-width: 600px) {
+
+    .card--contact-form {
+        width: 91%;
+    }
+
+    .contact-submit {
+        height: 81px;
+    }
+
+    .contact-card-top-section input:nth-child(2) {
+        width: calc(100% - 160px);
+    }
+
+    .greeting-pane--contact p {
+        max-height: 96px;
+        padding: 0 15px;
+    }
+
+    @media screen and (max-width: 421px) {
+
+        .card--contact-form {
+            height: 460px;
+            margin-bottom: 0px;
         }
 
         .contact-card-top-section input:nth-child(2) {
-            width: calc(100% - 160px);
+            width: 100%;
         }
 
-        .greeting-pane--contact p {
-            max-height: 96px;
-            padding: 0 15px;
+        .contact-card-top-section input:nth-child(4) {
+            width: 100%;
         }
 
-        @media screen and (max-width: 421px) {
+        .contact-submit {
+            top: 389px;
+            left: 0;
+            right: 0;
+            height: 67px;
+            width: calc(100% - 60px);
+            margin: 0 auto;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
 
-            .card--contact-form {
-                height: 460px;
-                margin-bottom: 0px;
-            }
+        .greeting-pane--contact h1 {
+            margin-top: -13px;
+        }
 
-            .contact-card-top-section input:nth-child(2) {
-                width: 100%;
-            }
-
-            .contact-card-top-section input:nth-child(4) {
-                width: 100%;
-            }
-
-            .contact-submit {
-                top: 389px;
-                left: 0;
-                right: 0;
-                height: 67px;
-                width: calc(100% - 60px);
-                margin: 0 auto;
-                border-top-left-radius: 12px;
-                border-top-right-radius: 12px;
-                border-bottom-right-radius: 0px;
-                border-bottom-left-radius: 0px;
-            }
+        @media screen and (max-width: 390px) {
 
             .greeting-pane--contact h1 {
-                margin-top: -13px;
+                font-size: 15vw;
             }
 
-            @media screen and (max-width: 390px) {
+            .greeting-pane--contact p {
+                line-height: 1.4;
+            }
+
+            @media screen and (max-width: 321px) {
 
                 .greeting-pane--contact h1 {
-                    font-size: 15vw;
+                    margin-top: -18px;
                 }
 
-                .greeting-pane--contact p {
-                    line-height: 1.4;
+                .card--contact-form {
+                    margin-top: 27px;
                 }
 
-                @media screen and (max-width: 321px) {
-
-                    .greeting-pane--contact h1 {
-                        margin-top: -18px;
-                    }
-
-                    .card--contact-form {
-                        margin-top: 27px;
-                    }
-
-                    .h-menu-drop li {
-                        margin: 0 7px;
-                        font-size: 16px;
-                    }
-
+                .h-menu-drop li {
+                    margin: 0 7px;
+                    font-size: 16px;
                 }
 
             }
@@ -580,46 +615,48 @@
 
     }
 
-    /* || Footer  */
+}
 
-    @media screen and (max-width: 917px) {
+/* || Footer  */
 
-        .l-footer {
-            height: 205px;
+@media screen and (max-width: 917px) {
+
+    .l-footer {
+        height: 205px;
+    }
+
+    .l-footer-wrapper {
+        height: 205px;
+        padding: 10px;
+    }
+
+    #footer-box1 {
+        top: 72px;
+        display: block;
+    }
+
+    #footer-box2 {
+        bottom: 45px;
+        display: block;
+    }
+
+    #footer-box3 {
+        display: block;
+        top: 32px;
+    }
+
+    @media screen and (max-width: 330px) {
+
+        .l-box-third {
+            width: 100%;
         }
 
-        .l-footer-wrapper {
-            height: 205px;
-            padding: 10px;
-        }
-
-        #footer-box1 {
-            top: 72px;
-            display: block;
-        }
-
-        #footer-box2 {
-            bottom: 45px;
-            display: block;
-        }
-
-        #footer-box3 {
-            display: block;
-            top: 32px;
-        }
-
-        @media screen and (max-width: 330px) {
-
-            .l-box-third {
-                width: 100%;
-            }
-
-            .footer-goodbye h3 a {
-                font-size: 30px;
-            }
-
+        .footer-goodbye h3 a {
+            font-size: 30px;
         }
 
     }
 
-    /* || END of document  */
+}
+
+/* || END of document  */
