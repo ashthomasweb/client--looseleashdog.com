@@ -396,6 +396,41 @@
 
 }
 
+/* Photos Page  */
+
+@media screen and (max-width: 1018px) {
+
+    .carousel--curator {
+        width: 689px;
+    }
+
+    .viewport {
+        max-width: 620px;
+    }
+
+    @media screen and (max-width: 705px) {
+
+        .carousel--curator {
+            width: 379px;
+        }
+    
+        .viewport {
+            max-width: 310px;
+        }
+
+        .greeting-pane--photos p {
+            padding: 0 15px 0 25px;
+        }
+
+
+    }
+
+
+
+}
+
+
+
 /* Contact Page  */
 
 @media screen and (max-width: 600px) {
