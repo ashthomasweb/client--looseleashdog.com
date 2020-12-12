@@ -418,10 +418,18 @@
             max-width: 310px;
         }
 
-        .greeting-pane--photos p {
+        .greeting-pane--photos {
             padding: 0 15px 0 25px;
         }
 
+        .text-pane--photos {
+            padding: 0 15px 0 25px;
+
+        }
+
+        .text-pane--photos p {
+            margin-left: 0;
+        }
 
     }
 
