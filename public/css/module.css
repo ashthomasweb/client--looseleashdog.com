@@ -58,7 +58,9 @@
 }
 
 .link-box {
-   
+    position: relative;
+    bottom: 2px;
+    right: 2px;
     display: inline-block;
     width: 150px;
     height: 120px;
@@ -69,31 +71,72 @@
     pointer-events: none;
 }
 
+
+
+
+
+
+
+
 .card--home {
+    position: relative;
     vertical-align: top;
+    display: inline-block;
     width: 150px;
     height: 120px;
-    padding: 0;
-    border: 2px solid;
+    padding: 2px;
     margin: 30px 20px 25px;
 }
 
-.card--home p {
-    margin: 5px;
-    line-height: 1.25;
+.home-card-inner-wrap {
+    position: absolute;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-radius: 10px;
 }
 
-.card--home h2 {
+.home-card-top-section {
+    position: relative;
+    top: -1px;
+    right: 3px;
+    width: 146px;
+    height: 33%;
+    padding: 5px;
+    border-bottom: 1px solid;
+}
+
+.home-card-top-section h2 {
     display: inline-block;
     padding-bottom: 4px;
-    padding-top: 10px;
+    padding-top: 3px;
     margin: 0;
-    border-bottom: 2px solid;
-    font-family: phoreuscherokee, serif;
     font-size: 22px;
-    font-weight: 700;
     line-height: 1;
+}    
+
+.home-card-bottom-section {
+    position: relative;
+    width: 100%;
+    height: 67%;
+    padding: 1px 0;
 }
+
+.home-card-bottom-section p {
+    margin: 5px;
+    line-height: 1.25;
+}    
+
+
+
+
+
+
+
+
+
+
+
+
 
 .current { /* this class is assigned via ejs in '/views/partials/header.ejs' */
     border-bottom: 5px solid !important;

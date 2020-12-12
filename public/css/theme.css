@@ -199,14 +199,24 @@ footer a:hover {
 /* || Pages - Home  */
 
 .card--home {
-    background-color: var(--theme-lightblue);
-    transition: border .1s linear;
-    border-color: var(--theme-lightblue-alt);
+    background-color: var(--theme-lightblue-alt);
+    transition: background-color .1s linear;
 }
 
 .card--home:hover {
-    border-color: var(--theme-blue);
-    background-color: var(--theme-washedblue);
+    background-color: var(--theme-blue);
+}
+
+.home-card-inner-wrap {
+    border-radius: 10px;
+    background-color: var(--theme-verylightblue);
+}
+
+.home-card-top-section {
+    border-bottom-color: var(--theme-lightblue-alt);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--theme-lightblue);
 }
 
 .card--home p {

@@ -109,12 +109,22 @@
         }
 
         .text-pane--home {
-            padding: 85px 0 20px;
+            padding: 85px 0 20px 0;
         }
 
     }
 
     @media screen and (max-width: 405px) {
+
+        .greeting-pane--home p {
+            max-width: 100%;
+            padding: 0 15px 0 25px;
+        }
+
+        .text-pane--home p {
+            max-width: 100%;
+            padding: 0 15px 0 25px;
+        }
 
         .card-pane--home {
             height: auto;
@@ -123,6 +133,11 @@
         .card--home {
             margin: 4vw 4vw;
         }
+
+        .wrap-home1 {
+            margin-top: 10px;
+        }
+
 
         .wrap-home2 {
             bottom: 10px;
@@ -136,7 +151,7 @@
             }
 
             .text-pane--home {
-                padding: 120px 0 20px;
+                padding: 120px 0 20px 0;
             }
 
         }
@@ -161,14 +176,19 @@
         @media screen and (max-width: 345px) {
 
             .card--home {
-                width: 43vw;
-                height: 36vw;
-                margin: 2vw 2vw;
+                width: 145px;
+                height: 110px;
+                margin: 3vw 2vw;
+            }
+
+            .home-card-top-section {
+                top: 1px;
+                width: 141px;
             }
 
             .link-box {
-                width: 42vw;
-                height: 36vw;
+                width: 145px;
+                height: 110px;
                 margin: 0 auto;
             }
 
@@ -179,18 +199,23 @@
 
         }
 
-        @media screen and (max-width: 315px) {
+        @media screen and (max-width: 324px) {
 
             .card--home {
-                width: 45vw;
-                height: 38vw;
-                margin: 2vw 2vw;
+                width: 130px;
+                height: 110px;
+            }
+
+            .home-card-top-section {
+                top: 1px;
+                right: -2px;
+                width: 126px;
             }
 
             .link-box {
-                width: 44vw;
-                height: 38vw;
-                padding: calc((100% - 140px) / 2) 0px;
+                width: 130px;
+                height: 110px;
+                padding: 0px;
                 margin: 0 auto;
             }
 
@@ -198,32 +223,33 @@
                 font-size: 55px;
             }
 
-            .greeting-pane--home p {
-                max-width: 90%;
-            }
-
-            .text-pane--home p {
-                max-width: 90%;
-            }
-
         }
 
         @media screen and (max-width: 300px) {
 
+            .card--home {
+                width: 125px;
+                height: 110px;
+            }
+
+            .home-card-top-section {
+                top: 1px;
+                right: -2px;
+                width: 121px;
+            }
+
             .link-box {
-                width: 44vw;
-                height: 38vw;
-                padding: calc((100% - 140px) / 2) 0px;
-                margin: -7px auto 0;
+                width: 125px;
+                height: 110px;
+                padding: 0px;
+                margin: 0 auto;
             }
 
             .greeting-pane--home p {
-                max-width: 95%;
                 font-size: 19px;
             }
 
             .text-pane--home p {
-                max-width: 95%;
                 font-size: 19px;
             }
 
@@ -303,6 +329,11 @@
 
     @media screen and (max-width: 768px) {
 
+        .greeting-pane--blog {
+            padding: 0 15px 0 25px;
+        }
+
+
         .card--blog-main {
             width: 300px;
             height: 440px;
@@ -335,6 +366,30 @@
             border-right: 0;
             border-bottom: 1px solid var(--theme-lightblue-alt);
             border-bottom-left-radius: 0px;
+        }
+
+        @media screen and (max-width: 400px) {
+
+            .greeting-pane--blog h1 {
+                font-size: 15vw;
+            }
+
+            @media screen and (max-width: 310px) {
+
+                .card--blog-main {
+                    width: 280px;
+                }
+
+                .blog-card-left-section {
+                    right: 10px;
+                }
+
+                .blog-card-right-section {
+                    right: 10px;
+                }
+
+            }
+
         }
 
     }
@@ -468,7 +523,5 @@
     }
 
 }
-
-
 
 /* || END of document  */
