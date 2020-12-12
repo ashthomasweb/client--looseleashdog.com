@@ -333,7 +333,6 @@
             padding: 0 15px 0 25px;
         }
 
-
         .card--blog-main {
             width: 300px;
             height: 440px;
@@ -424,7 +423,6 @@
 
         .text-pane--photos {
             padding: 0 15px 0 25px;
-
         }
 
         .text-pane--photos p {
@@ -446,14 +444,12 @@
                 left: 88px;
                 background-color: var(--theme-blue);
                 background-position: center;
-                opacity: 1;
                 border-radius: 12px;
             }
 
             .left-button-center {
                 opacity: 1;
             }
-
 
             .right-button-center {
                 opacity: 1;
@@ -462,10 +458,10 @@
             .right-button-center button {
                 float: right;
                 position: relative;
-                height: 50px;
                 width: 70px;
                 bottom: -321px;
                 right: 84px;
+                height: 50px;
                 background-color: var(--theme-blue);
                 background-position: center;
                 border-radius: 12px;
@@ -503,12 +499,12 @@
     }
 
     @media screen and (max-width: 662px) {
+
         .post-gallery {
             position: relative;
             left: 50%;
             transform: translateX(-50%);
         }
-
 
         @media screen and (max-width: 530px) {
 
