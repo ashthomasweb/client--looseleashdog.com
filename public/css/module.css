@@ -613,7 +613,8 @@
     box-sizing: content-box;
     max-width: 930px;
     height: 310px;
-    border: 1px solid;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
     overflow-x: hidden;
     overflow-y: hidden;
     scroll-behavior: smooth;
