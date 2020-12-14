@@ -1,13 +1,18 @@
 /* || layout CSS file for "looseleashdog" */
 
+
+
+
+
+
 /* || Header */
 
 .l-header {
     z-index: 90;
     position: fixed;
-    top: 1px;
+    top: 0px;
     width: 100%;
-    height: 68px;
+    height: 66px;
     border-bottom: 3px solid;
     text-align: center;
 }
@@ -17,6 +22,7 @@
     position: relative;
     max-width: 1000px;
     width: 100%;
+    height: 100%;
     margin: 0 auto;
 }
 
