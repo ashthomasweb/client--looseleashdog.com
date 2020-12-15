@@ -372,6 +372,14 @@ footer a:hover {
     border-color:var(--theme-blue);
 }
 
+.left-button-wrap {
+    background-color: var(--theme-blue);
+}
+
+.right-button-wrap {
+    background-color: var(--theme-blue);
+}
+
 .card-pane--photos p {
     color: var(--copy-light);
 }

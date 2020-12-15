@@ -47,6 +47,8 @@
     </div>
 </footer>
 <!-- JS -->
+<% if ( pageTitle === "Photos" ) { %>
+
 <script type="text/javascript">
     /* curator-feed-wide-layout */
     (function () {
@@ -59,7 +61,12 @@
         e.parentNode.insertBefore(i, e);
     })();
 </script>
+<script src="/js/photos.js" charset="utf-8"></script>
+<% } %>
+
 <script src="/js/index.js" charset="utf-8"></script>
+<script src="/js/mquery.js" charset="utf-8"></script>
+
 </body>
 
 </html>

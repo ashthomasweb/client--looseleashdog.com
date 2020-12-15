@@ -528,8 +528,9 @@
     margin: 0 auto 0px;
 }
 
+
 .left-button-wrap {
-    z-index: 10;
+    z-index: 11;
     position: relative;
     left: 0px;
     display: inline-block;
@@ -540,22 +541,25 @@
 
 .left-button-center {
     position: absolute;
+    z-index: 100;
     top: 50%;
+    left: 0px;
     transform: translateY(-156px);
-    width: 100%;
+    width: 40px;
     height: 312px;
-    opacity: 0.2;
-    transition: opacity .2s;
+    background-color: var(--theme-blue);
 }
 
 .left-button-center button {
     z-index: 99;
-    width: 34px;
+    width: 40px;
     height: 312px;
     border: 0;
     background-image: url("/images/left-arrow.png");
     background-repeat: no-repeat;
-    background-position: 10px 138px;
+    background-position: 13px 138px;
+    opacity: 0.2;
+    transition: opacity .3s;
 }
 
 .crt-post-footer {
@@ -591,24 +595,29 @@
 .right-button-center {
     position: absolute;
     top: 50%;
-    right: 0px;
+    right: -4px;
     transform: translateY(-156px);
-    width: 100%;
+    width: 40px;
     height: 312px;
-    opacity: 0.2;
+    background-color: var(--theme-blue);
 }
 
 .right-button-center button {
     z-index: 99;
-    width: 34px;
+    width: 40px;
     height: 312px;
     border: 0;
     background-image: url("/images/right-arrow.png");
-    background-position: 10px 138px;
+    background-position: 13px 138px;
     background-repeat: no-repeat;
+    opacity: 0.2;
+    transition: opacity .3s;
+
 }
 
 .viewport {
+    position: relative;
+    z-index: 10;
     display: inline-block;
     box-sizing: content-box;
     max-width: 930px;
@@ -624,6 +633,7 @@
     width: 3100px;
     height: 310px;
 }
+
 
 .card-pane--photos {
     z-index: 52;

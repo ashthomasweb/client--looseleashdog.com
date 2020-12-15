@@ -30,7 +30,7 @@
             <div class="blog-card-right-section">
                 <div class="intro-text-box">
                     <h2><%=post.data.title[0].text%></h2>
-                    <p><%=post.data.description[0].text.slice(0, 250)%></p>
+                    <p class="description"><%=post.data.description[0].text.slice(0, 250)%></p>
                     <button class="intro-read-more" type="button" onclick="location.href='./posts/<%=post.data.title[0].text.replace(/ /g, '-') %>' ">Read More</button>
                 </div>
 

@@ -24,6 +24,8 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400&family=Sacramento&display=swap">
     <!-- EmailJS -->
+    <% if ( pageTitle === "Contact" ) { %>
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
@@ -41,6 +43,8 @@
             });
         }
     </script>
+    <% } %>
+
     <!-- END EmailJS -->
 </head>
 <body>
