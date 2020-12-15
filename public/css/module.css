@@ -539,7 +539,6 @@
     margin: 0 auto 0px;
 }
 
-
 .left-button-wrap {
     z-index: 11;
     position: relative;
@@ -623,7 +622,6 @@
     background-repeat: no-repeat;
     opacity: 0.2;
     transition: opacity .3s;
-
 }
 
 .viewport {
@@ -644,7 +642,6 @@
     width: 3100px;
     height: 310px;
 }
-
 
 .card-pane--photos {
     z-index: 52;

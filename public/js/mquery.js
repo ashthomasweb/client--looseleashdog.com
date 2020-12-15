@@ -25,8 +25,8 @@ function adjustDescription(mid) {
 
 let mid = window.matchMedia("(min-width: 769px) and (max-width: 875px)");
 
-adjustDescription(mid) 
-mid.addListener(adjustDescription) 
+adjustDescription(mid);
+mid.addListener(adjustDescription);
 
 
 // || END of document 
