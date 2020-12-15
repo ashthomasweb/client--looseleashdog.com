@@ -335,7 +335,7 @@
 
         .card--blog-main {
             width: 300px;
-            height: 440px;
+            height: 488px;
         }
 
         .blog-card-right-section {
@@ -349,7 +349,8 @@
 
         .intro-text-box p:nth-child(2) {
             /* description */
-            max-height: 132px;
+            max-height: 154px;
+            top: 66px;
         }
 
         .intro-text-box {
@@ -359,6 +360,12 @@
         .intro-text-box h2 {
             /* heading */
             top: 28px;
+        }
+
+        .intro-read-more {
+            width: 300px;
+            border-top-left-radius: 0;
+            bottom: -55px;
         }
 
         .blog-card-left-section {

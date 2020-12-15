@@ -9,53 +9,24 @@ collection.forEach(post => arr.push(post.innerText));
 
 let elements = document.getElementsByClassName("description");
 
-function adjustDescriptionMid(size) {
+function adjustDescription(mid) {
     
-    if (size.matches) { // If media query matches
+    if (mid.matches) { 
         for (let i = 0; i < elements.length; i++ ) {
-            elements[i].innerText = arr[i].slice(0, 10);
+            elements[i].innerText = arr[i].slice(0, 170) + "...";
         } 
-    
     } else {
         for (let i = 0; i < elements.length; i++ ) {
-            elements[i].innerText = arr[i].slice(0, 250);
+            elements[i].innerText = arr[i].slice(0, 230);
         } 
     }
 
 }
 
-var size = window.matchMedia("(max-width: 600px)");
-adjustDescriptionMid(size) // Call listener function at run time
-size.addListener(adjustDescriptionMid) // Attach listener function on state changes
+let mid = window.matchMedia("(min-width: 769px) and (max-width: 875px)");
+
+adjustDescription(mid) 
+mid.addListener(adjustDescription) 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function adjustDescriptionLarge(large) {
-  
-//     if (large.matches) {
-//         for (let i = 0; i < collection.length; i++ ) {
-//             element[i].innerText = collection[i].innerText.slice(0, 200);
-//         }    
-//     }
-// }
-
-// var large = window.matchMedia("(max-width: 800px)");
-// adjustDescriptionLarge(large) // Call listener function at run time
-
-// large.addListener(adjustDescriptionLarge) // Attach listener function on state changes
+// || END of document 

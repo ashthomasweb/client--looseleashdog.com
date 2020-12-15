@@ -151,4 +151,26 @@
     line-height: 1.2;
 }
 
+.post-return {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 62px;
+    margin: 30px 0 20px;
+    border: 4px solid var(--theme-lightblue-alt);
+    font-size: 22px;
+    font-weight: 700;
+    font-family: phoreuscherokee, sans-serif;
+    border-radius: 12px;
+    background-color: var(--theme-green);
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.post-return:hover {
+    background-color: var(--theme-blue);
+}
+
+
 /* || END of document */

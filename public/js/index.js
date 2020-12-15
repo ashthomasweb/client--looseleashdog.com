@@ -152,6 +152,27 @@ function hamburger() {
     }
 }
 
+// || Blog Main hover event 
+
+function mouseHover(event) {
+    let path = event.path;
+    let parent;
+    let btn;
+    path.forEach(findName);
+        
+    function findName(item) {
+        if ( item.className == "card card--blog-main" ) {
+            parent = item;
+            btn = parent.children[0].children[1].children[0].children[2];
+            btn.style.backgroundColor = "var(--theme-blue)";
+            parent.addEventListener("mouseout", function() {
+                btn.style.backgroundColor = "var(--theme-green)";
+            })
+        }
+
+    }
+    
+}
 
 
 /* || END of document  */
