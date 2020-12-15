@@ -1,19 +1,25 @@
 // || JS Media Queries for "Looseleashdog"
 
 // || Blog main description slice length
-let collection = document.getElementsByClassName("description");
+let collection = Array.from(document.getElementsByClassName("description"));
 
-let arr = Array.from(collection.forEach(element => element.innerText));
-console.log(arr);
-let element = document.getElementsByClassName("description");
+let arr = [];
+
+collection.forEach(post => arr.push(post.innerText));
+
+let elements = document.getElementsByClassName("description");
 
 function adjustDescriptionMid(size) {
     
     if (size.matches) { // If media query matches
-        for (let i = 0; i < collection.length; i++ ) {
-            element[i].innerText = element[i].innerText.slice(0, 10);
+        for (let i = 0; i < elements.length; i++ ) {
+            elements[i].innerText = arr[i].slice(0, 10);
         } 
     
+    } else {
+        for (let i = 0; i < elements.length; i++ ) {
+            elements[i].innerText = arr[i].slice(0, 250);
+        } 
     }
 
 }
