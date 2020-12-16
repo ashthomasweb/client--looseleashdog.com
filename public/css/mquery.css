@@ -271,40 +271,49 @@
         padding-left: 25px;
     }
 
-    @media screen and (max-width: 361px) {
+    @media screen and (max-width: 723px) {
 
-        .text-pane--services h2 {
-            font-size: 11.5vw;
+        .text-pane--services {
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
 
-        .card--services-left {
-            width: 280px;
-            height: 266px;
-            margin: 0 auto;
-        }
+        @media screen and (max-width: 361px) {
 
-        .card--services-right {
-            width: 280px;
-            height: 266px;
-            margin: 25px auto 0;
-        }
+            .text-pane--services h2 {
+                font-size: 11.5vw;
+            }
 
-        .card--services-innerleft {
-            margin: 9px 6px 10px 12px;
-        }
+            .card--services-left {
+                width: 280px;
+                height: 266px;
+                margin: 0 auto;
+            }
 
-        .card--services-innerright {
-            margin: 9px 12px 10px 6px;
-        }
+            .card--services-right {
+                width: 280px;
+                height: 266px;
+                margin: 25px auto 0;
+            }
 
-        .services-card-bottom-section {
-            padding: 3px 0 14px;
-        }
+            .card--services-innerleft {
+                margin: 9px 6px 10px 12px;
+            }
 
-        @media screen and (max-width: 333px) {
+            .card--services-innerright {
+                margin: 9px 12px 10px 6px;
+            }
 
-            .greeting-text--services {
-                top: 20px;
+            .services-card-bottom-section {
+                padding: 3px 0 14px;
+            }
+
+            @media screen and (max-width: 333px) {
+
+                .greeting-text--services {
+                    top: 20px;
+                }
+
             }
 
         }
@@ -349,8 +358,8 @@
 
         .intro-text-box p:nth-child(2) {
             /* description */
-            max-height: 154px;
             top: 66px;
+            max-height: 154px;
         }
 
         .intro-text-box {
@@ -363,9 +372,9 @@
         }
 
         .intro-read-more {
+            bottom: -55px;
             width: 300px;
             border-top-left-radius: 0;
-            bottom: -55px;
         }
 
         .blog-card-left-section {
@@ -429,7 +438,7 @@
         }
 
         .text-pane--photos {
-            padding: 0 15px 0 25px;
+            padding: 20px 15px 20px 25px;
         }
 
         .text-pane--photos p {
@@ -570,22 +579,29 @@
 
         .contact-submit {
             top: 389px;
-            left: 0;
-            right: 0;
+            left: -4px;
             height: 67px;
-            width: calc(100% - 60px);
+            width: calc(100% + 8px);
             margin: 0 auto;
-            border-top-left-radius: 12px;
-            border-top-right-radius: 12px;
-            border-bottom-right-radius: 0px;
-            border-bottom-left-radius: 0px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 12px;
+            border-bottom-left-radius: 12px;
         }
 
         .greeting-pane--contact h1 {
             margin-top: -13px;
         }
 
-        @media screen and (max-width: 390px) {
+        @media screen and (max-width: 372px) {
+
+            .greeting-img--contact img {
+                height: 795px;
+            }
+
+            .greeting-pane--contact {
+                margin-bottom: 30px;
+            }
 
             .greeting-pane--contact h1 {
                 font-size: 15vw;
@@ -593,6 +609,7 @@
 
             .greeting-pane--contact p {
                 line-height: 1.4;
+                padding: 0 15px;
             }
 
             @media screen and (max-width: 321px) {

@@ -9,6 +9,7 @@
     --theme-darkgreen: #00bf79; /* rgba(109, 236, 185, 1) */
     --theme-green: #6decb9; /* rgba(109, 236, 185, 1) */
     --theme-lightgreen: #9cefcd; 
+    --theme-washedgreen: #abffdc; 
     --theme-yellow: #f2f5d1;    
     --theme-borders: #3a3b48;
     --theme-border-light: #e6e6e6;
@@ -64,8 +65,8 @@ footer a:hover {
 
 .link-impact {
     padding-bottom: 3px;
-    border-top: 4px solid var(--theme-lightgreen);
-    border-bottom: 4px solid var(--theme-lightgreen);
+    border-top: 4px solid var(--theme-washedgreen);
+    border-bottom: 4px solid var(--theme-washedgreen);
     font-family: phoreuscherokee, serif;
     font-style: normal;
     font-size: 35px;
@@ -133,7 +134,7 @@ footer a:hover {
 
 .l-footer {
     border-top-color: var(--darken);
-    background-color: var(--theme-lightgreen);
+    background-color: var(--theme-washedgreen);
 }
 
 .divider-top {
