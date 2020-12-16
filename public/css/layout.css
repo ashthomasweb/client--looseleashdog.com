@@ -156,23 +156,15 @@
     border-bottom: 1px solid;
 }
 
-.overfix-bottom {
+.margin-b-85 {
     margin-bottom: 85px;
 }
 
-.overfix-top {
-    margin-top: 85px;
-}
-
-.pull-top {
+.margin-t-neg30 {
     margin-top: -30px;
 }
 
-.pull-bottom {
-    margin-bottom: 40px
-}
-
-.space-bottom {
+.margin-b-40 {
     margin-bottom: 40px
 }
 
@@ -181,7 +173,13 @@
 .smlogo-pane {
     position: fixed;
     padding: 7px 0 0 10px;
-    /* text-align: center; */
+}
+
+.logo-sm {
+    display: inline-block;
+    width: 330px;
+    margin-top: 4px;
+    margin-left: -10px;
 }
 
 /* || Large Logo  */
@@ -197,13 +195,6 @@
     width: 800px;
     margin-top: 7px;
     margin-left: -5px;
-}
-
-.logo-sm {
-    display: inline-block;
-    width: 330px;
-    margin-top: 4px;
-    margin-left: -10px;
 }
 
 /* || Footer */
@@ -234,5 +225,6 @@
     line-height: 1.5;
     letter-spacing: .5px;
 }
+
 
 /* || END of document  */
