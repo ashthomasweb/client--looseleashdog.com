@@ -156,6 +156,8 @@
     border-bottom: 1px solid;
 }
 
+/* || Atomic classes */
+
 .margin-b-85 {
     margin-bottom: 85px;
 }
@@ -166,6 +168,10 @@
 
 .margin-b-40 {
     margin-bottom: 40px
+}
+
+.margin-b-neg39 {
+    margin-bottom: -39px;
 }
 
 /* || Small logo */
