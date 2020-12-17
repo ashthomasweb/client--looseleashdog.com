@@ -1,5 +1,5 @@
-# Project Name
-> Client Project - https://www.looseleashdog.com
+# Client Project
+> https://www.looseleashdog.com
 
 ## Table of contents
 * [General info](#general-info)
