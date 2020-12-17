@@ -11,8 +11,10 @@
 * [Status](#status)
 * [Contact](#contact)
 
-## General info
-A full stack site built for local business owner/operator. The client's advertising platform revolves around Instagram. The purpose of this site is to bring the client's advertising strength to a blog where traffic, link-thru's, and affiliate sales can be generated. Additionally, the client wants the ability to create publicly available educational content that furthers her development as a professional and brings value to her community at large. This site provides her all the means to do so without a heavy CMS.
+## General Info
+A full stack site built for local business owner/operator. The client's previous advertising platform revolved around Instagram. The purpose of this site is to bring the client's advertising strength to a blog where traffic, link-thru's, and affiliate sales can be generated.
+
+Additionally, the client wants the ability to create publicly available educational content that furthers her development as a professional and brings value to her community at large. This site provides her all the means to do so without a heavy CMS.
 
 ## Live Version
 (https://www.dev.looseleashdog.com)
