@@ -3,7 +3,7 @@
 <%- include("../views/partials/header.ejs") -%>
 
 <% document.forEach(function(post) { %>
-  <% if ( title === post.data.title[0].text.replace(/\?/g, "")) { %>
+  <% if ( title === post.data.title[0].text.replace(/\?/g, "").replace(/\'/g, "").replace(/\,/g, "").replace(/\!/g, "") ) { %>
 
     <div class="post-main-img">
       <img src="<%= post.data.image.url %>">
@@ -21,7 +21,7 @@
     <div class="l-divider divider-bottom margin-b-40"></div>
 
     <%# Slice Zones %>
-    <% post.data.body1.forEach(function(slice) { %>
+    <% post.data.body.forEach(function(slice) { %>
 
       <%# Body Text%>
       <% if (slice.slice_type == "body") { %>
@@ -39,14 +39,14 @@
       <% } %>
 
       <%# Link %>
-      <% if (slice.slice_type == "link1") { %>
+      <% if (slice.slice_type == "link") { %>
         <div class="slice-link">
           <p><a href="<%= slice.primary.link[0].spans[0].data.url %>" target="__blank"><%=slice.primary.link[0].text%></a></p>
         </div>
       <% } %>
 
       <%# Quote %>
-      <% if (slice.slice_type == "quote1") { %>
+      <% if (slice.slice_type == "quote_and_author") { %>
         <div class="slice-quote">
           <%- PrismicDOM.RichText.asHtml(slice.primary.quote) %>
           <%- PrismicDOM.RichText.asHtml(slice.primary.author) %>
@@ -71,9 +71,12 @@
 
   <% }; %>
 <% }); %>
+
 <button class="post-return" type="button" onclick="location.href='/blog'">Return to Blog</button>
+
 <p class="slice-paragraph">Thanks for stopping by and reading! Check back soon for new posts and pics.</p>
 
 <%- include("../views/partials/footer.ejs") -%>
+
 
 <!-- || END of document -->

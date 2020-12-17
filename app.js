@@ -1,4 +1,4 @@
-// app.js for "Looseleashdog" 
+// Node.js and Express Server "app.js" for "Looseleashdog" 
 
 // Dependencies
 const express = require('express');
@@ -7,7 +7,7 @@ const ejs = require('ejs');
 const favicon = require('express-favicon');
 var Prismic = require('prismic-javascript');
 var PrismicDOM = require('prismic-dom');
-var prismicEndpoint = 'https://ashleyth-test.prismic.io/api/v2';
+var prismicEndpoint = 'https://looseleashdog.prismic.io/api/v2'; // endpoint address cannot be changed, "ashleyth-test" is correct and final
 
 const app = express();
 
@@ -15,10 +15,7 @@ app.use(favicon(__dirname + '/public/favicon.ico'));
 app.set('view engine', 'ejs');
 app.set('views', './views');
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Prismic
 // Pretty URLs for known types
@@ -35,7 +32,6 @@ app.use(function (req, res, next) {
         endpoint: prismicEndpoint,
         linkResolver: linkResolver,
     };
-    // add PrismicDOM in locals to access them in templates.
     res.locals.PrismicDOM = PrismicDOM;
     next();
 });
@@ -46,8 +42,9 @@ function initApi(req) {
         req: req
     });
 }
+// END Prismic
 
-// Routes 
+// Route Handlers
 
 app.get('/', function (req, res) {
     res.render('home', {
@@ -72,7 +69,7 @@ app.get('/blog', function (req, res) {
         api.query(
             Prismic.Predicates.at('document.type', 'post')
         ).then(function (response) {
-            // response is the response object. Render your views here.
+            // "response" is the data object.
             res.render('blog', {
                 document: response.results,
                 pageTitle: "Blog",
@@ -87,7 +84,7 @@ app.get('/posts/:postTitle', function (req, res) {
         api.query(
             Prismic.Predicates.at('document.type', 'post')
         ).then(function (response) {
-            // response is the response object. Render your views here.
+            // "response" is the data object.
             if (url) {
                 res.render('post', {
                     document: response.results,
@@ -118,5 +115,6 @@ if (port == null || port == "") {
     port = 3000; 
 }
 app.listen(port, () => console.log(`Server started at port ${port}.`));
+
 
 // || END of document

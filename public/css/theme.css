@@ -6,20 +6,20 @@
     --theme-lightblue-alt: #b0e9ff;
     --theme-washedblue: #dcf7ff;
     --theme-verylightblue: #ebfbff;
-    --theme-darkgreen: #00bf79; /* rgba(109, 236, 185, 1) */
-    --theme-green: #6decb9; /* rgba(109, 236, 185, 1) */
-    --theme-lightgreen: #9cefcd; 
-    --theme-washedgreen: #abffdc; 
-    --theme-yellow: #f2f5d1;    
+    --theme-darkgreen: #00bf79; 
+    --theme-green: #6decb9; 
+    --theme-lightgreen: #9cefcd;
+    --theme-washedgreen: #abffdc;
+    --theme-yellow: #f2f5d1;
     --theme-borders: #3a3b48;
     --theme-border-light: #e6e6e6;
-    --primary-background:#ffffff;
+    --primary-background: #ffffff;
     --secondary-background: #f9f9f9;
     --copy-light: #b4b4b4;
     --copy-mid: #6a6a6a;
     --copy-dark: #3a3b48;
     --shadow: rgba(0, 0, 0, 0.4);
-    --darken: rgba(0,0,0,0.1);
+    --darken: rgba(0, 0, 0, 0.1);
     --clear: rgba(0, 0, 0, 0);
     --haze: rgba(255, 255, 255, 0.8);
     --divider-top: #f0f0f0;
@@ -33,14 +33,19 @@ body {
     color: var(--copy-mid);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--copy-dark);
 }
 
 /* || Link Styling */
 
 a {
-    padding-bottom: 1px;    
+    padding-bottom: 1px;
     border-bottom: 4px solid var(--clear);
     color: var(--theme-darkgreen);
     text-decoration: none;
@@ -75,13 +80,13 @@ footer a:hover {
     transition: border-bottom .6s, border-top .6s, color .6s;
     -webkit-transition: border-bottom .6s, border-top .6s, color .6s;
 }
-  
+
 .link-impact:hover {
     border-top: 4px solid var(--theme-blue);
     border-bottom: 4px solid var(--theme-blue);
 }
 
-.start-impact { /* On contact page, this element takes place of link, styled the same */
+.start-impact { /* On contact page, this element takes place of "Contact Me" link. This is styled the same without a pointer event or link */
     padding-bottom: 3px;
     border-top: 4px solid var(--theme-blue);
     border-bottom: 4px solid var(--theme-blue);
@@ -120,7 +125,7 @@ footer a:hover {
 
 .l-header {
     border-bottom-color: var(--darken);
-    background-color: var(--theme-blue);  
+    background-color: var(--theme-blue);
 }
 
 .l-body-wrapper {
@@ -155,8 +160,6 @@ footer a:hover {
     background: linear-gradient(white, var(--divider-bottom));
 }
 
-
-
 /* || Card Elements */
 
 .card {
@@ -173,7 +176,7 @@ footer a:hover {
 
 .navbar-pane li {
     padding-bottom: 3px;
-    border-radius: 4px; /* curve of underline */
+    border-radius: 4px; /* side curve of underbar */
     color: var(--copy-dark);
 }
 
@@ -181,20 +184,36 @@ footer a:hover {
     border-bottom: 5px solid var(--theme-yellow);
 }
 
+.h-menu-drop {
+    border-color: var(--darken);
+    border-bottom-left-radius: 8px;
+    background-color: var(--theme-blue);
+}
+
+.h-menu-bar {
+    border-radius: 1.5px;
+    background-color: var(--theme-blue);
+}
+
+.h-menu-box {
+    border-radius: 8px;
+    border-color: var(--theme-lightblue-alt);
+    background-color: var(--theme-lightblue);
+    transition: background-color 1s;
+}
+
 .h-menu-drop li {
-    padding-bottom: 3px;
-    border-radius: 4px; /* curve of underline */
+    border-radius: 4px;  /* side curve of underbar */
     color: var(--copy-dark);
 }
 
 .h-menu-drop li:hover {
     border-bottom: 5px solid var(--theme-yellow);
-    
 }
 
-.current { /* this class is assigned via ejs in views/partials/header */
-    border-bottom-color: var(--theme-yellow)!important;
-    color: var(--theme-yellow)!important;
+.current { /* this class is assigned via ejs in views/partials/header, cannot be found in any other .css file */
+    border-bottom-color: var(--theme-yellow) !important;
+    color: var(--theme-yellow) !important;
 }
 
 /* || Pages - Home  */
@@ -214,9 +233,9 @@ footer a:hover {
 }
 
 .home-card-top-section {
-    border-bottom-color: var(--theme-lightblue-alt);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border-bottom-color: var(--theme-lightblue-alt);
     background-color: var(--theme-lightblue);
 }
 
@@ -244,9 +263,9 @@ footer a:hover {
 }
 
 .services-card-top-section {
-    border-bottom-color: var(--theme-lightblue-alt);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    border-bottom-color: var(--theme-lightblue-alt);
     background-color: var(--theme-lightblue);
 }
 
@@ -272,8 +291,8 @@ footer a:hover {
 }
 
 .blog-card-left-section {
-    border-right-color: var(--theme-lightblue-alt);
     border-top-left-radius: 8px;
+    border-right-color: var(--theme-lightblue-alt);
     border-bottom-left-radius: 8px;
     background-color: var(--theme-lightblue);
 }
@@ -284,7 +303,7 @@ footer a:hover {
     background-color: var(--theme-blue);
 }
 
-.intro-text-box p:nth-child(3) { /* description */
+.intro-text-box p:nth-child(3) {  /* description */
     color: var(--copy-mid);
 }
 
@@ -341,6 +360,17 @@ footer a:hover {
     color: var(--copy-mid);
 }
 
+.post-return {
+    border-color: var(--theme-lightblue-alt);
+    border-radius: 12px;
+    background-color: var(--theme-green);
+    transition: background-color .3s;
+}
+
+.post-return:hover {
+    background-color: var(--theme-blue);
+}
+
 /* || Curator Carosel */
 
 .carousel--curator {
@@ -350,6 +380,8 @@ footer a:hover {
 .left-button-center button {
     background-color: var(--clear);
     cursor: pointer;
+    opacity: 0.2;
+    transition: opacity .3s;
 }
 
 .crt-post-footer {
@@ -361,16 +393,18 @@ footer a:hover {
 }
 
 .right-button-center {
-    transition: opacity .2s;
+    background-color: var(--theme-blue);
 }
 
 .right-button-center button {
     background-color: var(--clear);
     cursor: pointer;
+    opacity: 0.2;
+    transition: opacity .3s;
 }
 
 .viewport {
-    border-color:var(--theme-blue);
+    border-color: var(--theme-blue);
 }
 
 .left-button-wrap {
@@ -423,9 +457,9 @@ footer a:hover {
 }
 
 .contact-card-top-section {
-    border-bottom-color: var(--theme-lightblue-alt);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    border-bottom-color: var(--theme-lightblue-alt);
     background-color: var(--theme-lightblue);
 }
 
@@ -452,8 +486,8 @@ textarea:focus {
 
 .contact-submit {
     border-color: var(--theme-lightblue-alt);
-    border-bottom-left-radius: 12px;
     border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
     color: var(--copy-dark);
     background-color: var(--theme-lightgreen);
     transition: background-color .1s ease-out;
@@ -472,5 +506,6 @@ textarea:focus {
 .footer-goodbye {
     color: var(--copy-mid);
 }
+
 
 /* || END of document  */

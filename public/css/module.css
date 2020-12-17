@@ -1,5 +1,4 @@
-/* || CSS file for "looseleashdog" modules  */
-
+/* || Module CSS file for "looseleashdog" */
 
 /* || Hamburger menu  */
 
@@ -22,8 +21,8 @@
     width: 38px;
     height: 38px;
     margin: 0;
-    opacity: 0;
     border: 0;
+    opacity: 0;
 }
 
 .h-menu-box {
@@ -32,22 +31,16 @@
     width: 38px;
     height: 38px;
     padding: 2px 0 0;
-    border: 3px solid var(--theme-lightblue-alt);
-    border-radius: 8px;
-    background-color: var(--theme-lightblue);
-    transition: background-color 1s;
+    border: 3px solid;
 }
 
 .h-menu-bar {
-    box-sizing: content-box;
     z-index: 111;
+    box-sizing: content-box;
     position: relative;
     width: 20px;
     height: 3px;
-
-    border-radius: 1.5px;
     margin: 5px auto;
-    background-color: var(--theme-blue);
 }
 
 /* || Pages - Home */
@@ -70,13 +63,6 @@
 .link-box * {
     pointer-events: none;
 }
-
-
-
-
-
-
-
 
 .card--home {
     position: relative;
@@ -126,20 +112,8 @@
     line-height: 1.25;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .current {
-    /* this class is assigned via ejs in '/views/partials/header.ejs' */
+    /* this class is assigned using ejs in '/views/partials/header.ejs' */
     border-bottom: 5px solid !important;
 }
 
@@ -313,7 +287,7 @@
     font-size: 22px;
 }
 
-.dog-img {
+.dog-art {
     height: 80px;
     margin: 0 0 10px;
 }
@@ -547,8 +521,8 @@
 }
 
 .left-button-center {
-    position: absolute;
     z-index: 100;
+    position: absolute;
     top: 50%;
     left: 0px;
     transform: translateY(-156px);
@@ -565,8 +539,6 @@
     background-image: url("/images/left-arrow.png");
     background-repeat: no-repeat;
     background-position: 13px 138px;
-    opacity: 0.2;
-    transition: opacity .3s;
 }
 
 .crt-post-footer {
@@ -606,7 +578,6 @@
     transform: translateY(-156px);
     width: 42px;
     height: 312px;
-    background-color: var(--theme-blue);
 }
 
 .right-button-center button {
@@ -617,15 +588,11 @@
     background-image: url("/images/right-arrow.png");
     background-position: 13px 138px;
     background-repeat: no-repeat;
-    opacity: 0.2;
-    transition: opacity .3s;
 }
 
 .viewport {
-    position: relative;
-    z-index: 10;
-    display: inline-block;
     box-sizing: content-box;
+    display: inline-block;
     max-width: 930px;
     height: 310px;
     border-top: 1px solid;
@@ -756,7 +723,6 @@
     pointer-events: none;
 }
 
-
 .contact-form * {
     display: block;
 }
@@ -843,5 +809,6 @@
     font-size: 24px;
     font-weight: 700;
 }
+
 
 /* || END of document */

@@ -58,15 +58,14 @@
     width: auto;
     height: 45px;
     padding: 10px;
-    border: 3px solid var(--darken);
+    border: 3px solid;
     border-right: 0;
     border-top: 0;
-    border-bottom-left-radius: 8px;
-    background-color: var(--theme-blue);
 }
 
 .h-menu-drop li {
     display: inline-block;
+    padding-bottom: 3px;
     font-size: 18px;
     margin: 0 10px;
 }

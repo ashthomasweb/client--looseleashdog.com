@@ -15,7 +15,7 @@
 
 <% document.forEach(function(post) { %>
 
-<div class="card card--blog-main" onmouseover="mouseHover(event)" onclick="location.href='./posts/<%=post.data.title[0].text.replace(/ /g, '-') %>' ">
+<div class="card card--blog-main" onmouseover="mouseHover(event)" onclick="location.href='./posts/<%=post.data.title[0].text.replace(/ /g, '-').replace(/\'/g, "").replace(/\,/g, "").replace(/\!/g, "") %>' ">
     <div class="blog-card-inner-wrap">
 
             <div class="blog-card-left-section">
@@ -29,7 +29,7 @@
                 <div class="intro-text-box">
                     <h2><%=post.data.title[0].text%></h2>
                     <p class="description"><%=post.data.description[0].text.slice(0, 230)%></p>
-                    <button class="intro-read-more" type="button" onclick="location.href='./posts/<%=post.data.title[0].text.replace(/ /g, '-') %>' ">Read More</button>
+                    <button class="intro-read-more" type="button" onclick="location.href='./posts/<%=post.data.title[0].text.replace(/ /g, '-').replace(/\'/g, '').replace(/\,/g, "").replace(/\!/g, "")%>' ">Read More</button>
                 </div>
             </div>
 
@@ -37,7 +37,10 @@
 </div>
 
 <% }); %>
+
 <div class="margin-b-neg39"></div>
+
 <%- include("../views/partials/footer.ejs") -%>
+
 
 <!-- || END of document -->

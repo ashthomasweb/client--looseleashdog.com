@@ -1,4 +1,4 @@
-// JavaScript for "Looseleashdog"
+// Main JavaScript file for "Looseleashdog"
 
 // || Contact form field button color 
 
@@ -19,9 +19,10 @@ function formFieldCheck() {
 
 // || Hamburger Menu for "Looseleashdog"
 // Would be best written with CSS animations or transitions.
-// I used pure JS as an exercise.
+// I used pure JS as an exercise and to balance the languages used on the site.
 
 function hamburger() {
+    
     let bar1 = document.getElementById("h-bar1");
     let bar2 = document.getElementById("h-bar2");
     let bar3 = document.getElementById("h-bar3");
@@ -143,6 +144,7 @@ function hamburger() {
 
     }
 
+    // Boolean check for menu checkbox 
     if (document.getElementById("h-menu-input").checked == true) {
         menuOpen();
         document.getElementById("h-box").style.backgroundColor = "var(--theme-yellow)";
@@ -150,6 +152,7 @@ function hamburger() {
         menuClose();
         document.getElementById("h-box").style.backgroundColor = "var(--theme-lightblue)";
     }
+
 }
 
 // || Blog Main hover event 

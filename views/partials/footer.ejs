@@ -4,6 +4,7 @@
 </div>
 <!-- l-body-wrapper -->
 </div>
+
 <footer>
     <div class="l-footer">
         <div class="l-footer-wrapper">
@@ -17,8 +18,6 @@
                 </div>
             </div>
             
-            
-            
             <div id="footer-box2" class="l-box-third">
                 <div class="footer-goodbye">
                     <% if ( pageTitle === "Contact" ) { %>
@@ -28,9 +27,6 @@
                     <% } %>
                 </div>
             </div>
-
-
-
 
             <div id="footer-box3" class="l-box-third">
                 <div class="footer-attributions">
@@ -43,25 +39,27 @@
                     </p>
                 </div>
             </div>
+
         </div>
     </div>
 </footer>
+
 <!-- JS -->
 <% if ( pageTitle === "Photos" ) { %>
 
-<script type="text/javascript">
-    /* curator-feed-wide-layout */
-    (function () {
-        var i, e, d = document,
-            s = "script";
-        i = d.createElement("script");
-        i.async = 1;
-        i.src = "https://cdn.curator.io/published/35181681-a0a8-4866-a9d5-0d26f773bff3.js";
-        e = d.getElementsByTagName(s)[0];
-        e.parentNode.insertBefore(i, e);
-    })();
-</script>
-<script src="/js/photos.js" charset="utf-8"></script>
+    <!-- Curator API and carousel-->
+    <script type="text/javascript">
+        (function () {
+            var i, e, d = document,
+                s = "script";
+            i = d.createElement("script");
+            i.async = 1;
+            i.src = "https://cdn.curator.io/published/35181681-a0a8-4866-a9d5-0d26f773bff3.js";
+            e = d.getElementsByTagName(s)[0];
+            e.parentNode.insertBefore(i, e);
+        })();
+    </script>
+    <script src="/js/photos.js" charset="utf-8"></script>
 <% } %>
 
 <script src="/js/index.js" charset="utf-8"></script>
@@ -70,5 +68,6 @@
 </body>
 
 </html>
+
 
 <!-- || END of document -->

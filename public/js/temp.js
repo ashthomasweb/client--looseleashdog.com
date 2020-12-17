@@ -1,8 +1,8 @@
-// THIS IS A FILE FOR WORK THAT MAY NEVER SEE LIGHT MODE
+// THIS IS A FILE THAT MAY NEVER SEE THE LIGHT MODE
 
 
 
-// IF CURATOR FAILS - overlay script for Juicer aggregator 
+// BACKUP FOR IF CURATOR FAILS - overlay script for Juicer aggregator 
 
 // function juicerFeed() {
 
@@ -72,9 +72,13 @@
 //     }, 800);
 // }
 
+
+
 // function closeOverlay() {
 //     document.getElementById("photo-overlay").style.display = "none";
 // }
+
+
 
 // // || Arrow icon and slider width
 // let count = 0;
@@ -85,6 +89,9 @@
 // function addListener(item) {
 //     item.addEventListener("click", arrowCounter);
 // }
+
+
+
 
 // function arrowCounter(e) {
 //     if (e.srcElement.ariaLabel == "Previous" && count > 0) {
@@ -105,11 +112,16 @@
 //     }
 // }
 
+
+
+
 // || Mouse drag listener prevents overlay
 // let clickPosition = 0;
 // let clickPositionUp = 0;
 // // let slickPosition = "";
 // // let item;
+
+
 
 // function trigger(e) {
 //     clickPosition = e.pageX;
@@ -123,9 +135,6 @@
 //     // e.path[4].children[0].style.left = slickPosition + "!important";
 //     // e.path[4].children[0].style.cssText = slickPosition + "!important";
 // }
-
-
-
 
 
 
@@ -161,7 +170,6 @@
 //     }
 // }
 
-// jrSlider();
 
 // function rosieSlider() {
 //     let image = document.getElementById("rosie-image");
@@ -193,8 +201,6 @@
 //         image.src = "./images/rosie.jpg";
 //     }
 // }
-
-// rosieSlider();
 
 
 
