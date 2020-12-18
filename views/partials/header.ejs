@@ -6,10 +6,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A resource for dog owners who want to develop their animal's leash skills and walking habits or hire professional dog walking services.">
-    <meta name="keywords" content="dog walking, leash skills, loose leash skills, looseleashdog, saco dog walking, biddeford dog walking, leash training" />
+    <meta name="description"
+        content="A resource for dog owners who want to develop their animal's leash skills and walking habits or hire professional dog walking services.">
+    <meta name="keywords"
+        content="dog walking, leash skills, loose leash skills, looseleashdog, saco dog walking, biddeford dog walking, leash training" />
     <meta name="author" content="Rideout Web" />
     <meta name="copyright" content="2020" />
+   
+
     <title><%=pageTitle%></title>
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="/css/reset.css">
@@ -47,87 +51,89 @@
     <% } %>
     <!-- END EmailJS -->
     <!-- ShareThis JS-->
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fdcf5e7808aed0011dfaa1c&product=inline-share-buttons" async="async"></script>
+    <script type="text/javascript"
+        src="https://platform-api.sharethis.com/js/sharethis.js#property=5fdcf5e7808aed0011dfaa1c&product=inline-share-buttons"
+        async="async"></script>
 </head>
 
 <body>
     <% if ( pageTitle === "Home" ) { %>
 
-        <div class="l-header l-home-header">
-            <div class="l-header-wrapper l-home-header">
-                <div class="logo-pane">
-                    <img class="logo-main" src="/images/logo2.png">
-                </div>
+    <div class="l-header l-home-header">
+        <div class="l-header-wrapper l-home-header">
+            <div class="logo-pane">
+                <img class="logo-main" src="/images/logo2.png">
             </div>
         </div>
-        <div class="l-body-wrapper--home ">
-            <div class="l-content-wrapper">
+    </div>
+    <div class="l-body-wrapper--home ">
+        <div class="l-content-wrapper">
 
-    <%} else { %>
+            <%} else { %>
 
-        <div id="h-menu" class="h-menu-drop">
-            <ul>
-                <a href="/services">
-                    <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services
-                    </li>
-                </a>
-                <a href="/blog">
-                    <li id="blog" <% if (pageTitle === "Blog") { %> class="current" <% } %>>Blog</li>
-                </a>
-                <a href="/photos">
-                    <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
-                </a>
-                <a href="/contact">
-                    <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact
-                    </li>
-                </a>
-            </ul>
-        </div>
+            <div id="h-menu" class="h-menu-drop">
+                <ul>
+                    <a href="/services">
+                        <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services
+                        </li>
+                    </a>
+                    <a href="/blog">
+                        <li id="blog" <% if (pageTitle === "Blog") { %> class="current" <% } %>>Blog</li>
+                    </a>
+                    <a href="/photos">
+                        <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
+                    </a>
+                    <a href="/contact">
+                        <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact
+                        </li>
+                    </a>
+                </ul>
+            </div>
 
-        <div class="l-header">
-            <div class="l-header-wrapper">
+            <div class="l-header">
+                <div class="l-header-wrapper">
 
-                <div class="smlogo-pane">
-                    <a href="/"><img class="logo-sm" src="/images/logo2.png"></a>
-                </div>
+                    <div class="smlogo-pane">
+                        <a href="/"><img class="logo-sm" src="/images/logo2.png"></a>
+                    </div>
 
-                <div class="navbar-pane">
-                    <ul>
-                        <a href="/services">
-                            <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services
-                            </li>
-                        </a>
-                        <a href="/blog">
-                            <li id="blog" <% if (pageTitle === "Blog") { %> class="current" <% } %>>Blog</li>
-                        </a>
-                        <a href="/photos">
-                            <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
-                        </a>
-                        <a href="/contact">
-                            <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact
-                            </li>
-                        </a>
-                    </ul>
-                </div>
+                    <div class="navbar-pane">
+                        <ul>
+                            <a href="/services">
+                                <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services
+                                </li>
+                            </a>
+                            <a href="/blog">
+                                <li id="blog" <% if (pageTitle === "Blog") { %> class="current" <% } %>>Blog</li>
+                            </a>
+                            <a href="/photos">
+                                <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
+                            </a>
+                            <a href="/contact">
+                                <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
 
-                <div class="h-menu-pane">
-                    <input id="h-menu-input" type="checkbox" onclick="hamburger()">
-                    <div id="h-box" class="h-menu-box">
-                        <div class="h-menu-bars">
-                            <div id="h-bar1" class="h-menu-bar"></div>
-                            <div id="h-bar2" class="h-menu-bar"></div>
-                            <div id="h-bar3" class="h-menu-bar"></div>
+                    <div class="h-menu-pane">
+                        <input id="h-menu-input" type="checkbox" onclick="hamburger()">
+                        <div id="h-box" class="h-menu-box">
+                            <div class="h-menu-bars">
+                                <div id="h-bar1" class="h-menu-bar"></div>
+                                <div id="h-bar2" class="h-menu-bar"></div>
+                                <div id="h-bar3" class="h-menu-bar"></div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
-
             </div>
-        </div>
 
-        <div class="l-body-wrapper">
-            <div class="l-content-wrapper">
+            <div class="l-body-wrapper">
+                <div class="l-content-wrapper">
 
-    <% } %>
+                    <% } %>
 
 
-<!-- || END of document -->
+                    <!-- || END of document -->

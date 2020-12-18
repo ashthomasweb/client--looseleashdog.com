@@ -88,7 +88,7 @@ app.get('/posts/:postTitle', function (req, res) {
             if (url) {
                 res.render('post', {
                     document: response.results,
-                    pageTitle: "Blog",
+                    pageTitle: "Blog Post",
                     title: req.params.postTitle.replace(/-/g, ' '),
                 });
             }
