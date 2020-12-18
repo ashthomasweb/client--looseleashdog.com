@@ -3,7 +3,7 @@
 <%- include("../views/partials/header.ejs") -%>
 
 <% document.forEach(function(post) { %>
-  <% if ( title === post.data.title[0].text.replace(/\?/g, "").replace(/\'/g, "").replace(/\,/g, "").replace(/\!/g, "") ) { %>
+  <% if ( title === post.data.title[0].text.replace(/\?/g, "").replace(/\'/g, "").replace(/\,/g, "").replace(/\!/g, "").replace(/-/g, ' ') ) { %>
 
     <div class="post-main-img">
       <img src="<%= post.data.image.url %>">
@@ -67,10 +67,18 @@
         </div>
       <% }; %>
 
+      <%# Whitespace %>
+      <% if (slice.slice_type == "whitespace") { %>
+        <div style="<%- PrismicDOM.RichText.asText(slice.primary.margin) %>"></div>
+      <% }; %>
+
+
     <% }); %>
 
   <% }; %>
 <% }); %>
+
+<div class="sharethis-inline-share-buttons"></div>
 
 <button class="post-return" type="button" onclick="location.href='/blog'">Return to Blog</button>
 

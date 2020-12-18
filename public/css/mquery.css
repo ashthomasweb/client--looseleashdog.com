@@ -515,6 +515,10 @@
 
     @media screen and (max-width: 662px) {
 
+        .post-title {
+            padding: 0;
+        }
+
         .post-gallery {
             position: relative;
             left: 50%;
