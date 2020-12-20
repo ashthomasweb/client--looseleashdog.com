@@ -169,6 +169,14 @@
     margin-bottom: 40px
 }
 
+.whitespace-10 {
+    height: 10px
+}
+
+.margin-b-50 {
+    margin-bottom: 50px
+}
+
 .margin-b-neg39 {
     margin-bottom: -39px;
 }

@@ -23,5 +23,9 @@ button:focus {
     outline: none;
 }
 
+.sharethis-inline-share-buttons {
+    margin-bottom: 10px;
+}
+
 
 /* || END of document  */
