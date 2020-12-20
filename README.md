@@ -17,7 +17,7 @@ A full stack site built for local business owner/operator. The client's previous
 Additionally, the client wants the ability to create publicly available educational content that furthers her development as a professional and brings value to her community at large. This site provides her all the means to do so without a heavy CMS.
 
 ## Live Version
-(https://www.dev.looseleashdog.com)
+(https://www.looseleashdog.com)
 
 ## Technologies
 * Node.js - version 12.18.3
@@ -37,6 +37,7 @@ Additionally, the client wants the ability to create publicly available educatio
 
 To-do list:
 * Equipment page / affiliate store to be implemented once enough blog articles are written. Equipment entries will be useful for the client to populate the blog initially.
+* Improve Open Graph data to be page/post specific.
 * Build video page with YouTube Integration upon client venture.
 * Build custom overlay for photo carousel. 
 * Institute full server-side rendering and SPA with ejs renderFile() operation.
@@ -48,7 +49,7 @@ To-do list:
 * Current third-party carousel overlay causes a brief double scrollbar error during it's transition.
 
 ## Status
-Project is: _in progress_, final setup of blog post templates and content generation underway!
+Project is: _in production_!
 
 ## Contact
 Created by William Rideout (https://www.rideoutweb.com/) - feel free to contact me!
