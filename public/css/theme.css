@@ -9,8 +9,8 @@
     --theme-darkgreen: #00bf79; 
     --theme-green: #6decb9; 
     --theme-lightgreen: #9cefcd;
-    --theme-washedgreen: #abffdc;
-    --theme-yellow: #f2f5d1;
+    --theme-washedgreen: #befff0;
+    --theme-yellow: #feffef;
     --theme-borders: #3a3b48;
     --theme-border-light: #e6e6e6;
     --primary-background: #ffffff;
@@ -199,7 +199,7 @@ footer a:hover {
     border-radius: 8px;
     border-color: var(--theme-lightblue-alt);
     background-color: var(--theme-lightblue);
-    transition: background-color 1s;
+    transition: background-color .3s;
 }
 
 .h-menu-drop li {
@@ -498,6 +498,19 @@ textarea:focus {
 }
 
 /* || Footer */
+
+.share-menu-pane {
+    transition: margin-top 1s;
+}
+
+.footer-social button {
+    cursor: pointer;
+    border-radius: 12px;
+    border-color: var(--theme-blue);
+    background: url(/images/share.png);
+    background-color: var(--theme-lightblue);
+    transition: background-color .3s;
+}
 
 .footer-attributions {
     color: var(--copy-light);

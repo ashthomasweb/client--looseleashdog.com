@@ -6,24 +6,30 @@
 </div>
 
 <footer>
+    <div id="share-menu" class="share-menu-pane">
+        <div class="share-wrapper">
+            <div class="sharethis-inline-share-buttons"></div>
+        </div>
+    </div>
     <div class="l-footer">
         <div class="l-footer-wrapper">
-            
+
             <div id="footer-box1" class="l-box-third">
                 <div class="footer-social">
+                    <button id="footer-share" type="button" onclick="footerShare()"></button>
                     <a href="https://www.facebook.com/looseleashdog" target="_blank"><img
                             src="../images/facebook.png"></a>
                     <a href="https://www.instagram.com/looseleashdog" target="_blank"><img
                             src="../images/instagram.png"></a>
                 </div>
             </div>
-            
+
             <div id="footer-box2" class="l-box-third">
                 <div class="footer-goodbye">
                     <% if ( pageTitle === "Contact" ) { %>
-                        <h3 style="pointer-events: none;"><a class="link-impact" href="/contact">Let's get started!</a></h3>
+                    <h3 style="pointer-events: none;"><a class="link-impact" href="/contact">Let's get started!</a></h3>
                     <%} else { %>
-                        <h3><a class="link-impact" href="/contact">Contact me here</a></h3>
+                    <h3><a class="link-impact" href="/contact">Contact me here</a></h3>
                     <% } %>
                 </div>
             </div>
@@ -34,7 +40,8 @@
                     <p><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a>
 
                     </p>
-                    <p><a href="https://www.vecteezy.com/free-vector/female-portrait" target="_blank">Portrait</a><a href="https://www.vecteezy.com/free-vector/park" target="_blank"> and Park
+                    <p><a href="https://www.vecteezy.com/free-vector/female-portrait" target="_blank">Portrait</a><a
+                            href="https://www.vecteezy.com/free-vector/park" target="_blank"> and Park
                             Vectors by Vecteezy</a>
                     </p>
                 </div>
@@ -47,19 +54,19 @@
 <!-- JS -->
 <% if ( pageTitle === "Photos" ) { %>
 
-    <!-- Curator API and carousel-->
-    <script type="text/javascript">
-        (function () {
-            var i, e, d = document,
-                s = "script";
-            i = d.createElement("script");
-            i.async = 1;
-            i.src = "https://cdn.curator.io/published/35181681-a0a8-4866-a9d5-0d26f773bff3.js";
-            e = d.getElementsByTagName(s)[0];
-            e.parentNode.insertBefore(i, e);
-        })();
-    </script>
-    <script src="/js/photos.js" charset="utf-8"></script>
+<!-- Curator API and carousel-->
+<script type="text/javascript">
+    (function () {
+        var i, e, d = document,
+            s = "script";
+        i = d.createElement("script");
+        i.async = 1;
+        i.src = "https://cdn.curator.io/published/35181681-a0a8-4866-a9d5-0d26f773bff3.js";
+        e = d.getElementsByTagName(s)[0];
+        e.parentNode.insertBefore(i, e);
+    })();
+</script>
+<script src="/js/photos.js" charset="utf-8"></script>
 <% } %>
 
 <script src="/js/index.js" charset="utf-8"></script>

@@ -22,7 +22,7 @@ function formFieldCheck() {
 // I used pure JS as an exercise and to balance the languages used on the site.
 
 function hamburger() {
-    
+
     let bar1 = document.getElementById("h-bar1");
     let bar2 = document.getElementById("h-bar2");
     let bar3 = document.getElementById("h-bar3");
@@ -63,6 +63,7 @@ function hamburger() {
             }
 
             setTimeout(function () {
+
                 let animC = setInterval(barRotation, 2);
                 function barRotation() {
                     if (barsRot == 45) {
@@ -97,6 +98,7 @@ function hamburger() {
         let menuPos = 65;
 
         setTimeout(function () {
+
             let animA = setInterval(barMid, 8);
             function barMid() {
                 if (bar2Vis > 0.9) {
@@ -107,7 +109,7 @@ function hamburger() {
                 }
             }
         }, 150);
-        
+
         let animB = setInterval(barMove, 30);
         function barMove() {
             if (barsPos == 0) {
@@ -162,20 +164,88 @@ function mouseHover(event) {
     let parent;
     let btn;
     path.forEach(findName);
-        
+
     function findName(item) {
-        if ( item.className == "card card--blog-main" ) {
+        if (item.className == "card card--blog-main") {
             parent = item;
             btn = parent.children[0].children[1].children[0].children[2];
             btn.style.backgroundColor = "var(--theme-blue)";
-            parent.addEventListener("mouseout", function() {
+            parent.addEventListener("mouseout", function () {
                 btn.style.backgroundColor = "var(--theme-green)";
             })
         }
 
     }
-    
+
 }
 
+// || Footer Social Share Menu 
+
+let shareBool = true;
+let menuPos = 0;
+
+function footerShare() {
+
+    let shareMenu = document.getElementById("share-menu");
+    let menuButton = document.getElementById("footer-share");
+
+
+    function shareOpen() {
+
+        let shareAnimA = setInterval(menuOn, 1);
+
+        function menuOn() {
+            if (menuPos == -56) {
+                clearInterval(shareAnimA);
+                shareBool = false;
+            } else {
+                menuPos--
+                shareMenu.style.top = menuPos + "px";
+            }
+        }
+    }
+
+    function shareClose() {
+
+        let shareAnimB = setInterval(menuOff, 1);
+
+        function menuOff() {
+            if (menuPos == 0) {
+                clearInterval(shareAnimB);
+                shareBool = true;
+            } else {
+                menuPos++;
+                shareMenu.style.top = menuPos + "px";
+            }
+        }
+    }
+
+    if (shareBool == true ) {
+        shareOpen();
+        menuButton.style.backgroundColor = "var(--theme-yellow)";
+    } else {
+        shareClose();
+        menuButton.style.backgroundColor = "var(--theme-lightblue)";
+    }
+
+}
+
+function shareCheck() {
+    let check = document.title;
+    if ( check == "Blog Post" ) {
+        footerShare();
+    }
+}
+
+
+
+
+// if ( pos == "0") {
+//     pos = "-45px";
+
+// } else if ( pos == "-45px" ) {
+//     pos = "0";
+
+// }
 
 /* || END of document  */

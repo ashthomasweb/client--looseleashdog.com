@@ -183,7 +183,7 @@
 .text-pane--home p {
     display: inline-block;
     max-width: 650px;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 10px 0px;
     text-align: left;
     font-size: 20px;
     line-height: 1.6;
@@ -419,7 +419,7 @@
     padding: 0 15px;
     margin-bottom: 8px;
     text-align: center;
-    font-size: 28px;
+    font-size: 27px;
     line-height: 1.1;
 }
 
