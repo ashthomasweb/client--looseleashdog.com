@@ -25,66 +25,65 @@
     <% post.data.body.forEach(function(slice) { %>
 
       <%# Body Text%>
-      <% if (slice.slice_type == "body") { %>
-        <div class="slice-paragraph"><%- PrismicDOM.RichText.asHtml(slice.primary.paragraph) %></div>
-      <% } %>
+        <% if (slice.slice_type == "body") { %>
+          <div class="slice-paragraph"><%- PrismicDOM.RichText.asHtml(slice.primary.paragraph) %></div>
+        <% } %>
 
       <%# Heading h2%>
-      <% if (slice.slice_type == "heading") { %>
-        <div class="slice-heading"><%- PrismicDOM.RichText.asHtml(slice.primary.heading) %></div>
-      <% } %>
+        <% if (slice.slice_type == "heading") { %>
+          <div class="slice-heading"><%- PrismicDOM.RichText.asHtml(slice.primary.heading) %></div>
+        <% } %>
 
       <%# Subheading h3%>
-      <% if (slice.slice_type == "subheading") { %>
-        <div class="slice-subheading"><%- PrismicDOM.RichText.asHtml(slice.primary.subheading) %></div>
-      <% } %>
+        <% if (slice.slice_type == "subheading") { %>
+          <div class="slice-subheading"><%- PrismicDOM.RichText.asHtml(slice.primary.subheading) %></div>
+        <% } %>
 
       <%# Link %>
-      <% if (slice.slice_type == "link") { %>
-        <div class="slice-link">
-          <p><a href="<%= slice.primary.link[0].spans[0].data.url %>" target="__blank"><%=slice.primary.link[0].text%></a></p>
-        </div>
-      <% } %>
+        <% if (slice.slice_type == "link") { %>
+          <div class="slice-link">
+            <p><a href="<%= slice.primary.link[0].spans[0].data.url %>" target="__blank"><%=slice.primary.link[0].text%></a></p>
+          </div>
+        <% } %>
 
       <%# Quote %>
-      <% if (slice.slice_type == "quote_and_author") { %>
-        <div class="slice-quote">
-          <%- PrismicDOM.RichText.asHtml(slice.primary.quote) %>
-          <%- PrismicDOM.RichText.asHtml(slice.primary.author) %>
-        </div>
-      <% } %>
+        <% if (slice.slice_type == "quote_and_author") { %>
+          <div class="slice-quote">
+            <%- PrismicDOM.RichText.asHtml(slice.primary.quote) %>
+            <%- PrismicDOM.RichText.asHtml(slice.primary.author) %>
+          </div>
+        <% } %>
 
       <%# Image Gallery %>
-      <% if (slice.slice_type == "image_gallery") { %>
-        <div class="slice-gallery">
-          <div class="post-gallery">
-            <% slice.items.forEach(function(image) { %>
-            <div class="gallery-content-frame">
-              <img class="post-gallery-img" src="<%= image.gallery_image.url %>"/>
-              <p class="post-gallery-caption"><%= image.image_captions[0].text %></p>
+        <% if (slice.slice_type == "image_gallery") { %>
+          <div class="slice-gallery">
+            <div class="post-gallery">
+              <% slice.items.forEach(function(image) { %>
+              <div class="gallery-content-frame">
+                <img class="post-gallery-img" src="<%= image.gallery_image.url %>"/>
+                <p class="post-gallery-caption"><%= image.image_captions[0].text %></p>
+              </div>
+              <% }) %>
             </div>
-            <% }) %>
           </div>
-        </div>
-      <% }; %>
+        <% }; %>
 
       <%# Whitespace %>
-      <% if (slice.slice_type == "whitespace") { %>
-        <div style="<%- PrismicDOM.RichText.asText(slice.primary.margin) %>"></div>
-      <% }; %>
-
+        <% if (slice.slice_type == "whitespace") { %>
+          <div style="<%- PrismicDOM.RichText.asText(slice.primary.margin) %>"></div>
+        <% }; %>
 
     <% }); %>
 
   <% }; %>
 <% }); %>
 
-<button class="post-return" type="button" onclick="location.href='/blog'">Return to Blog</button>
+<button class="post-return" type="button" onclick="location.href='/blog'">Return to Blog Main</button>
 
-<p class="slice-paragraph">Thanks for stopping by and reading! Check back soon for new posts and pics. I hope you found something useful, if you did you can share this page on your media networks below.</p>
+<p class="slice-paragraph">Thanks for stopping by and reading! Check back soon for new posts and pics. I hope 
+  you found something useful, if you did you can share this page on your media networks below.</p>
 
 <div class="margin-b-40"></div>
-
 
 <%- include("../views/partials/footer.ejs") -%>
 

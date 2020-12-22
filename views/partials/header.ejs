@@ -73,69 +73,74 @@
 
             <%} else { %>
 
-            <div id="h-menu" class="h-menu-drop">
-                <ul>
-                    <a href="/services">
-                        <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services
-                        </li>
-                    </a>
-                    <a href="/blog">
-                        <li id="blog" <% if (pageTitle === "Blog") { %> class="current" <% } %>>Blog</li>
-                    </a>
-                    <a href="/photos">
-                        <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
-                    </a>
-                    <a href="/contact">
-                        <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact
-                        </li>
-                    </a>
-                </ul>
-            </div>
+                <div id="h-menu" class="h-menu-drop">
+                    <ul>
+                        <a href="/services">
+                            <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services
+                            </li>
+                        </a>
+                        <a href="/blog">
+                            <li id="blog" <% if (pageTitle === "Blog" || pageTitle === "Blog Post") { %> class="current" <% } %>>Blog</li>
+                        </a>
+                        <a href="/photos">
+                            <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
+                        </a>
+                        <a href="/contact">
+                            <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact
+                            </li>
+                        </a>
+                    </ul>
+                </div>
 
-            <div class="l-header">
-                <div class="l-header-wrapper">
+                <div class="l-header">
+                    <div class="l-header-wrapper">
 
-                    <div class="smlogo-pane">
-                        <a href="/"><img class="logo-sm" src="/images/logo2.png"></a>
-                    </div>
+                        <div class="smlogo-pane">
+                            <a href="/"><img class="logo-sm" src="/images/logo2.png"></a>
+                        </div>
 
-                    <div class="navbar-pane">
-                        <ul>
-                            <a href="/services">
-                                <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services
-                                </li>
-                            </a>
-                            <a href="/blog">
-                                <li id="blog" <% if (pageTitle === "Blog") { %> class="current" <% } %>>Blog</li>
-                            </a>
-                            <a href="/photos">
-                                <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
-                            </a>
-                            <a href="/contact">
-                                <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact
-                                </li>
-                            </a>
-                        </ul>
-                    </div>
+                        <div class="navbar-pane">
+                            <ul>
+                                <a href="/services">
+                                    <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services
+                                    </li>
+                                </a>
+                                <a href="/blog">
+                                    <li id="blog" <% if (pageTitle === "Blog" || pageTitle === "Blog Post") { %> class="current" <% } %>>Blog</li>
+                                </a>
+                                <a href="/photos">
+                                    <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
+                                </a>
+                                <a href="/contact">
+                                    <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
 
-                    <div class="h-menu-pane">
-                        <input id="h-menu-input" type="checkbox" onclick="hamburger()">
-                        <div id="h-box" class="h-menu-box">
-                            <div class="h-menu-bars">
-                                <div id="h-bar1" class="h-menu-bar"></div>
-                                <div id="h-bar2" class="h-menu-bar"></div>
-                                <div id="h-bar3" class="h-menu-bar"></div>
+                        <div class="h-menu-pane">
+                            <input id="h-menu-input" type="checkbox" onclick="hamburger()">
+                            <div id="h-box" class="h-menu-box">
+                                <div class="h-menu-bars">
+                                    <div id="h-bar1" class="h-menu-bar"></div>
+                                    <div id="h-bar2" class="h-menu-bar"></div>
+                                    <div id="h-bar3" class="h-menu-bar"></div>
+                                </div>
                             </div>
                         </div>
+
                     </div>
-
                 </div>
-            </div>
 
-            <div class="l-body-wrapper">
-                <div class="l-content-wrapper">
+                <% if ( pageTitle === "Contact" ) { %>
+                    <div class="l-body-wrapper--contact">
+                        <div class="l-content-wrapper--contact">
+                <%} else { %>
+                    <div class="l-body-wrapper">
+                        <div class="l-content-wrapper">
+                <% } %>
 
-                    <% } %>
+            <% } %>
 
 
                     <!-- || END of document -->

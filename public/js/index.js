@@ -238,14 +238,4 @@ function shareCheck() {
 }
 
 
-
-
-// if ( pos == "0") {
-//     pos = "-45px";
-
-// } else if ( pos == "-45px" ) {
-//     pos = "0";
-
-// }
-
 /* || END of document  */

@@ -646,22 +646,6 @@
     text-align: center;
 }
 
-.greeting-img--contact {
-    z-index: 0;
-    position: absolute;
-    top: 63px;
-    right: 0px;
-    left: 0px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.greeting-img--contact img {
-    position: relative;
-    width: 1000px;
-    height: 770px;
-}
-
 .greeting-pane--contact h1 {
     z-index: 1;
     position: relative;

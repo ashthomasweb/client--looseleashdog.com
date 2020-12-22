@@ -88,6 +88,19 @@
     padding-bottom: 40px;
 }
 
+.l-body-wrapper--contact {
+    max-width: 1000px;
+    min-height: calc(100vh - 186px);
+    margin: 60px auto 0px auto;
+    background: url(/images/contact-background7.png);
+    background-size: cover;
+}
+
+.l-content-wrapper--contact {
+    padding-bottom: 40px;
+    position: relative;
+}
+
 /* || Footer */
 
 .l-footer {
@@ -232,6 +245,11 @@
 }
 
 /* || Footer */
+
+footer {
+    position: relative;
+    height: 123px;
+}
 
 .footer-social button {
     display: inline-block;

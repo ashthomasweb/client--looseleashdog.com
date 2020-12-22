@@ -137,6 +137,16 @@ footer a:hover {
     background-color: var(--primary-background);
 }
 
+.l-body-wrapper--contact {
+    background: url(/images/contact-background7.png);
+    background-size: cover;
+}
+
+.l-content-wrapper--contact {
+    box-shadow: 0px 0px 8px var(--shadow);
+    background-color: var(--clear);
+}
+
 .l-footer {
     border-top-color: var(--darken);
     background-color: var(--theme-washedgreen);
