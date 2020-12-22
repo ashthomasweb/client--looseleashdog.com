@@ -45,7 +45,7 @@ To-do list:
 
 ## Known Issues:
 * Firefox for Android - 1px margin above fixed header allows content to show through when scrolling.
-* Current third-party carousel overlay causes a brief double scrollbar error during it's transition.
+* Current third-party carousel overlay causes a brief double scrollbar display error during it's transition.
 
 ## Status
 Project is: _in production_! Client has control of marketing engine.
