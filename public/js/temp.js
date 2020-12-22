@@ -1,8 +1,7 @@
-// THIS IS A FILE THAT MAY NEVER SEE THE LIGHT MODE
+// THIS IS ONE WEEK OF WORK THAT WILL PROBABLY STAY IN THE DARK
 
 
-
-// BACKUP FOR IF CURATOR FAILS - overlay script for Juicer aggregator 
+// BACKUP IF CURATOR FAILS - overlay script for Juicer aggregator 
 
 // function juicerFeed() {
 

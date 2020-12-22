@@ -97,6 +97,15 @@ footer a:hover {
     color: var(--theme-blue);
 }
 
+/* || ShareThis menu styles  */
+
+.share-wrapper {
+    border-color: var(--darken);
+    background-color: var(--theme-washedgreen);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
 /* || Curator overlay links */
 
 .crt-popup-text-body a {
@@ -384,6 +393,10 @@ footer a:hover {
 /* || Curator Carosel */
 
 .carousel--curator {
+    background-color: var(--theme-blue);
+}
+
+.left-button-center {
     background-color: var(--theme-blue);
 }
 

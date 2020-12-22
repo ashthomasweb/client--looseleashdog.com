@@ -36,20 +36,19 @@ Additionally, the client wants the ability to create publicly available educatio
 * Secure email auto-responder keeps client email safe, without the need for authentication.
 
 To-do list:
-* Equipment page / affiliate store to be implemented once enough blog articles are written. Equipment entries will be useful for the client to populate the blog initially.
 * Improve Open Graph data to be page/post specific.
-* Build video page with YouTube Integration upon client venture.
 * Build custom overlay for photo carousel. 
 * Institute full server-side rendering and SPA with ejs renderFile() operation.
 * Improve font rendering in Chrome.
-* Bring site to WCAG 2.0
+* Bring site to WCAG 2.0.
+* Introduce lazy-loading on Blog Main
 
 ## Known Issues:
 * Firefox for Android - 1px margin above fixed header allows content to show through when scrolling.
 * Current third-party carousel overlay causes a brief double scrollbar error during it's transition.
 
 ## Status
-Project is: _in production_!
+Project is: _in production_! Client has control of marketing engine.
 
 ## Contact
 Created by William Rideout (https://www.rideoutweb.com/) - feel free to contact me!

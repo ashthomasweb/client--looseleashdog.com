@@ -91,7 +91,6 @@ function hamburger() {
     }
 
     function menuClose() {
-
         let barsPos = 8;
         let barsRot = 45;
         let bar2Vis = 0;
@@ -147,6 +146,7 @@ function hamburger() {
     }
 
     // Boolean check for menu checkbox 
+
     if (document.getElementById("h-menu-input").checked == true) {
         menuOpen();
         document.getElementById("h-box").style.backgroundColor = "var(--theme-yellow)";
@@ -163,6 +163,7 @@ function mouseHover(event) {
     let path = event.path;
     let parent;
     let btn;
+
     path.forEach(findName);
 
     function findName(item) {
@@ -180,7 +181,6 @@ function mouseHover(event) {
 }
 
 // || Footer Social Share Menu 
-
 let shareBool = true;
 let menuPos = 0;
 
@@ -188,7 +188,6 @@ function footerShare() {
 
     let shareMenu = document.getElementById("share-menu");
     let menuButton = document.getElementById("footer-share");
-
 
     function shareOpen() {
 
@@ -208,7 +207,6 @@ function footerShare() {
     function shareClose() {
 
         let shareAnimB = setInterval(menuOff, 1);
-
         function menuOff() {
             if (menuPos == 0) {
                 clearInterval(shareAnimB);
@@ -230,9 +228,11 @@ function footerShare() {
 
 }
 
-function shareCheck() {
+// || Open share menu on load 
+
+function shareIfBlog() {
     let check = document.title;
-    if ( check == "Blog Post" ) {
+    if ( check == "Blog Post" || check == "Blog" ) {
         footerShare();
     }
 }

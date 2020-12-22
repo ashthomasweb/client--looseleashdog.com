@@ -6,8 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords"
-        content="dog walking, leash skills, loose leash skills, looseleashdog, saco dog walking, biddeford dog walking, leash training" />
+    <meta name="keywords" content="dog walking, leash skills, loose leash skills, looseleashdog, saco dog walking, biddeford dog walking, leash training" />
     <meta name="author" content="Rideout Web" />
     <meta name="copyright" content="2020" />
     <meta property="og:image" content="/images/rosie-share.jpg">
@@ -15,7 +14,6 @@
     <meta property="og:description" content="Learn about your animal's leash skills or hire professional dog walking services.">
     <meta property="og:url" content="https://www.looseleashdog.com">
     <meta name="twitter:card" content="summary_large_image">
-
     <title><%=pageTitle%></title>
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="/css/reset.css">
@@ -27,38 +25,38 @@
     <link rel="stylesheet" href="/css/mquery.css">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/atn3lzq.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400&family=Sacramento&display=swap">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400&family=Sacramento&display=swap">
     <!-- EmailJS -->
     <% if ( pageTitle === "Contact" ) { %>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            // find user info at https://dashboard.emailjs.com/admin/integration
-            emailjs.init('user_i2jhWUzjMEJrRku3U92ZB');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function () {
-            document.getElementById('contact-form').addEventListener('submit', function (event) {
-                event.preventDefault();
-                emailjs.sendForm('service_znjcbmt', 'contact_form', this);
-                document.getElementById("hidden-response").style.display = "block";
-                document.getElementById("contact-form").style.display = "none";
-            });
-        }
-    </script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function () {
+                // find user info at https://dashboard.emailjs.com/admin/integration
+                emailjs.init('user_i2jhWUzjMEJrRku3U92ZB');
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function () {
+                document.getElementById('contact-form').addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    emailjs.sendForm('service_znjcbmt', 'contact_form', this);
+                    document.getElementById("hidden-response").style.display = "block";
+                    document.getElementById("contact-form").style.display = "none";
+                });
+            }
+        </script>
     <% } %>
     <!-- END EmailJS -->
+
     <!-- ShareThis JS-->
     <script type="text/javascript"
-        src="https://platform-api.sharethis.com/js/sharethis.js#property=5fdcf5e7808aed0011dfaa1c&product=inline-share-buttons"
-        async="async"></script>
+        src="https://platform-api.sharethis.com/js/sharethis.js#property=5fdcf5e7808aed0011dfaa1c&product=inline-share-buttons" async="async">
+    </script>
+    <!-- END ShareThis JS-->
+
 </head>
 
-<body onload="shareCheck()">
+<body onload="shareIfBlog()">
     <% if ( pageTitle === "Home" ) { %>
 
     <div class="l-header l-home-header">
@@ -76,8 +74,7 @@
                 <div id="h-menu" class="h-menu-drop">
                     <ul>
                         <a href="/services">
-                            <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services
-                            </li>
+                            <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services</li>
                         </a>
                         <a href="/blog">
                             <li id="blog" <% if (pageTitle === "Blog" || pageTitle === "Blog Post") { %> class="current" <% } %>>Blog</li>
@@ -86,8 +83,7 @@
                             <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
                         </a>
                         <a href="/contact">
-                            <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact
-                            </li>
+                            <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact</li>
                         </a>
                     </ul>
                 </div>
@@ -143,4 +139,4 @@
             <% } %>
 
 
-                    <!-- || END of document -->
+<!-- || END of document -->

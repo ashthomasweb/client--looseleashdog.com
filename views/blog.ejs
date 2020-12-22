@@ -19,10 +19,10 @@
     <div class="blog-card-inner-wrap">
 
             <div class="blog-card-left-section">
-                    <div class="intro-img">
-                        <img src=<%=post.data.image.url%>>
-                    </div>
-                    <p><i>Published <%=post.first_publication_date.slice(5, 10)%>, <%=post.first_publication_date.slice(0, 4)%></i></p>
+                <div class="intro-img">
+                    <img src=<%=post.data.image.url%>>
+                </div>
+                <p><i>Published <%=post.first_publication_date.slice(5, 10)%>, <%=post.first_publication_date.slice(0, 4)%></i></p>
             </div>
             
             <div class="blog-card-right-section">
@@ -37,8 +37,6 @@
 </div>
 
 <% }); %>
-
-
 
 <%- include("../views/partials/footer.ejs") -%>
 

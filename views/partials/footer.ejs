@@ -6,11 +6,13 @@
 </div>
 
 <footer>
+    
     <div id="share-menu" class="share-menu-pane">
         <div class="share-wrapper">
             <div class="sharethis-inline-share-buttons"></div>
         </div>
     </div>
+
     <div class="l-footer">
         <div class="l-footer-wrapper">
 
@@ -49,25 +51,26 @@
     </div>
 </footer>
 
-<!-- JS -->
+<!-- Curator API and carousel-->
 <% if ( pageTitle === "Photos" ) { %>
 
-<!-- Curator API and carousel-->
-<script type="text/javascript">
-    (function () {
-        var i, e, d = document,
-            s = "script";
-        i = d.createElement("script");
-        i.async = 1;
-        i.src = "https://cdn.curator.io/published/35181681-a0a8-4866-a9d5-0d26f773bff3.js";
-        e = d.getElementsByTagName(s)[0];
-        e.parentNode.insertBefore(i, e);
-    })();
-</script>
-<script src="/js/photos.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        (function () {
+            var i, e, d = document,
+                s = "script";
+            i = d.createElement("script");
+            i.async = 1;
+            i.src = "https://cdn.curator.io/published/35181681-a0a8-4866-a9d5-0d26f773bff3.js";
+            e = d.getElementsByTagName(s)[0];
+            e.parentNode.insertBefore(i, e);
+        })();
+    </script>
+    <script src="/js/photos.js" charset="utf-8"></script>
 <% } %>
+
 <script src="/js/index.js" charset="utf-8"></script>
 <script src="/js/mquery.js" charset="utf-8"></script>
+
 </body>
 
 </html>

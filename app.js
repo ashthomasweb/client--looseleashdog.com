@@ -1,4 +1,4 @@
-// Node.js and Express Server "app.js" for "Looseleashdog" 
+// Node.js/Express Server "app.js" for "Looseleashdog" 
 
 // Dependencies
 const express = require('express');
@@ -7,7 +7,7 @@ const ejs = require('ejs');
 const favicon = require('express-favicon');
 var Prismic = require('prismic-javascript');
 var PrismicDOM = require('prismic-dom');
-var prismicEndpoint = 'https://looseleashdog.prismic.io/api/v2'; // endpoint address cannot be changed, "ashleyth-test" is correct and final
+var prismicEndpoint = 'https://looseleashdog.prismic.io/api/v2';
 
 const app = express();
 
@@ -18,7 +18,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Prismic
-// Pretty URLs for known types
+// Standardized URLs for known types
 var linkResolver = function (doc) {
     if (doc.type === 'blog') return "/post/" + doc.uid;
     if (doc.type === 'page') return "/" + doc.uid;

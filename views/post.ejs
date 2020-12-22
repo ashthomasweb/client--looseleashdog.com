@@ -16,7 +16,6 @@
     <div class="post-meta">
       <p class="post-date"><i>First published on <%= post.first_publication_date.slice(5, 10) %>, </i></p>
       <p class="post-date"><i><%= post.first_publication_date.slice(0, 4) %></i></p>
-      
     </div>
 
     <div class="l-divider divider-bottom margin-b-40"></div>
@@ -59,10 +58,10 @@
           <div class="slice-gallery">
             <div class="post-gallery">
               <% slice.items.forEach(function(image) { %>
-              <div class="gallery-content-frame">
-                <img class="post-gallery-img" src="<%= image.gallery_image.url %>"/>
-                <p class="post-gallery-caption"><%= image.image_captions[0].text %></p>
-              </div>
+                <div class="gallery-content-frame">
+                  <img class="post-gallery-img" src="<%= image.gallery_image.url %>"/>
+                  <p class="post-gallery-caption"><%= image.image_captions[0].text %></p>
+                </div>
               <% }) %>
             </div>
           </div>
@@ -81,7 +80,8 @@
 <button class="post-return" type="button" onclick="location.href='/blog'">Return to Blog Main</button>
 
 <p class="slice-paragraph">Thanks for stopping by and reading! Check back soon for new posts and pics. I hope 
-  you found something useful, if you did you can share this page on your media networks below.</p>
+  you found something useful, if you did you can share this page on your media networks below.
+</p>
 
 <div class="margin-b-40"></div>
 
