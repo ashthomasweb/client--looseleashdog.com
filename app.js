@@ -1,6 +1,12 @@
 // Node.js/Express Server "app.js" for "Looseleashdog" 
 
 // Dependencies
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
+
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
@@ -8,6 +14,7 @@ const favicon = require('express-favicon');
 var Prismic = require('prismic-javascript');
 var PrismicDOM = require('prismic-dom');
 var prismicEndpoint = 'https://looseleashdog.prismic.io/api/v2';
+const nodemailer = require("nodemailer");
 
 const app = express();
 
@@ -15,7 +22,9 @@ app.use(favicon(__dirname + '/public/favicon.ico'));
 app.set('view engine', 'ejs');
 app.set('views', './views');
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 // Prismic
 // Standardized URLs for known types
@@ -43,6 +52,26 @@ function initApi(req) {
     });
 }
 // END Prismic
+
+// Nodemailer 
+var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'rideoutweb',
+        pass: '3625Pinkship!'
+    }
+});
+
+var mailOptions = {
+    from: 'youremail@gmail.com',
+    to: 'myfriend@yahoo.com',
+    subject: 'Sending Email using Node.js',
+    text: 'That was easy! Oh yeah!'
+};
+
+
+
+// END Nodemailer 
 
 // Route Handlers
 
@@ -105,14 +134,32 @@ app.get('/photos', function (req, res) {
 app.get('/contact', function (req, res) {
     res.render('contact', {
         pageTitle: "Contact",
+        sentBool: false,
+    });
+});
+
+app.post('/contact', function (req, res) {
+    console.log(req.body);
+
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+        }
+    });
+
+    res.render('contact', {
+        pageTitle: "Contact",
+        sentBool: true,
     });
 });
 
 // || Listener 
 
 let port = process.env.PORT;
-if (port == null || port == "") { 
-    port = 3000; 
+if (port == null || port == "") {
+    port = 3000;
 }
 app.listen(port, () => console.log(`Server started at port ${port}.`));
 

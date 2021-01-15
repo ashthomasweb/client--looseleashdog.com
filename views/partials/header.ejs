@@ -6,12 +6,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="dog walking, leash skills, loose leash skills, looseleashdog, saco dog walking, biddeford dog walking, leash training" />
+    <meta name="keywords"
+        content="dog walking, leash skills, loose leash skills, looseleashdog, saco dog walking, biddeford dog walking, leash training" />
     <meta name="author" content="Rideout Web" />
     <meta name="copyright" content="2020" />
     <meta property="og:image" content="/images/rosie-share.jpg">
     <meta property="og:title" content="Blog and Leash Training Services">
-    <meta property="og:description" content="Learn about your animal's leash skills or hire professional dog walking services.">
+    <meta property="og:description"
+        content="Learn about your animal's leash skills or hire professional dog walking services.">
     <meta property="og:url" content="https://www.looseleashdog.com">
     <meta name="twitter:card" content="summary_large_image">
     <title><%=pageTitle%></title>
@@ -25,32 +27,59 @@
     <link rel="stylesheet" href="/css/mquery.css">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/atn3lzq.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400&family=Sacramento&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400&family=Sacramento&display=swap">
     <!-- EmailJS -->
-    <% if ( pageTitle === "Contact" ) { %>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-        <script type="text/javascript">
-            (function () {
-                // find user info at https://dashboard.emailjs.com/admin/integration
-                emailjs.init('user_i2jhWUzjMEJrRku3U92ZB');
-            })();
-        </script>
-        <script type="text/javascript">
-            window.onload = function () {
-                document.getElementById('contact-form').addEventListener('submit', function (event) {
+    <!-- <% if ( pageTitle === "Contact" ) { %>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_i2jhWUzjMEJrRku3U92ZB");
+        })();
+    </script> -->
+    <!-- <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm("service_LLD", "contact_LLD", this);
+                document.getElementById("hidden-response").style.display = "block";
+                document.getElementById("contact-form").style.display = "none";
+            });
+        }
+    </script> -->
+    <!-- <script>
+        window.onload = function () {
+
+            const cbtn = document.getElementById('contact-button');
+
+            document.getElementById('contact-form')
+                .addEventListener('submit', function (event) {
                     event.preventDefault();
-                    emailjs.sendForm('service_znjcbmt', 'contact_form', this);
-                    document.getElementById("hidden-response").style.display = "block";
-                    document.getElementById("contact-form").style.display = "none";
+
+                    cbtn.value = 'Sending...';
+
+                    const serviceID = 'service_LLD';
+                    const templateID = 'contact_LLD';
+
+                    emailjs.sendForm(serviceID, templateID, this)
+                        .then(() => {
+                            cbtn.value = 'Send Email';
+                            alert('Sent!');
+                        }, (err) => {
+                            cbtn.value = 'Send Email';
+                            alert(JSON.stringify(err));
+                        });
                 });
-            }
-        </script>
-    <% } %>
+        };
+    </script> -->
+
+    <!-- <% } %> -->
     <!-- END EmailJS -->
 
     <!-- ShareThis JS-->
     <script type="text/javascript"
-        src="https://platform-api.sharethis.com/js/sharethis.js#property=5fdcf5e7808aed0011dfaa1c&product=inline-share-buttons" async="async">
+        src="https://platform-api.sharethis.com/js/sharethis.js#property=5fdcf5e7808aed0011dfaa1c&product=inline-share-buttons"
+        async="async">
     </script>
     <!-- END ShareThis JS-->
 
@@ -71,72 +100,74 @@
 
             <%} else { %>
 
-                <div id="h-menu" class="h-menu-drop">
-                    <ul>
-                        <a href="/services">
-                            <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services</li>
-                        </a>
-                        <a href="/blog">
-                            <li id="blog" <% if (pageTitle === "Blog" || pageTitle === "Blog Post") { %> class="current" <% } %>>Blog</li>
-                        </a>
-                        <a href="/photos">
-                            <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
-                        </a>
-                        <a href="/contact">
-                            <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact</li>
-                        </a>
-                    </ul>
-                </div>
+            <div id="h-menu" class="h-menu-drop">
+                <ul>
+                    <a href="/services">
+                        <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services</li>
+                    </a>
+                    <a href="/blog">
+                        <li id="blog" <% if (pageTitle === "Blog" || pageTitle === "Blog Post") { %> class="current"
+                            <% } %>>Blog</li>
+                    </a>
+                    <a href="/photos">
+                        <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
+                    </a>
+                    <a href="/contact">
+                        <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact</li>
+                    </a>
+                </ul>
+            </div>
 
-                <div class="l-header">
-                    <div class="l-header-wrapper">
+            <div class="l-header">
+                <div class="l-header-wrapper">
 
-                        <div class="smlogo-pane">
-                            <a href="/"><img class="logo-sm" src="/images/logo2.png"></a>
-                        </div>
+                    <div class="smlogo-pane">
+                        <a href="/"><img class="logo-sm" src="/images/logo2.png"></a>
+                    </div>
 
-                        <div class="navbar-pane">
-                            <ul>
-                                <a href="/services">
-                                    <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services
-                                    </li>
-                                </a>
-                                <a href="/blog">
-                                    <li id="blog" <% if (pageTitle === "Blog" || pageTitle === "Blog Post") { %> class="current" <% } %>>Blog</li>
-                                </a>
-                                <a href="/photos">
-                                    <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
-                                </a>
-                                <a href="/contact">
-                                    <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact
-                                    </li>
-                                </a>
-                            </ul>
-                        </div>
+                    <div class="navbar-pane">
+                        <ul>
+                            <a href="/services">
+                                <li id="services" <% if (pageTitle === "Services") { %> class="current" <% } %>>Services
+                                </li>
+                            </a>
+                            <a href="/blog">
+                                <li id="blog" <% if (pageTitle === "Blog" || pageTitle === "Blog Post") { %>
+                                    class="current" <% } %>>Blog</li>
+                            </a>
+                            <a href="/photos">
+                                <li id="photos" <% if (pageTitle === "Photos") { %> class="current" <% } %>>Photos</li>
+                            </a>
+                            <a href="/contact">
+                                <li id="contact" <% if (pageTitle === "Contact") { %> class="current" <% } %>>Contact
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
 
-                        <div class="h-menu-pane">
-                            <input id="h-menu-input" type="checkbox" onclick="hamburger()">
-                            <div id="h-box" class="h-menu-box">
-                                <div class="h-menu-bars">
-                                    <div id="h-bar1" class="h-menu-bar"></div>
-                                    <div id="h-bar2" class="h-menu-bar"></div>
-                                    <div id="h-bar3" class="h-menu-bar"></div>
-                                </div>
+                    <div class="h-menu-pane">
+                        <input id="h-menu-input" type="checkbox" onclick="hamburger()">
+                        <div id="h-box" class="h-menu-box">
+                            <div class="h-menu-bars">
+                                <div id="h-bar1" class="h-menu-bar"></div>
+                                <div id="h-bar2" class="h-menu-bar"></div>
+                                <div id="h-bar3" class="h-menu-bar"></div>
                             </div>
                         </div>
-
                     </div>
-                </div>
 
-                <% if ( pageTitle === "Contact" ) { %>
-                    <div class="l-body-wrapper--contact">
-                        <div class="l-content-wrapper--contact">
-                <%} else { %>
+                </div>
+            </div>
+
+            <% if ( pageTitle === "Contact" ) { %>
+            <div class="l-body-wrapper--contact">
+                <div class="l-content-wrapper--contact">
+                    <%} else { %>
                     <div class="l-body-wrapper">
                         <div class="l-content-wrapper">
-                <% } %>
+                            <% } %>
 
-            <% } %>
+                            <% } %>
 
 
-<!-- || END of document -->
+                            <!-- || END of document -->
