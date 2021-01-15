@@ -4,17 +4,14 @@
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
 }
-
-
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const favicon = require('express-favicon');
+const nodemailer = require("nodemailer");
 var Prismic = require('prismic-javascript');
 var PrismicDOM = require('prismic-dom');
 var prismicEndpoint = 'https://looseleashdog.prismic.io/api/v2';
-const nodemailer = require("nodemailer");
 
 const app = express();
 
@@ -54,21 +51,6 @@ function initApi(req) {
 // END Prismic
 
 // Nodemailer 
-var transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: 'rideoutweb',
-        pass: '3625Pinkship!'
-    }
-});
-
-var mailOptions = {
-    from: 'youremail@gmail.com',
-    to: 'myfriend@yahoo.com',
-    subject: 'Sending Email using Node.js',
-    text: 'That was easy! Oh yeah!'
-};
-
 
 
 // END Nodemailer 
@@ -139,20 +121,55 @@ app.get('/contact', function (req, res) {
 });
 
 app.post('/contact', function (req, res) {
+    const {
+        user_name,
+        user_email,
+        message
+    } = req.body;
     console.log(req.body);
 
-    transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log('Email sent: ' + info.response);
+    var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'rideoutweb',
+            pass: '3625Pinkship!'
         }
     });
+
+    var mailNewInquiry = {
+        from: 'rideoutweb@gmail.com',
+        to: 'rideoutweb@gmail.com',
+        subject: 'A person is reaching out!',
+        text: 'Oh yeah! KoolAid Man!'
+    };
+
+    var mailConfirmation = {
+        from: 'rideoutweb@gmail.com',
+        to: user_email,
+        subject: 'This is your email confirmation!',
+        text: 'Hi ' + user_name + ', thanks for reaching out. This is an automatic message just letting you know your email went through. I will get in touch within a few business days. Thanks!',
+    };
+
+    var orderReq = transporter.sendMail(mailNewInquiry);
+
+    var orderConfirm = transporter.sendMail(mailConfirmation);
+
+    let ifError = false;
+
+    Promise.all([orderReq, orderConfirm])
+        .then(([result1, result2]) => {
+            console.log("Emails sent");
+        })
+        .catch(err => {
+            ifError = true;
+        });
 
     res.render('contact', {
         pageTitle: "Contact",
         sentBool: true,
+        isError: ifError,
     });
+
 });
 
 // || Listener 
