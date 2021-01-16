@@ -133,25 +133,78 @@ app.post('/contact', function (req, res) {
         }
     });
 
-    var mailOptions = {
+    // var mailOptions = {
+    //     from: 'info@looseleashdog.com',
+    //     to: 'rideoutweb@gmail.com',
+    //     subject: 'Sending Email using Node.js',
+    //     text: message
+    // };
+
+
+    var mailNewInquiry = {
         from: 'info@looseleashdog.com',
         to: 'rideoutweb@gmail.com',
-        subject: 'Sending Email using Node.js',
-        text: message
+        subject: 'A person from your website is reaching out!',
+        html: `<h1>A person from your website is reaching out!</h1>
+            <div style="max-width: 100%; padding: 2rem; border: 1px solid lightgrey; border-radius: 12px; margin: 1rem;">    
+                <h2>From:</h2>
+                <div style="padding: 0rem 2rem;">
+                    <p><strong>${user_name}</strong></p>
+                </div>
+                <h2>Email:</h2>
+                <div style="padding: 0rem 2rem;">
+                    <p>${user_email}</p>
+                </div>
+                <h2>Message:</h2>
+                <div style="padding: 0rem 2rem;">
+                    <p>${message}</p>
+                </div>
+            </div>`
+    };
+
+    var mailConfirmation = {
+        from: 'info@looseleashdog.com',
+        to: user_email,
+        subject: 'This is your email confirmation!',
+        html: `<h1>Hi ${user_name}, thanks for reaching out.</h1>
+            <p>This is an automatic message just letting you know your email went through. I will get in touch within a few business days. This is what I received:</p>
+            <div style="max-width: 100%; padding: 2rem; border: 1px solid lightgrey; border-radius: 12px; margin: 1rem;">    
+                <h2>From:</h2>
+                <div style="padding: 0rem 2rem;">
+                    <p><strong>${user_name}</strong></p>
+                </div>
+                <h2>Email:</h2>
+                <div style="padding: 0rem 2rem;">
+                    <p>${user_email}</p>
+                </div>
+                <h2>Message:</h2>
+                <div style="padding: 0rem 2rem;">
+                    <p>${message}</p>
+                </div>
+            </div>`
     };
 
 
-    transporter.sendMail(mailOptions, function (error, info) {
+    transporter.sendMail(mailNewInquiry, function (error, info) {
         if (error) {
-            console.log(error);
+            console.log('Inquiry email error', error);
             //   ifError = true;
 
         } else {
-            console.log('Email sent: ' + info.response);
+            console.log('Inquiry sent: ' + info.response);
         }
     });
 
-  
+    transporter.sendMail(mailConfirmation, function (error, info) {
+        if (error) {
+            console.log('Confirmation email error', error);
+            //   ifError = true;
+
+        } else {
+            console.log('Confirmation sent: ' + info.response);
+        }
+    });
+
 
     res.render('contact', {
         pageTitle: "Contact",
