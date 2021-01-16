@@ -50,11 +50,6 @@ function initApi(req) {
 }
 // END Prismic
 
-// Nodemailer 
-
-
-// END Nodemailer 
-
 // Route Handlers
 
 app.get('/', function (req, res) {
@@ -129,45 +124,39 @@ app.post('/contact', function (req, res) {
     console.log(req.body);
 
     var transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: 'mi3-ts3.a2hosting.com',
+        port: 465,
+        secure: true,
         auth: {
-            user: 'rideoutweb',
-            pass: '3625Pinkship!'
+            user: "info@looseleashdog.com",
+            pass: "tempword!!"
         }
     });
 
-    var mailNewInquiry = {
-        from: 'rideoutweb@gmail.com',
+    var mailOptions = {
+        from: 'info@looseleashdog.com',
         to: 'rideoutweb@gmail.com',
-        subject: 'A person is reaching out!',
-        text: 'Oh yeah! KoolAid Man!'
+        subject: 'Sending Email using Node.js',
+        text: message
     };
 
-    var mailConfirmation = {
-        from: 'rideoutweb@gmail.com',
-        to: user_email,
-        subject: 'This is your email confirmation!',
-        text: 'Hi ' + user_name + ', thanks for reaching out. This is an automatic message just letting you know your email went through. I will get in touch within a few business days. Thanks!',
-    };
 
-    var orderReq = transporter.sendMail(mailNewInquiry);
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error);
+            //   ifError = true;
 
-    var orderConfirm = transporter.sendMail(mailConfirmation);
+        } else {
+            console.log('Email sent: ' + info.response);
+        }
+    });
 
-    let ifError = false;
-
-    Promise.all([orderReq, orderConfirm])
-        .then(([result1, result2]) => {
-            console.log("Emails sent");
-        })
-        .catch(err => {
-            ifError = true;
-        });
+  
 
     res.render('contact', {
         pageTitle: "Contact",
-        sentBool: true,
-        isError: ifError,
+        sentBool: true
+        // isError: ifError,
     });
 
 });

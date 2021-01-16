@@ -1,0 +1,59 @@
+  <% if ( isError == true ) { %>
+                        <p>Ah bummer!</p>
+                        <p>Looks like something went wrong.</p>
+                        <p>I'm currently looking into the problem, try back soon!</p>
+                        <button type="button" class="hidden-button" onclick="location.href='/blog'"/>Check out the Blog</button> -->
+                    <% } else { %>
+
+                     <% } %>
+
+
+
+
+
+
+
+
+                     From App
+
+
+  
+
+    // var mailConfirmation = {
+    //     from: 'info@looseleashdog.com',
+    //     to: user_email,
+    //     subject: 'This is your email confirmation!',
+    //     html: `<h1>Hi ${user_name}, thanks for reaching out.</h1>
+    //         <p>This is an automatic message just letting you know your email went through. I will get in touch within a few business days. This is what I received:</p>
+    //         <div style="max-width: 100%; padding: 2rem; border: 1px solid lightgrey; border-radius: 12px; margin: 1rem;">    
+    //             <h2>From:</h2>
+    //             <div style="padding: 0rem 2rem;">
+    //                 <p><strong>${user_name}</strong></p>
+    //             </div>
+    //             <h2>Email:</h2>
+    //             <div style="padding: 0rem 2rem;">
+    //                 <p>${user_email}</p>
+    //             </div>
+    //             <h2>Message:</h2>
+    //             <div style="padding: 0rem 2rem;">
+    //                 <p>${message}</p>
+    //             </div>
+    //         </div>`
+    // };
+
+
+    // let ifError = false;
+
+
+  // var orderReq = transporter.sendMail(mailNewInquiry);
+
+    // var orderConfirm = transporter.sendMail(mailConfirmation);
+
+
+    // Promise.all([orderReq, orderConfirm])
+    //     .then(([result1, result2]) => {
+    //         console.log("Emails sent");
+    //     })
+    //     .catch(err => {
+    //         ifError = true;
+    //     });
