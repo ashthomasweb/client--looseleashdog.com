@@ -1,11 +1,6 @@
-  <% if ( isError == true ) { %>
-                        <p>Ah bummer!</p>
-                        <p>Looks like something went wrong.</p>
-                        <p>I'm currently looking into the problem, try back soon!</p>
-                        <button type="button" class="hidden-button" onclick="location.href='/blog'"/>Check out the Blog</button> -->
-                    <% } else { %>
 
-                     <% } %>
+
+                
 
 
 
@@ -22,7 +17,6 @@
 
 
 
-    // let ifError = false;
 
 
   // var orderReq = transporter.sendMail(mailNewInquiry);

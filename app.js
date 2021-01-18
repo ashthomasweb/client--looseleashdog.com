@@ -1,9 +1,9 @@
 // Node.js/Express Server "app.js" for "Looseleashdog" 
 
 // Dependencies
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config();
-}
+require('dotenv').config();
+
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
@@ -109,6 +109,7 @@ app.get('/photos', function (req, res) {
 });
 
 app.get('/contact', function (req, res) {
+    
     res.render('contact', {
         pageTitle: "Contact",
         sentBool: false,
@@ -116,6 +117,9 @@ app.get('/contact', function (req, res) {
 });
 
 app.post('/contact', function (req, res) {
+    console.log(process.env.MAIL_PASS);
+
+    let ifError = false;
     const {
         user_name,
         user_email,
@@ -128,18 +132,10 @@ app.post('/contact', function (req, res) {
         port: 465,
         secure: true,
         auth: {
-            user: "info@looseleashdog.com",
-            pass: "tempword!!"
+            user: process.env.MAIL_USER,
+            pass: process.env.MAIL_PASS
         }
     });
-
-    // var mailOptions = {
-    //     from: 'info@looseleashdog.com',
-    //     to: 'rideoutweb@gmail.com',
-    //     subject: 'Sending Email using Node.js',
-    //     text: message
-    // };
-
 
     var mailNewInquiry = {
         from: 'info@looseleashdog.com',
@@ -184,12 +180,10 @@ app.post('/contact', function (req, res) {
             </div>`
     };
 
-
     transporter.sendMail(mailNewInquiry, function (error, info) {
         if (error) {
             console.log('Inquiry email error', error);
-            //   ifError = true;
-
+            ifError = true;
         } else {
             console.log('Inquiry sent: ' + info.response);
         }
@@ -198,18 +192,20 @@ app.post('/contact', function (req, res) {
     transporter.sendMail(mailConfirmation, function (error, info) {
         if (error) {
             console.log('Confirmation email error', error);
-            //   ifError = true;
-
+            ifError = true;
+            res.render('contact', {
+                pageTitle: "Contact",
+                sentBool: true,
+                isError: ifError,
+            });
         } else {
             console.log('Confirmation sent: ' + info.response);
+            res.render('contact', {
+                pageTitle: "Contact",
+                sentBool: true,
+                isError: ifError,
+            });
         }
-    });
-
-
-    res.render('contact', {
-        pageTitle: "Contact",
-        sentBool: true
-        // isError: ifError,
     });
 
 });

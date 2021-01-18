@@ -17,6 +17,11 @@ function formFieldCheck() {
     }
 }
 
+function sendingText() {
+    let elem = document.getElementById("contact-button");
+    elem.innerText = "Sending";
+}
+
 // || Hamburger Menu for "Looseleashdog"
 // Would be best written with CSS animations or transitions.
 // I used pure JS as an exercise and to balance the languages used on the site.

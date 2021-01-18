@@ -15,12 +15,17 @@
 
             <div id="hidden-response" class="hidden-response">
                 <div class="response-box">
-                  
+                    <% if ( isError == true ) { %>
+                        <p>Ah bummer!</p>
+                        <p>Looks like something went wrong.</p>
+                        <p>I'm currently looking into the problem, try back soon!</p>
+                        <button type="button" class="hidden-button" onclick="location.href='/blog'"/>Check out the Blog</button>
+                    <% } else { %>
                         <p>Thanks!</p>
                         <p>Your message has been sent</p>
                         <p>I'm looking forward to talking with you, I will reach out within 2 or 3 business days.</p>
                         <button type="button" class="hidden-button" onclick="location.href='/blog'"/>Check out the Blog</button>
-                   
+                    <% } %>
                 </div>
             </div>
         <% } else { %>
@@ -32,7 +37,7 @@
                     <input class="form-entry" type="text" name="user_name" oninput="formFieldCheck()">
                     <label class="form-title">Email:</label>
                     <input class="form-entry" type="email" name="user_email" oninput="formFieldCheck()">
-                    <button id="contact-button" class="contact-submit" type="submit">Send</button>
+                    <button id="contact-button" class="contact-submit" type="submit" onclick="sendingText()">Send</button>
                 </div>
                 
                 <div class="contact-card-bottom-section">
