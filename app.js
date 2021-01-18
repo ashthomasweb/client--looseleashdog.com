@@ -8,7 +8,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const favicon = require('express-favicon');
-const nodemailer = require("nodemailer");
 var Prismic = require('prismic-javascript');
 var PrismicDOM = require('prismic-dom');
 var prismicEndpoint = 'https://looseleashdog.prismic.io/api/v2';
@@ -65,6 +64,7 @@ app.get('/about', function (req, res) {
 });
 
 app.get('/services', function (req, res) {
+    console.log(autoMail.n);
     res.render('services', {
         pageTitle: "Services",
     });
@@ -109,104 +109,64 @@ app.get('/photos', function (req, res) {
 });
 
 app.get('/contact', function (req, res) {
-    
     res.render('contact', {
         pageTitle: "Contact",
-        sentBool: false,
+        responseBool: false,
     });
 });
 
 app.post('/contact', function (req, res) {
-    console.log(process.env.MAIL_PASS);
 
     let ifError = false;
+    let renderPage = res.render('contact', {
+        pageTitle: "Contact",
+        responseBool: true,
+        isError: ifError,
+    });
     const {
         user_name,
         user_email,
         message
     } = req.body;
-    console.log(req.body);
 
-    var transporter = nodemailer.createTransport({
-        host: 'mi3-ts3.a2hosting.com',
-        port: 465,
-        secure: true,
-        auth: {
-            user: process.env.MAIL_USER,
-            pass: process.env.MAIL_PASS
-        }
-    });
+    module.exports = { user_email, user_name, message };
 
-    var mailNewInquiry = {
-        from: 'info@looseleashdog.com',
-        to: 'rideoutweb@gmail.com',
-        subject: 'A person from your website is reaching out!',
-        html: `<h1>A person from your website is reaching out!</h1>
-            <div style="max-width: 100%; padding: 2rem; border: 1px solid lightgrey; border-radius: 12px; margin: 1rem;">    
-                <h2>From:</h2>
-                <div style="padding: 0rem 2rem;">
-                    <p><strong>${user_name}</strong></p>
-                </div>
-                <h2>Email:</h2>
-                <div style="padding: 0rem 2rem;">
-                    <p>${user_email}</p>
-                </div>
-                <h2>Message:</h2>
-                <div style="padding: 0rem 2rem;">
-                    <p>${message}</p>
-                </div>
-            </div>`
-    };
+    const { transporter, mailNewInquiry } = require('./test.js');
 
-    var mailConfirmation = {
-        from: 'info@looseleashdog.com',
-        to: user_email,
-        subject: 'This is your email confirmation!',
-        html: `<h1>Hi ${user_name}, thanks for reaching out.</h1>
-            <p>This is an automatic message just letting you know your email went through. I will get in touch within a few business days. This is what I received:</p>
-            <div style="max-width: 100%; padding: 2rem; border: 1px solid lightgrey; border-radius: 12px; margin: 1rem;">    
-                <h2>From:</h2>
-                <div style="padding: 0rem 2rem;">
-                    <p><strong>${user_name}</strong></p>
-                </div>
-                <h2>Email:</h2>
-                <div style="padding: 0rem 2rem;">
-                    <p>${user_email}</p>
-                </div>
-                <h2>Message:</h2>
-                <div style="padding: 0rem 2rem;">
-                    <p>${message}</p>
-                </div>
-            </div>`
-    };
 
-    transporter.sendMail(mailNewInquiry, function (error, info) {
+
+    let x = mailNewInquiry(user_name, user_email, message);
+
+    console.log(x.charCodeAt(253));
+    let y = JSON.parse(x);
+
+    console.log(x.charAt(2));
+    console.log(x.charAt(282));
+    console.log(x.charAt(283));
+    console.log(x.charAt(284));
+    console.log(x.charAt(285));
+
+    // let y = JSON.parse(x);
+
+    transporter.sendMail(y, function (error, info) {
         if (error) {
             console.log('Inquiry email error', error);
             ifError = true;
         } else {
             console.log('Inquiry sent: ' + info.response);
+            renderPage;
         }
     });
 
-    transporter.sendMail(mailConfirmation, function (error, info) {
-        if (error) {
-            console.log('Confirmation email error', error);
-            ifError = true;
-            res.render('contact', {
-                pageTitle: "Contact",
-                sentBool: true,
-                isError: ifError,
-            });
-        } else {
-            console.log('Confirmation sent: ' + info.response);
-            res.render('contact', {
-                pageTitle: "Contact",
-                sentBool: true,
-                isError: ifError,
-            });
-        }
-    });
+    // transporter.sendMail(mailConfirmation, function (error, info) {
+    //     if (error) {
+    //         console.log('Confirmation email error', error);
+    //         ifError = true;
+    //     } else {
+    //         console.log('Confirmation sent: ' + info.response);
+    //         renderPage;
+    //     }
+    // });
 
 });
 
