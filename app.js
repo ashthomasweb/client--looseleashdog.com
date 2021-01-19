@@ -64,7 +64,6 @@ app.get('/about', function (req, res) {
 });
 
 app.get('/services', function (req, res) {
-    console.log(autoMail.n);
     res.render('services', {
         pageTitle: "Services",
     });
@@ -118,55 +117,45 @@ app.get('/contact', function (req, res) {
 app.post('/contact', function (req, res) {
 
     let ifError = false;
-    let renderPage = res.render('contact', {
-        pageTitle: "Contact",
-        responseBool: true,
-        isError: ifError,
-    });
+
     const {
         user_name,
         user_email,
         message
     } = req.body;
 
-    module.exports = { user_email, user_name, message };
+    module.exports = {
+        user_email,
+        user_name,
+        message
+    };
 
-    const { transporter, mailNewInquiry } = require('./test.js');
+    const {
+        transporter,
+        array1
+    } = require('./test.js');
 
+    for (i = 0; i <= array1.length - 1; i++) {
 
+        transporter.sendMail(array1[i], function (error, info, i) {
+            if (error) {
+                console.log('Inquiry email error', error);
+                ifError = true;
+               
+            } else {
+                console.log('Inquiry sent: ' + info.response);
+            }
+            if (i === array1.length-1) {
+                console.log("hi");
+                res.render('contact', {
+                    pageTitle: "Contact",
+                    responseBool: true,
+                    isError: ifError,
+                });
+            }
+        });
 
-    let x = mailNewInquiry(user_name, user_email, message);
-
-    console.log(x.charCodeAt(253));
-    let y = JSON.parse(x);
-
-    console.log(x.charAt(2));
-    console.log(x.charAt(282));
-    console.log(x.charAt(283));
-    console.log(x.charAt(284));
-    console.log(x.charAt(285));
-
-    // let y = JSON.parse(x);
-
-    transporter.sendMail(y, function (error, info) {
-        if (error) {
-            console.log('Inquiry email error', error);
-            ifError = true;
-        } else {
-            console.log('Inquiry sent: ' + info.response);
-            renderPage;
-        }
-    });
-
-    // transporter.sendMail(mailConfirmation, function (error, info) {
-    //     if (error) {
-    //         console.log('Confirmation email error', error);
-    //         ifError = true;
-    //     } else {
-    //         console.log('Confirmation sent: ' + info.response);
-    //         renderPage;
-    //     }
-    // });
+    }
 
 });
 

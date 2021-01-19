@@ -29,7 +29,33 @@ function userMessage() {
     </div>
     </div>`;
 
-    let b = a.replace(/\n/g, "");
+    let b = a.replace(/\n/g, "").replace(/\r/g, "");
+
+    return b;
+};
+
+function userAutoReply() {
+
+    let a = `<div style='max-width: 100%; padding: 2rem; border: 1px solid lightgrey; border-radius: 12px; margin: 1rem;'>
+    <h2>Thanks for reaching out to LooseLeashDog. This is an automatic response confirming that your email was sent.</h2>
+    <p>I will reach out to you within the next few days.</p>
+    <h2>From:</h2>
+    <div style='padding: 0rem 2rem;'>
+    <p><strong>${user_name}</strong></p>
+    </div>
+    <h2>Email:</h2>
+    <div style='padding: 0rem 2rem;'>
+    <p>${user_email}</p>
+    </div><h2>Message:</h2>
+    <div style='padding: 0rem 2rem;'>
+    <p>${message}</p>
+    </div>
+    </div>
+    <br>
+    <p>Thanks for contacting me, I'm looking forward to speaking with you.</p>
+    <p>Remember, this is just an automatic email and doesn't accept replys.</p>`;
+
+    let b = a.replace(/\n/g, "").replace(/\r/g, "");
 
     return b;
 };
@@ -41,18 +67,25 @@ function mailNewInquiry(user_name, user_email, message) {
     "html": "${userMessage()}"}`
 };
 
-// var mailConfirmation = {
-//     from: 'info@looseleashdog.com',
-//     to: user_email,
-//     subject: 'This is your email confirmation from LooseLeashDog!',
-//     html: `<h1>Hi ${user_name}, thanks for reaching out.</h1>
-//             <p>This is an automatic message just letting you know your email went through. I will get in touch within a few business days. Below is a copy of what I received:</p>
-//             ${userMessage}`
-// };
+function mailConfirmation(user_name, user_email, message) {
+    return `{"from": "info@looseleashdog.com",
+    "to": "${user_email}",
+    "subject": "This is your email confirmation from LooseLeashDog!",
+    "html": "${userAutoReply()}"}`
+};
 
+console.log(mailNewInquiry(user_name, user_email, message).charAt(517));
+console.log(mailNewInquiry(user_name, user_email, message).charAt(518));
+console.log(mailNewInquiry(user_name, user_email, message).charAt(519));
+console.log(mailNewInquiry(user_name, user_email, message).charAt(520));
+console.log(mailNewInquiry(user_name, user_email, message).charAt(521));
 
+let y = JSON.parse(mailNewInquiry(user_name, user_email, message));
+let yy = JSON.parse(mailConfirmation(user_name, user_email, message));
 
+let array1 = [y, yy];
+// let array2 = ["Inquiry", "Confirmation"]
 
 module.exports = {
-    transporter, userMessage, mailNewInquiry 
+    transporter, userMessage, userAutoReply, array1
 };

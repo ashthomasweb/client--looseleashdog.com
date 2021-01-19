@@ -5,29 +5,3 @@
 
 
 
-
-
-
-
-                     From App
-
-
-  
-
-
-
-
-
-
-  // var orderReq = transporter.sendMail(mailNewInquiry);
-
-    // var orderConfirm = transporter.sendMail(mailConfirmation);
-
-
-    // Promise.all([orderReq, orderConfirm])
-    //     .then(([result1, result2]) => {
-    //         console.log("Emails sent");
-    //     })
-    //     .catch(err => {
-    //         ifError = true;
-    //     });
