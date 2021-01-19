@@ -135,27 +135,31 @@ app.post('/contact', function (req, res) {
         array1
     } = require('./test.js');
 
+    let i = 0;
     for (i = 0; i <= array1.length - 1; i++) {
-
-        transporter.sendMail(array1[i], function (error, info, i) {
+        console.log(i);
+        transporter.sendMail(array1[i], function (error, info) {
             if (error) {
                 console.log('Inquiry email error', error);
                 ifError = true;
-               
+
             } else {
                 console.log('Inquiry sent: ' + info.response);
-            }
-            if (i === array1.length-1) {
-                console.log("hi");
-                res.render('contact', {
-                    pageTitle: "Contact",
-                    responseBool: true,
-                    isError: ifError,
-                });
-            }
-        });
 
+            }
+
+            
+            
+        });
     }
+    setTimeout(function() {
+
+        res.render('contact', {
+            pageTitle: "Contact",
+            responseBool: true,
+            isError: ifError,
+        });
+    }, 2000);
 
 });
 
