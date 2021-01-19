@@ -65,14 +65,14 @@ function userAutoReply() {
 };
 
 function mailNewInquiry(user_name, user_email, message) {
-    return `{"from": "info@looseleashdog.com",
+    return `{"from": "mailer@looseleashdog.com",
     "to": "rideoutweb@gmail.com",
     "subject": "A person from your website is reaching out!",
     "html": "${userMessage()}"}`
 };
 
 function mailConfirmation(user_name, user_email, message) {
-    return `{"from": "info@looseleashdog.com",
+    return `{"from": "mailer@looseleashdog.com",
     "to": "${user_email}",
     "subject": "This is your email confirmation from LooseLeashDog!",
     "html": "${userAutoReply()}"}`

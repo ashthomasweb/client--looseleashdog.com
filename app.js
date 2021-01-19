@@ -118,40 +118,46 @@ app.post('/contact', function (req, res) {
 
     let ifError = false;
 
-    const { user_name, user_email, message } = req.body;
+    const {
+        user_name,
+        user_email,
+        message
+    } = req.body;
 
-    module.exports = { user_email, user_name, message };
+    module.exports = {
+        user_email,
+        user_name,
+        message
+    };
 
-    const { transporter, inquiry, finalConfirm } = require('./test.js');
+    const {
+        transporter,
+        inquiry,
+        finalConfirm
+    } = require('./test.js');
 
-    transporter.sendMail(inquiry, function (error, info) {
-        if (error) {
-            console.log('Inquiry email error', error);
+
+    var orderReq = transporter.sendMail(inquiry);
+
+    var orderConfirm = transporter.sendMail(finalConfirm);
+
+
+    Promise.all([orderReq, orderConfirm])
+        .then(([result1, result2]) => {
+            console.log("Emails sent", result1, result2);
+        })
+        .catch(err => {
+            console.log(err);
             ifError = true;
-        } else {
-            console.log('Inquiry sent: ' + info.response);
-        }
-    });
-
-    transporter.sendMail(finalConfirm, function (error, info) {
-        if (error) {
-            console.log('Confirmation email error', error);
-            ifError = true;
+        })
+        .finally(() => {
             res.render('contact', {
                 pageTitle: "Contact",
                 responseBool: true,
                 isError: ifError,
             });
-        } else {
-            console.log('Confirmation sent: ' + info.response);
-            res.render('contact', {
-                pageTitle: "Contact",
-                responseBool: true,
-                isError: ifError,
-            });
-        }
+        });
 
-    });
 
 });
 
