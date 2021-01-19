@@ -3,7 +3,6 @@
 // Dependencies
 require('dotenv').config();
 
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
@@ -118,29 +117,15 @@ app.post('/contact', function (req, res) {
 
     let ifError = false;
 
-    const {
-        user_name,
-        user_email,
-        message
-    } = req.body;
+    const { user_name, user_email, message } = req.body;
 
-    module.exports = {
-        user_email,
-        user_name,
-        message
-    };
+    module.exports = { user_email, user_name, message };
 
-    const {
-        transporter,
-        inquiry,
-        finalConfirm
-    } = require('./test.js');
-
+    const { transporter, inquiry, finalConfirm } = require('./test.js');
 
     var orderReq = transporter.sendMail(inquiry);
 
     var orderConfirm = transporter.sendMail(finalConfirm);
-
 
     Promise.all([orderReq, orderConfirm])
         .then(([result1, result2]) => {
@@ -157,7 +142,6 @@ app.post('/contact', function (req, res) {
                 isError: ifError,
             });
         });
-
 
 });
 

@@ -16,7 +16,6 @@ var transporter = nodemailer.createTransport({
     }
 });
 
-
 function userMessage() {
 
     let a = `<div style='max-width: 100%; padding: 2rem; border: 1px solid lightgrey; border-radius: 12px; margin: 1rem;'>
@@ -78,15 +77,8 @@ function mailConfirmation(user_name, user_email, message) {
     "html": "${userAutoReply()}"}`
 };
 
-// console.log(mailNewInquiry(user_name, user_email, message).charAt(517));
-// console.log(mailNewInquiry(user_name, user_email, message).charAt(518));
-// console.log(mailNewInquiry(user_name, user_email, message).charAt(519));
-// console.log(mailNewInquiry(user_name, user_email, message).charAt(520));
-// console.log(mailNewInquiry(user_name, user_email, message).charAt(521));
-
 let inquiry = JSON.parse(mailNewInquiry(user_name, user_email, message));
 let finalConfirm = JSON.parse(mailConfirmation(user_name, user_email, message));
-
 
 module.exports = {
     transporter,
