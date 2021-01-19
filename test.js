@@ -1,5 +1,9 @@
 const nodemailer = require("nodemailer");
-const { user_name, user_email, message } = require('./app.js')
+const {
+    user_name,
+    user_email,
+    message
+} = require('./app.js')
 
 
 var transporter = nodemailer.createTransport({
@@ -74,18 +78,20 @@ function mailConfirmation(user_name, user_email, message) {
     "html": "${userAutoReply()}"}`
 };
 
-console.log(mailNewInquiry(user_name, user_email, message).charAt(517));
-console.log(mailNewInquiry(user_name, user_email, message).charAt(518));
-console.log(mailNewInquiry(user_name, user_email, message).charAt(519));
-console.log(mailNewInquiry(user_name, user_email, message).charAt(520));
-console.log(mailNewInquiry(user_name, user_email, message).charAt(521));
+// console.log(mailNewInquiry(user_name, user_email, message).charAt(517));
+// console.log(mailNewInquiry(user_name, user_email, message).charAt(518));
+// console.log(mailNewInquiry(user_name, user_email, message).charAt(519));
+// console.log(mailNewInquiry(user_name, user_email, message).charAt(520));
+// console.log(mailNewInquiry(user_name, user_email, message).charAt(521));
 
-let y = JSON.parse(mailNewInquiry(user_name, user_email, message));
-let yy = JSON.parse(mailConfirmation(user_name, user_email, message));
+let inquiry = JSON.parse(mailNewInquiry(user_name, user_email, message));
+let finalConfirm = JSON.parse(mailConfirmation(user_name, user_email, message));
 
-let array1 = [y, yy];
-// let array2 = ["Inquiry", "Confirmation"]
 
 module.exports = {
-    transporter, userMessage, userAutoReply, array1
+    transporter,
+    userMessage,
+    userAutoReply,
+    inquiry,
+    finalConfirm
 };

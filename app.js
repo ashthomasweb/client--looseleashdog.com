@@ -118,48 +118,40 @@ app.post('/contact', function (req, res) {
 
     let ifError = false;
 
-    const {
-        user_name,
-        user_email,
-        message
-    } = req.body;
+    const { user_name, user_email, message } = req.body;
 
-    module.exports = {
-        user_email,
-        user_name,
-        message
-    };
+    module.exports = { user_email, user_name, message };
 
-    const {
-        transporter,
-        array1
-    } = require('./test.js');
+    const { transporter, inquiry, finalConfirm } = require('./test.js');
 
-    let i = 0;
-    for (i = 0; i <= array1.length - 1; i++) {
-        console.log(i);
-        transporter.sendMail(array1[i], function (error, info) {
-            if (error) {
-                console.log('Inquiry email error', error);
-                ifError = true;
+    transporter.sendMail(inquiry, function (error, info) {
+        if (error) {
+            console.log('Inquiry email error', error);
+            ifError = true;
+        } else {
+            console.log('Inquiry sent: ' + info.response);
+        }
+    });
 
-            } else {
-                console.log('Inquiry sent: ' + info.response);
+    transporter.sendMail(finalConfirm, function (error, info) {
+        if (error) {
+            console.log('Confirmation email error', error);
+            ifError = true;
+            res.render('contact', {
+                pageTitle: "Contact",
+                responseBool: true,
+                isError: ifError,
+            });
+        } else {
+            console.log('Confirmation sent: ' + info.response);
+            res.render('contact', {
+                pageTitle: "Contact",
+                responseBool: true,
+                isError: ifError,
+            });
+        }
 
-            }
-
-            
-            
-        });
-    }
-    setTimeout(function() {
-
-        res.render('contact', {
-            pageTitle: "Contact",
-            responseBool: true,
-            isError: ifError,
-        });
-    }, 2000);
+    });
 
 });
 
