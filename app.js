@@ -2,7 +2,6 @@
 
 // Dependencies
 require('dotenv').config();
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
@@ -17,9 +16,7 @@ app.use(favicon(__dirname + '/public/favicon.ico'));
 app.set('view engine', 'ejs');
 app.set('views', './views');
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Prismic
 // Standardized URLs for known types
@@ -28,7 +25,7 @@ var linkResolver = function (doc) {
     if (doc.type === 'page') return "/" + doc.uid;
     // Fallback for other types, in case new custom types get created
     return "/";
-}
+};
 
 // Middleware to inject prismic context
 app.use(function (req, res, next) {
@@ -45,7 +42,7 @@ function initApi(req) {
     return Prismic.getApi(prismicEndpoint, {
         req: req
     });
-}
+};
 // END Prismic
 
 // Route Handlers
