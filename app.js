@@ -121,17 +121,17 @@ app.post('/contact', function (req, res) {
 
     module.exports = { user_email, user_name, message };
 
-    const { transporter, inquiry, finalConfirm } = require('./test.js');
+    const { transporter, inquiry, finalConfirm } = require('./nodemailer.js');
 
-    var orderReq = transporter.sendMail(inquiry);
+    var userInquiry = transporter.sendMail(inquiry);
 
-    var orderConfirm = transporter.sendMail(finalConfirm);
+    var userConfirm = transporter.sendMail(finalConfirm);
 
-    Promise.all([orderReq, orderConfirm])
-        .then(([result1, result2]) => {
-            console.log("Emails sent", result1, result2);
+    Promise.all([userInquiry, userConfirm])
+        .then(([resultInq, resultConf]) => {
+            console.log("Emails sent", resultInq, resultConf);
         })
-        .catch(err => {
+        .catch((err) => {
             console.log(err);
             ifError = true;
         })

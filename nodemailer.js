@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 const {
     user_name,
     user_email,
-    message
+    message,
 } = require('./app.js')
 
 
@@ -12,7 +12,7 @@ var transporter = nodemailer.createTransport({
     secure: true,
     auth: {
         user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS
+        pass: process.env.MAIL_PASS,
     }
 });
 
