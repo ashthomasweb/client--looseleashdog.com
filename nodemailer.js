@@ -39,28 +39,26 @@ function userMessage() {
 
 function userAutoReply() {
 
-    let a = `<div style='max-width: 100%; padding: 2rem; border: 1px solid lightgrey; border-radius: 12px; margin: 1rem;'>
-    <h2>Thanks for reaching out to LooseLeashDog. This is an automatic response confirming that your email was sent.</h2>
-    <p>I will reach out to you within the next few days.</p>
-    <h2>From:</h2>
-    <div style='padding: 0rem 2rem;'>
-    <p><strong>${user_name}</strong></p>
-    </div>
-    <h2>Email:</h2>
-    <div style='padding: 0rem 2rem;'>
-    <p>${user_email}</p>
-    </div><h2>Message:</h2>
-    <div style='padding: 0rem 2rem;'>
-    <p>${message}</p>
-    </div>
-    </div>
-    <br>
-    <p>Thanks for contacting me, I'm looking forward to speaking with you.</p>
-    <p>Remember, this is just an automatic email and doesn't accept replys.</p>`;
+    // Do not remove backtick
+    let replyTemplate = ` 
 
-    let b = a.replace(/\n/g, "").replace(/\r/g, "");
+    <div style='max-width: 100%; padding: 2rem; border: 1px solid lightgrey; border-radius: 12px; margin: 1rem;'>   
+        <h2>Hi ${user_name}, thanks for reaching out to LooseLeashDog!</h2>
+            <p>This is an automatic response confirming that your email was sent. I will reach out to you within the next few days. Below is a copy of your email.</p> 
+            <p>Remember, this is an automatic email and doesn't accept replys.</p>
+        <h2>From:</h2>
+            <p style='padding: 0rem 2rem;'><strong>${user_name}</strong></p>  
+        <h2>Email:</h2>
+            <p style='padding: 0rem 2rem;'>${user_email}</p>
+        <h2>Message:</h2>
+            <p style='padding: 0rem 2rem;'>${message}</p>
+    </div>
 
-    return b;
+    `; // Do not remove backtick
+
+    let output = replyTemplate.replace(/\n/g, "").replace(/\r/g, "<br>");
+
+    return output;  
 };
 
 function mailNewInquiry(user_name, user_email, message) {
