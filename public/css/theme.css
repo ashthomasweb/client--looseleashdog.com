@@ -394,6 +394,8 @@ footer a:hover {
 
 .carousel--curator {
     background-color: var(--theme-blue);
+    border-top: 4px solid var(--theme-blue);
+    border-bottom: 4px solid var(--theme-blue);
 }
 
 .left-button-center {
@@ -401,7 +403,9 @@ footer a:hover {
 }
 
 .left-button-center button {
-    background-color: var(--clear);
+    background-color: var(--theme-lightblue);
+    border-left: 4px solid var(--theme-blue);
+    border-right: 4px solid var(--theme-blue);
     cursor: pointer;
     opacity: 0.2;
     transition: opacity .3s;
@@ -420,7 +424,9 @@ footer a:hover {
 }
 
 .right-button-center button {
-    background-color: var(--clear);
+    background-color: var(--theme-lightblue);
+    border-left: 4px solid var(--theme-blue);
+    border-right: 4px solid var(--theme-blue);
     cursor: pointer;
     opacity: 0.2;
     transition: opacity .3s;

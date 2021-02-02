@@ -500,7 +500,7 @@
 
 .carousel--curator {
     width: 1000px;
-    height: 312px;
+    height: 320px;
     margin: 0 auto 0px;
 }
 
@@ -531,7 +531,7 @@
     border: 0;
     background-image: url("/images/left-arrow.png");
     background-repeat: no-repeat;
-    background-position: 13px 138px;
+    background-position: 10px 138px;
 }
 
 .crt-post-footer {
@@ -579,8 +579,8 @@
     height: 312px;
     border: 0;
     background-image: url("/images/right-arrow.png");
-    background-position: 13px 138px;
     background-repeat: no-repeat;
+    background-position: 10px 138px;
 }
 
 .viewport {
