@@ -134,7 +134,7 @@
     position: relative;
     display: inline-block;
     width: 270px;
-    margin-left: 20px;
+    margin: 37px 20px 0 13px;
 }
 
 .greeting-pane--home p {
