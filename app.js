@@ -5,6 +5,8 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require("nodemailer");
+const { google } = require("googleapis");
+const OAuth2 = google.auth.OAuth2;
 const ejs = require('ejs');
 const favicon = require('express-favicon');
 var Prismic = require('prismic-javascript');
@@ -126,15 +128,51 @@ app.post('/contact', function (req, res) {
     } = req.body;
 
     // Mailer transport object 
-    var transporter = nodemailer.createTransport({
-        host: 'mi3-ts3.a2hosting.com',
-        port: 465,
-        secure: true,
-        auth: {
-            user: process.env.MAIL_USER,
-            pass: process.env.MAIL_PASS,
-        }
-    });
+    // var transporter = nodemailer.createTransport({
+    //     host: 'mi3-ts3.a2hosting.com',
+    //     port: 465,
+    //     secure: true,
+    //     auth: {
+    //         user: process.env.MAIL_USER,
+    //         pass: process.env.MAIL_PASS,
+    //     }
+    // });
+
+    const createTransporter = async () => {
+        const oauth2Client = new OAuth2(
+            process.env.CLIENT_ID,
+            process.env.CLIENT_SECRET,
+            "https://developers.google.com/oauthplayground"
+        );
+
+        oauth2Client.setCredentials({
+            refresh_token: process.env.REFRESH_TOKEN
+        });
+
+        const accessToken = await new Promise((resolve, reject) => {
+            oauth2Client.getAccessToken((err, token) => {
+                if (err) {
+                    reject();
+                }
+                resolve(token);
+            });
+        });
+
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                type: "OAuth2",
+                user: process.env.EMAIL,
+                accessToken,
+                clientId: process.env.CLIENT_ID,
+                clientSecret: process.env.CLIENT_SECRET,
+                refreshToken: process.env.REFRESH_TOKEN
+            }
+        });
+
+        return transporter;
+    };
+
 
     // Templates
     function inquiryTemplate() {
@@ -184,26 +222,38 @@ app.post('/contact', function (req, res) {
 
     // Nodemailer email objects
     function mailNewInquiry(user_name, user_email, message) {
-        return `{"from": "mailer@looseleashdog.com",
+        return `{"from": "ashthomasweb@gmail.com",
     "to": "ashthomasweb@gmail.com",
     "subject": "A person from your website is reaching out!",
     "html": "${inquiryTemplate()}"}`;
     };
 
     function mailConfirmation(user_name, user_email, message) {
-        return `{"from": "mailer@looseleashdog.com",
+        return `{"from": "ashthomasweb@gmail.com",
     "to": "${user_email}",
     "subject": "This is your email confirmation from LooseLeashDog!",
     "html": "${confirmTemplate()}"}`;
     };
 
+    //emailOptions - who sends what to whom
+    const sendEmail = async (emailOptions) => {
+        let emailTransporter = await createTransporter();
+        await emailTransporter.sendMail(emailOptions);
+    };
+
+    
     // Object parsing
     let inquiry = JSON.parse(mailNewInquiry(user_name, user_email, message));
     let finalConfirm = JSON.parse(mailConfirmation(user_name, user_email, message));
+    
+    // sendEmail(inquiry);
+    // sendEmail(finalConfirm);
+    // var userInquiry = transporter().sendMail(inquiry);
+    sendEmail(inquiry);
 
-    var userInquiry = transporter.sendMail(inquiry);
 
-    var userConfirm = transporter.sendMail(finalConfirm);
+    // var userConfirm = transporter().sendMail(finalConfirm);
+    sendEmail(finalConfirm);
 
     Promise.all([userInquiry, userConfirm])
         .then(([resultInq, resultConf]) => {
@@ -211,6 +261,7 @@ app.post('/contact', function (req, res) {
         })
         .catch((err) => {
             console.log(err);
+            console.log('error')
             ifError = true;
         })
         .finally(() => {
