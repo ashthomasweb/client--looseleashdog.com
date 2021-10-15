@@ -119,7 +119,7 @@ app.post('/contact', function (req, res) {
 
     let ifError = false;
 
-    const {
+    let {
         user_name,
         user_email,
         message
