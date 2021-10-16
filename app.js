@@ -199,14 +199,14 @@ app.post('/contact', async (req, res) => {
 
     // Nodemailer email objects
     function mailNewInquiry(user_name, user_email, message) {
-        return `{"from": "ashthomasweb@gmail.com",
+        return `{"from": "info.looseleashdog@gmail.com",
                 "to": "ashthomasweb@gmail.com",
                 "subject": "A person from your website is reaching out!",
                 "html": "${inquiryTemplate()}"}`;
     };
 
     function mailConfirmation(user_name, user_email, message) {
-        return `{"from": "ashthomasweb@gmail.com",
+        return `{"from": "info.looseleashdog@gmail.com",
                 "to": "${user_email}",
                 "subject": "This is your email confirmation from LooseLeashDog!",
                 "html": "${confirmTemplate()}"}`;
