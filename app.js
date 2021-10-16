@@ -284,7 +284,7 @@ app.post('/contact', async (req, res) => {
                 responseBool: true,
                 isError: ifError,
             });
-            
+            transporter.close();
         });
 
 });
