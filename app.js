@@ -164,24 +164,23 @@ app.post('/contact', function (req, res) {
         return transporter;
     };
 
-    // // Templates
+    // Templates
     function inquiryTemplate() {
 
-        // Do not remove backtick
         let inqTemplate = `
 
-        <div style='max-width: 80%; padding: 30px; border: 1px solid lightgrey; border-radius: 12px; margin: 15px;'>
-            <h2>Hi Emily, someone is reaching out from your website!</h2>
-                <p>Below is a copy of the email.</p> 
-            <h2>From:</h2>
-                <p style='padding: 0 30px;'><strong>${user_name}</strong></p>
-            <h2>Email:</h2>
-                <p style='padding: 0 30px;'>${user_email}</p>
-            <h2>Message:</h2>
-                <p style='padding: 0 30px;'>${message}</p>
-        </div>
-    
-        `; // Do not remove backtick
+            <div style='max-width: 80%; padding: 30px; border: 1px solid lightgrey; border-radius: 12px; margin: 15px;'>
+                <h2>Hi Emily, someone is reaching out from your website!</h2>
+                    <p>Below is a copy of the email.</p> 
+                <h2>From:</h2>
+                    <p style='padding: 0 30px;'><strong>${user_name}</strong></p>
+                <h2>Email:</h2>
+                    <p style='padding: 0 30px;'>${user_email}</p>
+                <h2>Message:</h2>
+                    <p style='padding: 0 30px;'>${message}</p>
+            </div>
+        
+            `; 
 
         let output = inqTemplate.replace(/\n/g, "").replace(/\r/g, "<br>");
         return output;
@@ -189,22 +188,21 @@ app.post('/contact', function (req, res) {
 
     function confirmTemplate() {
 
-        // Do not remove backtick
         let confTemplate = `
 
-        <div style='max-width: 80%; padding: 30px; border: 1px solid lightgrey; border-radius: 12px; margin: 15px;'>   
-            <h2>Hi ${user_name}, thanks for reaching out to LooseLeashDog!</h2>
-                <p>This is an automatic response confirming that your email was sent. I will reach out to you within the next few days. Below is a copy of your email.</p> 
-                <p>Remember, this is an automatic email and doesn't accept replys.</p>
-            <h2>From:</h2>
-                <p style='padding: 0 30px;'><strong>${user_name}</strong></p>  
-            <h2>Email:</h2>
-                <p style='padding: 0 30px;'>${user_email}</p>
-            <h2>Message:</h2>
-                <p style='padding: 0 30px;'>${message}</p>
-        </div>
+            <div style='max-width: 80%; padding: 30px; border: 1px solid lightgrey; border-radius: 12px; margin: 15px;'>   
+                <h2>Hi ${user_name}, thanks for reaching out to LooseLeashDog!</h2>
+                    <p>This is an automatic response confirming that your email was sent. I will reach out to you within the next few days. Below is a copy of your email.</p> 
+                    <p>Remember, this is an automatic email and doesn't accept replys.</p>
+                <h2>From:</h2>
+                    <p style='padding: 0 30px;'><strong>${user_name}</strong></p>  
+                <h2>Email:</h2>
+                    <p style='padding: 0 30px;'>${user_email}</p>
+                <h2>Message:</h2>
+                    <p style='padding: 0 30px;'>${message}</p>
+            </div>
 
-        `; // Do not remove backtick
+            `;
 
         let output = confTemplate.replace(/\n/g, "").replace(/\r/g, "<br>");
         return output;
@@ -213,16 +211,16 @@ app.post('/contact', function (req, res) {
     // // Nodemailer email objects
     function mailNewInquiry(user_name, user_email, message) {
         return `{"from": "ashthomasweb@gmail.com",
-    "to": "ashthomasweb@gmail.com",
-    "subject": "A person from your website is reaching out!",
-    "html": "${inquiryTemplate()}"}`;
+                "to": "ashthomasweb@gmail.com",
+                "subject": "A person from your website is reaching out!",
+                "html": "${inquiryTemplate()}"}`;
     };
 
     function mailConfirmation(user_name, user_email, message) {
         return `{"from": "ashthomasweb@gmail.com",
-    "to": "${user_email}",
-    "subject": "This is your email confirmation from LooseLeashDog!",
-    "html": "${confirmTemplate()}"}`;
+                "to": "${user_email}",
+                "subject": "This is your email confirmation from LooseLeashDog!",
+                "html": "${confirmTemplate()}"}`;
     };
 
     //emailOptions - who sends what to whom
@@ -231,34 +229,12 @@ app.post('/contact', function (req, res) {
         await emailTransporter.sendMail(emailOptions);
     };
 
-    
     // // Object parsing
     let inquiry = JSON.parse(mailNewInquiry(user_name, user_email, message));
     let finalConfirm = JSON.parse(mailConfirmation(user_name, user_email, message));
     
-    // sendEmail({
-    //     subject: "Test2",
-    //     text: "I am alive!",
-    //     to: "ashthomasweb@gmail.com",
-    //     from: process.env.EMAIL
-    // });
-    
-    // sendEmail(finalConfirm);
-    // sendEmail(inquiry);
-    
-    
-    // var userInquiry = sendEmail({
-        //     subject: "Test3",
-        //     text: "I am alive!",
-        //     to: "ashthomasweb@gmail.com",
-        //     from: process.env.EMAIL
-        // });
-        
     var userConf = sendEmail(finalConfirm);
     var userInquiry = sendEmail(inquiry);
-
-
-    // sendEmail(finalConfirm);
 
     Promise.all([userInquiry, userConf])
         .then(([resultInq, resultConf]) => {
