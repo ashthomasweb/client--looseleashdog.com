@@ -247,7 +247,7 @@ app.post('/contact', function (req, res) {
     // let finalConfirm = JSON.parse(mailConfirmation(user_name, user_email, message));
     
     sendEmail({
-        subject: "Test",
+        subject: "Test2",
         text: "I am alive!",
         to: "ashthomasweb@gmail.com",
         from: process.env.EMAIL
@@ -258,25 +258,25 @@ app.post('/contact', function (req, res) {
     // sendEmail(inquiry);
 
 
-    // var userConfirm = transporter().sendMail(finalConfirm);
+    var userInquiry = sendEmail(finalConfirm);
     // sendEmail(finalConfirm);
 
-    // Promise.all([userInquiry, userConfirm])
-    //     .then(([resultInq, resultConf]) => {
-    //         console.log("Emails sent", resultInq, resultConf);
-    //     })
-    //     .catch((err) => {
-    //         console.log(err);
-    //         console.log('error')
-    //         ifError = true;
-    //     })
-    //     .finally(() => {
-    //         res.render('contact', {
-    //             pageTitle: "Contact",
-    //             responseBool: true,
-    //             isError: ifError,
-    //         });
-    //     });
+    Promise.all([userInquiry])
+        .then(([resultInq]) => {
+            console.log("Emails sent", resultInq);
+        })
+        .catch((err) => {
+            console.log(err);
+            console.log('error')
+            ifError = true;
+        })
+        .finally(() => {
+            res.render('contact', {
+                pageTitle: "Contact",
+                responseBool: true,
+                isError: ifError,
+            });
+        });
 
 });
 
