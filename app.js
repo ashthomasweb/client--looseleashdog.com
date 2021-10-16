@@ -175,27 +175,27 @@ app.post('/contact', function (req, res) {
 
 
     // // Templates
-    // function inquiryTemplate() {
+    function inquiryTemplate() {
 
-    //     // Do not remove backtick
-    //     let inqTemplate = `
+        // Do not remove backtick
+        let inqTemplate = `
 
-    //     <div style='max-width: 80%; padding: 30px; border: 1px solid lightgrey; border-radius: 12px; margin: 15px;'>
-    //         <h2>Hi Emily, someone is reaching out from your website!</h2>
-    //             <p>Below is a copy of the email.</p> 
-    //         <h2>From:</h2>
-    //             <p style='padding: 0 30px;'><strong>${user_name}</strong></p>
-    //         <h2>Email:</h2>
-    //             <p style='padding: 0 30px;'>${user_email}</p>
-    //         <h2>Message:</h2>
-    //             <p style='padding: 0 30px;'>${message}</p>
-    //     </div>
+        <div style='max-width: 80%; padding: 30px; border: 1px solid lightgrey; border-radius: 12px; margin: 15px;'>
+            <h2>Hi Emily, someone is reaching out from your website!</h2>
+                <p>Below is a copy of the email.</p> 
+            <h2>From:</h2>
+                <p style='padding: 0 30px;'><strong>${user_name}</strong></p>
+            <h2>Email:</h2>
+                <p style='padding: 0 30px;'>${user_email}</p>
+            <h2>Message:</h2>
+                <p style='padding: 0 30px;'>${message}</p>
+        </div>
     
-    //     `; // Do not remove backtick
+        `; // Do not remove backtick
 
-    //     let output = inqTemplate.replace(/\n/g, "").replace(/\r/g, "<br>");
-    //     return output;
-    // };
+        let output = inqTemplate.replace(/\n/g, "").replace(/\r/g, "<br>");
+        return output;
+    };
 
     // function confirmTemplate() {
 
@@ -221,12 +221,12 @@ app.post('/contact', function (req, res) {
     // };
 
     // // Nodemailer email objects
-    // function mailNewInquiry(user_name, user_email, message) {
-    //     return `{"from": "ashthomasweb@gmail.com",
-    // "to": "ashthomasweb@gmail.com",
-    // "subject": "A person from your website is reaching out!",
-    // "html": "${inquiryTemplate()}"}`;
-    // };
+    function mailNewInquiry(user_name, user_email, message) {
+        return `{"from": "ashthomasweb@gmail.com",
+    "to": "ashthomasweb@gmail.com",
+    "subject": "A person from your website is reaching out!",
+    "html": "${inquiryTemplate()}"}`;
+    };
 
     // function mailConfirmation(user_name, user_email, message) {
     //     return `{"from": "ashthomasweb@gmail.com",
@@ -243,7 +243,7 @@ app.post('/contact', function (req, res) {
 
     
     // // Object parsing
-    // let inquiry = JSON.parse(mailNewInquiry(user_name, user_email, message));
+    let inquiry = JSON.parse(mailNewInquiry(user_name, user_email, message));
     // let finalConfirm = JSON.parse(mailConfirmation(user_name, user_email, message));
     
     // sendEmail({
@@ -258,12 +258,16 @@ app.post('/contact', function (req, res) {
     // sendEmail(inquiry);
 
 
-    var userInquiry = sendEmail({
-        subject: "Test3",
-        text: "I am alive!",
-        to: "ashthomasweb@gmail.com",
-        from: process.env.EMAIL
-    });
+    // var userInquiry = sendEmail({
+    //     subject: "Test3",
+    //     text: "I am alive!",
+    //     to: "ashthomasweb@gmail.com",
+    //     from: process.env.EMAIL
+    // });
+
+    var userInquiry = sendEmail(inquiry);
+
+
     // sendEmail(finalConfirm);
 
     Promise.all([userInquiry])
