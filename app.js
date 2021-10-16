@@ -246,19 +246,24 @@ app.post('/contact', function (req, res) {
     // let inquiry = JSON.parse(mailNewInquiry(user_name, user_email, message));
     // let finalConfirm = JSON.parse(mailConfirmation(user_name, user_email, message));
     
-    sendEmail({
-        subject: "Test2",
-        text: "I am alive!",
-        to: "ashthomasweb@gmail.com",
-        from: process.env.EMAIL
-    });
+    // sendEmail({
+    //     subject: "Test2",
+    //     text: "I am alive!",
+    //     to: "ashthomasweb@gmail.com",
+    //     from: process.env.EMAIL
+    // });
     
     // sendEmail(finalConfirm);
     // var userInquiry = transporter().sendMail(inquiry);
     // sendEmail(inquiry);
 
 
-    var userInquiry = sendEmail(finalConfirm);
+    var userInquiry = sendEmail({
+        subject: "Test3",
+        text: "I am alive!",
+        to: "ashthomasweb@gmail.com",
+        from: process.env.EMAIL
+    });
     // sendEmail(finalConfirm);
 
     Promise.all([userInquiry])
