@@ -200,7 +200,7 @@ app.post('/contact', async (req, res) => {
     // Nodemailer email objects
     function mailNewInquiry(user_name, user_email, message) {
         return `{"from": "info.looseleashdog@gmail.com",
-                "to": "ashthomasweb@gmail.com",
+                "to": "emily.elizabeth.platt@gmail.com",
                 "subject": "A person from your website is reaching out!",
                 "html": "${inquiryTemplate()}"}`;
     };
