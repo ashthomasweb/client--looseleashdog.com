@@ -117,7 +117,7 @@ app.get('/contact', function (req, res) {
     });
 });
 
-app.post('/contact', function (req, res) {
+app.post('/contact', async (req, res) => {
 
     let ifError = false;
 
@@ -128,41 +128,74 @@ app.post('/contact', function (req, res) {
     } = req.body;
 
     // Mailer transport object 
+
+    
+    const oauth2Client = new OAuth2(
+        process.env.CLIENT_ID,
+        process.env.CLIENT_SECRET,
+        'https://developers.google.com/oauthplayground'
+    )
+
+    oauth2Client.setCredentials({
+        refresh_token: process.env.REFRESH_TOKEN
+    })
+    
+    const accessToken = await oauth2Client.getAccessToken()
+    
+    let transporter = nodemailer.createTransport({
+        service: "Gmail",
+        auth: {
+            type: 'OAuth2',
+            user: process.env.EMAIL,
+            clientId: process.env.CLIENT_ID,
+            clientSecret: process.env.CLIENT_SECRET,
+            refreshToken: process.env.REFRESH_TOKEN,
+            accessToken: accessToken
+        }
+    });
    
-    const createTransporter = async () => {
-        const oauth2Client = new OAuth2(
-            process.env.CLIENT_ID,
-            process.env.CLIENT_SECRET,
-            "https://developers.google.com/oauthplayground"
-        );
+    // const createTransporter = async () => {
+    //     const oauth2Client = new OAuth2(
+    //         process.env.CLIENT_ID,
+    //         process.env.CLIENT_SECRET,
+    //         "https://developers.google.com/oauthplayground"
+    //     );
 
-        oauth2Client.setCredentials({
-            refresh_token: process.env.REFRESH_TOKEN
-        });
+    //     oauth2Client.setCredentials({
+    //         refresh_token: process.env.REFRESH_TOKEN
+    //     });
 
-        const accessToken = await new Promise((resolve, reject) => {
-            oauth2Client.getAccessToken((err, token) => {
-                if (err) {
-                    reject();
-                }
-                resolve(token);
-            });
-        });
+    //     const accessToken = await new Promise((resolve, reject) => {
+    //         oauth2Client.getAccessToken((err, token) => {
+    //             if (err) {
+    //                 reject();
+    //             }
+    //             resolve(token);
+    //         });
+    //     });
 
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
-            auth: {
-                type: "OAuth2",
-                user: process.env.EMAIL,
-                accessToken,
-                clientId: process.env.CLIENT_ID,
-                clientSecret: process.env.CLIENT_SECRET,
-                refreshToken: process.env.REFRESH_TOKEN
-            }
-        });
+    //     const transporter = nodemailer.createTransport({
+    //         service: "gmail",
+    //         auth: {
+    //             type: "OAuth2",
+    //             user: process.env.EMAIL,
+    //             accessToken,
+    //             clientId: process.env.CLIENT_ID,
+    //             clientSecret: process.env.CLIENT_SECRET,
+    //             refreshToken: process.env.REFRESH_TOKEN
+    //         }
+    //     });
 
-        return transporter;
-    };
+    //     return transporter;
+
+
+
+    // };
+
+
+
+
+
 
     // Templates
     function inquiryTemplate() {
@@ -208,7 +241,7 @@ app.post('/contact', function (req, res) {
         return output;
     };
 
-    // // Nodemailer email objects
+    // Nodemailer email objects
     function mailNewInquiry(user_name, user_email, message) {
         return `{"from": "ashthomasweb@gmail.com",
                 "to": "ashthomasweb@gmail.com",
@@ -224,17 +257,17 @@ app.post('/contact', function (req, res) {
     };
 
     //emailOptions - who sends what to whom
-    const sendEmail = async (emailOptions) => {
-        let emailTransporter = await createTransporter();
-        await emailTransporter.sendMail(emailOptions);
-    };
+    // const sendEmail = async (emailOptions) => {
+    //     let emailTransporter = await createTransporter();
+    //     await emailTransporter.sendMail(emailOptions);
+    // };
 
     // // Object parsing
     let inquiry = JSON.parse(mailNewInquiry(user_name, user_email, message));
     let finalConfirm = JSON.parse(mailConfirmation(user_name, user_email, message));
     
-    var userConf = sendEmail(finalConfirm);
-    var userInquiry = sendEmail(inquiry);
+    var userConf = transporter.sendMail(finalConfirm);
+    var userInquiry = transporter.sendMail(inquiry);
 
     Promise.all([userInquiry, userConf])
         .then(([resultInq, resultConf]) => {
@@ -251,6 +284,7 @@ app.post('/contact', function (req, res) {
                 responseBool: true,
                 isError: ifError,
             });
+            
         });
 
 });
