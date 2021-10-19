@@ -56,7 +56,7 @@ function initApi(req) {
 
 app.get('/', function (req, res) {
     res.render('home', {
-        pageTitle: 'Home',
+        pageTitle: 'LooseLeashDog',
     });
 });
 

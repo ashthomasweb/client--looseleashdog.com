@@ -1,6 +1,6 @@
 // Main JavaScript file for "Looseleashdog"
 
-// || Contact form field button color 
+// Contact form field button color 
 
 function formFieldCheck() {
     let name = document.forms["contact"]["user_name"].value;
@@ -22,7 +22,7 @@ function sendingText() {
     elem.innerText = "Sending";
 }
 
-// || Hamburger Menu for "Looseleashdog"
+// Hamburger Menu for "Looseleashdog"
 // Would be best written with CSS animations or transitions.
 // I used pure JS as an exercise and to balance the languages used on the site.
 
@@ -162,7 +162,7 @@ function hamburger() {
 
 }
 
-// || Blog Main hover event 
+// Blog Main hover event 
 
 function mouseHover(event) {
     let path = event.path;
@@ -242,5 +242,4 @@ function shareIfBlog() {
     }
 }
 
-
-/* || END of document  */
+// END of document

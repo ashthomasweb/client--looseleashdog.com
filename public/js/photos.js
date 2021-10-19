@@ -20,5 +20,4 @@ document.getElementById("curator-hover").addEventListener("mouseout", function (
     document.getElementById("right-button").style.opacity = "0.2";
 });
 
-
 // || END of document 
