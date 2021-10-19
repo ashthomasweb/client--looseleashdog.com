@@ -14,7 +14,6 @@ var PrismicDOM = require('prismic-dom');
 var prismicEndpoint = 'https://looseleashdog.prismic.io/api/v2';
 const secure = require("ssl-express-www");
 
-
 const app = express();
 app.use(secure);
 app.use(favicon(__dirname + '/public/favicon.ico'));
